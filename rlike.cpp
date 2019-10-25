@@ -27,6 +27,45 @@ static std::regex operator ""_r(const char* pattern, std::size_t length) {
     return std::regex(pattern, length);
 }
 
+enum { Normal = 64, Bold = 128, ColorMask = 63 };
+static const std::map<std::string, unsigned> ansiFeatures = {
+    {"dfl",     0},
+    {"reset",   37|Normal},
+    {"me",      36|Bold},
+    {"exit",    33|Bold},
+    {"wall",    30|Bold},
+    {"road",    33|Normal},
+    {"alert",   31|Bold},
+    {"prompt",  37|Bold},
+    {"flush",   1}
+};
+
+/*
+     ███████████
+    ░█░░░███░░░█
+    ░   ░███  ░   ██████  ████████  █████████████
+        ░███     ███░░███░░███░░███░░███░░███░░███
+        ░███    ░███████  ░███ ░░░  ░███ ░███ ░███
+        ░███    ░███░░░   ░███      ░███ ░███ ░███
+        █████   ░░██████  █████     █████░███ █████
+       ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░
+ */
+
+/* Support for color terminals. */
+struct Term {
+    int color = 37;
+    bool bold = false, enabled = true;
+
+    std::string format(const std::string& what) {
+        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;
+        std::string result;
+        std::smatch res;
+        for (auto b=what.begin(), e=what.end(); std::regex_search(b,e,res,pat); b=res[0].second) {
+            if (res[2].length()) result += res[2];
+        }
+    }
+};
+
 /*
        █████████                                          ███           ██████████              █████
       ███░░░░░███                                        ░░░           ░░███░░░░███            ░░███
