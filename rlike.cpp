@@ -23,7 +23,7 @@ constexpr std::size_t Count(const T (&arr)[size]) {
 }
 
 // Syntactic shorthand for creating regular expressions.
-static std::regex operator ""_r(const char* pattern, std::size_t length) {
+static std::regex operator""_r(const char* pattern, std::size_t length) {
     return std::regex(pattern, length);
 }
 
@@ -62,9 +62,39 @@ struct Term {
         std::smatch res;
         for (auto b=what.begin(), e=what.end(); std::regex_search(b,e,res,pat); b=res[0].second) {
             if (res[2].length()) result += res[2];
+            else {
+                auto i = ansiFeatures.find(res[1]);
+                if (i != ansiFeatures.end())
+                    switch (int c = i->second) {
+                        case 0: color = 0; break;
+                        case 1: std::cout << std::flush; break;
+                        default: result += SetColor( c&Bold, c&ColorMask );
+                    }
+            }
         }
+
+        return result;
     }
-};
+
+    Term& operator<<(const std::string& what) {
+        std::cout << format(what);
+        return *this;
+    }
+
+    std::string SetColor(bool newBold, int newColor) {
+        if (((newBold != bold) || newColor != color) && enabled) {
+            bold = newBold; color = newColor;
+            std::ostringstream oss; oss << "\33[" << (int)bold << ";" << color << "m";
+            return oss.str();
+        }
+        return {};
+    }
+
+    void EnableDisable(bool state) {
+        enabled = state;
+        if (enabled) *this << "`dfl`";
+    }
+} static term;
 
 /*
        █████████                                          ███           ██████████              █████
@@ -231,18 +261,28 @@ static void Look() {
     std::vector<std::string> mapGraph;
     for (long yo=-4; yo<=4; ++yo) {
         std::string line;
+        static const std::map<char, const char*> translation = {
+            {'@', "`me`"},
+            {'#', "`wall`"},
+            {'.', "`road`"}
+        };
         for (long xo=-5; xo<=5; ++xo) {
             char c = ((xo==0 && yo==0) ? '@' : maze.Char(x+xo, y+yo));
+            auto i = translation.find(c);
+            if (i != translation.end()) line += i->second;
             line += c;
         }
-        mapGraph.push_back(line);
+        std::ostringstream oss; oss << "`dfl`" << line << "`reset`";
+        mapGraph.push_back(oss.str());
     }
 
     // This is the text that will be printed on the right side of the map.
     std::ostringstream oss;
-    oss << "In a "  << envTypes[room.env].name << " tunnel at " << std::setw(3) << x << "," << std::setw(3) << y << "\n"
-        << "Exits:" << (CanMoveTo(x,y-1) ? " north" : "") << (CanMoveTo(x,y+1) ? " south" : "")
-                    << (CanMoveTo(x-1,y) ? " west"  : "") << (CanMoveTo(x+1,y) ? " east"  : "") << "\n\n";
+    oss << "`reset`In a "  << envTypes[room.env].name << " tunnel at " << std::setw(3) << x << "," << std::setw(3) << -y << "\n"
+        << "`reset`Exits:`exit`" << (CanMoveTo(x,y-1) ? " north" : "")
+                           << (CanMoveTo(x,y+1) ? " south" : "")
+                           << (CanMoveTo(x-1,y) ? " west"  : "")
+                           << (CanMoveTo(x+1,y) ? " east"  : "") << "\n\n";
     const std::string infoStr = oss.str();
 
     // Print the map and the information side by side.
@@ -256,7 +296,7 @@ static void Look() {
         if (b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }
         std::string sa = m!=mapGraph.end() ? *m++ : std::string(11, ' ');
         std::string sb = res.ready() ? (std::string)res[1] : "";
-        std::cout << sa << " | " << sb << "\n";
+        term << "`dfl`" << sa << " | " << "`items`" << sb << "\n";
     }
 }
 
@@ -276,8 +316,8 @@ static void EatLife(long l) {
     if (life>=800 && life-l<800) msg = "You are so hungry!\n";
     if (life>=150 && life-l<150) msg = "You are famished!\n";
     if (life>=70  && life-l<70)  msg = "You are about to collapse any second!\n";
-    life -= 1;
-    if (msg) { std::cout << msg; }
+    life -= l;
+    if (msg) { term << "`alert`" << msg << "`reset`"; }
 }
 
 /*
@@ -297,7 +337,7 @@ static void EatLife(long l) {
 static bool TryMoveBy(int xd, int yd) {
     // If we are moving diagonally, ensure that there is an actual path.
     if (!CanMoveTo(x+xd, y+yd) || (!CanMoveTo(x, y+yd) && !CanMoveTo(x+xd, y)))
-        { std::cout << "You cannot go that way.\n"; return false; }
+        { term << "You cannot go that way.\n"; return false; }
 
     long burden = 1;
     x += xd; y += yd;
@@ -364,7 +404,7 @@ struct CommandReader {
 
     std::string ReadCommand() {
         for (;;) {
-            std::cout << prompt << std::flush;
+            term << "`prompt`" << prompt << "`reset``flush`";
 
             std::string cmd;
 
@@ -382,7 +422,7 @@ struct CommandReader {
             if (std::regex_match(cmd, res, "^([1-9][0-9]*) +([^ 1-9].*)"_r)) {
                 repeat = { res[2], std::stoi(res[1]) };
                 if (repeat.second > 50) {
-                    std::cout << "Ignoring too large repeat count " << repeat.second << "\n";
+                    term << "Ignoring too large repeat count " << std::to_string(repeat.second) << "\n";
                     repeat.second = 0;
                 }
                 continue;
@@ -398,11 +438,11 @@ struct CommandReader {
             if (cmd[0]=='!' && cmd !="!?")
                 for (std::size_t a = history.size(); a-- > 0; ) {
                     if (history[a].compare(0, cmd.size()-1, cmd, 1, cmd.size()-1) == 0) {
-                        std::cout << "Repeating " << history[a] << "\n";
+                        term << "Repeating " << history[a] << "\n";
                         cmd = history[a];
                         break;
                     }
-                if (cmd[0] == '!') std::cout << "No match found for " << cmd.substr(1) << " from command history.\n";
+                if (cmd[0] == '!') term << "No match found for " << cmd.substr(1) << " from command history.\n";
                 if (cmd[0] == '!') continue;
             }
 
@@ -416,11 +456,15 @@ struct CommandReader {
             return cmd;
         }
     }
+
     void PrintHistory() {
         // Produce out the history of commands:
-        std::cout << "Your latest commands of at least " << int(HistMin) << " characters:\n";
-        for (std::size_t a=0; a<history.size(); ++a)
-            std::cout << std::setw(3) << a+1 << " : " << history[a] << "\n";
+        std::ostringstream oss; oss << "`reset`Your latest commands of at least " << int(HistMin) << " characters:\n";
+        term << oss.str();
+        for (std::size_t a=0; a<history.size(); ++a) {
+            std::ostringstream oss; oss << std::setw(3) << a+1 << " : " << history[a] << "\n";
+            term << oss.str();
+        }
     }
 };
 
@@ -436,24 +480,25 @@ struct CommandReader {
  */
 
 int main() {
-    std::cout << "Welcome to the treasure dungeon.\n";
+    term << "`reset`Welcome to the treasure dungeon.\n";
 
     CommandReader cmd;
 
 help:
-    std::cout << "\nAvailable commands:\n"
-                 "\tl/look\n"
-                 "\tn/s/w/e for moving\n"
-                 "\tquit\n"
-                 "\thelp\n\n"
-                 "You are starving. You are trying to find enough stuff to sell\n"
-                 "for food before you die. Beware, food is very expensive here.\n\n";
+    term << "`reset`Available commands:\n"
+            "\tl/look\n"
+            "\tn/s/w/e for moving\n"
+            "\tansi off, if the colors don't work for you\n"
+            "\tquit\n"
+            "\thelp\n\n"
+            "You are starving. You are trying to find enough stuff to sell\n"
+            "for food before you die. Beware, food is very expensive here.\n\n";
 
 
     // The main loop.
     Look();
     while (life > 0) {
-        std::ostringstream oss; oss << "[life:" << life << "]>";
+        std::ostringstream oss; oss << "[life:" << life << "]> ";
         cmd.SetPrompt(oss.str());
 
         auto s = cmd.ReadCommand();
@@ -484,15 +529,16 @@ help:
         // Use the power of regex to recognize complex syntax.
         else if (RM(s, "look( +around)?"_r)) Look();
 
+        else if (RM(s, res, "ansi +(off|on)"_r)) term.EnableDisable(res[1] == "on");
         else if (RM(s, R"((?:wear|wield|eq)\b.*)"_r))
-            std::cout << "You are scavenging for survival and not playing an RPG character.\n";
+            term << "You are scavenging for survival and not playing an RPG character.\n";
         else if (RM(s, R"(eat\b.*)"_r))
-            std::cout << "You have nothing edible! You are hoping to collect something you can sell for food.\n";
+            term << "You have nothing edible! You are hoping to collect something you can sell for food.\n";
 
         // Any unrecognized command.
-        else std::cout << "what\n";
+        else term << "what\n";
     }
 
-    std::cout << (life < 0 ? "You are pulled out from the maze by a supernatural force!" : "byebye")
-              << "[life:" << life << "] Game over\n";
+    term << "`alert`" << (life < 0 ? "You are pulled out from the maze by a supernatural force!\n" : "byebye\n")
+         << "[life:" << std::to_string(life) << "] Game over\n`reset`";
 }
