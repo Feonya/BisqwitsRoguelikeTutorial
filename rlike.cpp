@@ -17,11 +17,33 @@ static std::mt19937 rnd;    // Random number engine (Mersenne twister algorithm)
 // Generate a random number of specified range.
 #define RAND(size)  std::uniform_int_distribution<>(0, (size)-1)(rnd)
 
+/*
+       █████████                                  █████      ███    ███
+      ███░░░░░███                                ░░███      ███    ░░███
+     ███     ░░░   ██████  █████ ████ ████████   ███████   ███      ░░███
+    ░███          ███░░███░░███ ░███ ░░███░░███ ░░░███░   ░███       ░███
+    ░███         ░███ ░███ ░███ ░███  ░███ ░███   ░███    ░███       ░███
+    ░░███     ███░███ ░███ ░███ ░███  ░███ ░███   ░███ ███░░███      ███
+     ░░█████████ ░░██████  ░░████████ ████ █████  ░░█████  ░░███    ██░
+      ░░░░░░░░░   ░░░░░░    ░░░░░░░░ ░░░░ ░░░░░    ░░░░░    ░░░    ░░░
+ */
+
 // Return the size of an array at compile time.
 template<typename T, std::size_t size>
 constexpr std::size_t Count(const T (&arr)[size]) {
     return size;
 }
+
+/*
+     ██ ██    ██ ██                       ███    ███
+    ░██░██   ░██░██                      ███    ░░███
+    ░░ ░░    ░░ ░░            ████████  ███      ░░███
+                             ░░███░░███░███       ░███
+                              ░███ ░░░ ░███       ░███
+                              ░███     ░░███      ███
+                    █████████ █████     ░░███    ██░
+                   ░░░░░░░░░ ░░░░░       ░░░    ░░░
+*/
 
 // Syntactic shorthand for creating regular expressions.
 static std::regex operator""_r(const char* pattern, std::size_t length) {
@@ -170,6 +192,7 @@ static const std::map<std::string, unsigned> ansiFeatures = {
     {"exit",    33|Bold},
     {"wall",    30|Bold},
     {"road",    33|Normal},
+    {"items",   32|Normal},
     {"alert",   31|Bold},
     {"prompt",  37|Bold},
     {"flush",   1}
@@ -304,7 +327,7 @@ struct ItemReference {
         std::string word = part;
         for (unsigned a = 1; a <= 12; ++a) {
             std::ostringstream oss; oss << "(^" << numerals1To12[a - 1] << "\\b)";
-            word = std::regex_replace(word, std::regex(word, oss.str()), std::to_string(a));
+            word = std::regex_replace(word, std::regex(oss.str()), std::to_string(a));
         }
         static std::regex pattern("^((all|[0-9]+) +)? *(.*)");
         std::smatch res;
@@ -421,8 +444,12 @@ static std::string Appraise(double value, int v = 1, std::size_t maxi = 3) {
         if (value >= f.worth) {
             std::string k = f.name;
             for (auto& c : k) if (c - ' ') c = 1 + ((c - 1) ^ v);
-            // TODO:
+            list.push_back(k); value -= f.worth;
+            if (list.size() < maxi) goto redo;
+            break;
         }
+    if (list.empty()) return "nothing at all";
+    return ListWithCounts(std::move(list));
 }
 
 /*
@@ -454,7 +481,7 @@ struct ItemType {
     //      mat=2:      changes "shirt" into "shirt made of silk"
     //      cond=1:     changes "shirt" into "awesome shirt"
     std::string Name(int cond = 0, int mat = 0) const;
-    std::string Look(bool specific) const;
+    std::string Look_(bool specific) const;
 
     float Weight() const {
         return buildTypes[build].weight * itemTypes[type].weight;
@@ -478,7 +505,7 @@ struct ItemType {
                    ░░░░░
  */
 
-// Collection of items and money, either in character's pocket, on the round, or in a container.
+// Collection of items and money, either in character's pocket, on the ground, or in a container.
 struct Eq {
     std::deque<ItemType> items;
     long money[Count(moneyTypes)] = { 0 };
@@ -522,7 +549,7 @@ struct Eq {
     //      all = true, if this is not the only item being listed at once
     std::pair<std::string, float> LookItem(std::size_t n, bool specific) const {
         const auto& item = items[n];
-        return {item.Look(specific), item.Value()};
+        return {item.Look_(specific), item.Value()};
     }
 
     // Generate the output for "looking at" money.
@@ -623,6 +650,36 @@ struct Eq {
     }
 } static eq;
 
+std::string ItemType::GetType() const {
+    return itemTypes[type].name;
+}
+
+std::string ItemType::GetMaterial() const {
+    return buildTypes[build].name;
+}
+
+std::string ItemType::GetCondition() const {
+    return condTypes[condition].name;
+}
+
+std::string ItemType::Name(int cond, int mat) const {
+    std::string result = GetType(), m = GetMaterial();
+    // Special hack: If the material is "wood", use "wooden" instead.
+    if (mat  == 1) result = (m == "wood" ? "wooden" : m) + " " + result;
+    if (cond == 1) result = GetCondition() + " " + result;
+    if (mat  == 2) result += " made of " + m;
+    return result;
+}
+
+std::string ItemType::Look_(bool specific) const {
+    std::string info, common = specific ? "It is " + AddArticle(Name(0, 2)) + ". It is in " + GetCondition() + " condition.\n"
+                                        : "You see " + AddArticle(Name(0, 2)) + ", in " + GetCondition() + " condition.\n";
+
+    if (specific) info = "You estimate that with it you could probably purchase " + Appraise(Value(), 1, 1) + ".\n";
+
+    return common + info;
+}
+
 /*
      ███████████
     ░░███░░░░░███
@@ -638,6 +695,7 @@ struct Eq {
 struct Room {
     std::size_t wall = 0, env = 0;      // Indexs.
     unsigned seed = 0;                  // For maze generation.
+    Eq items;                           // What is lying on the floor.
 // Create a model "default" room based on empty definitions.
 } static const defaultRoom;
 
@@ -668,11 +726,14 @@ struct Maze {
         auto insRes = rooms[x].insert( {y, model} );
         Room& room = insRes.first->second;
         if (insRes.second) {
+            room.items.Clear();
             // If a new room was indeed inserted, make changes in it.
             room.seed = (seed + (FRAND() > 0.95 ? RAND(4) : 0)) & 3;
             // 10% chance for the environment type to change.
             if (FRAND() > 0.9) room.env = RAND(Count(envTypes));
             if (FRAND() > (seed == model.seed ? 0.95 : 0.1)) room.wall = FRAND() < 0.4 ? 2 : 0;
+            // Generate a few items in the room.
+            room.items.Clear(unsigned(std::pow(FRAND(), 40.0) * 8.5));
         }
         return room;
     }
@@ -683,7 +744,8 @@ struct Maze {
         // The second object is the value we would like to get.
         auto i = rooms.find(x);     if (i == rooms.end())     return ' ';
         auto j = i->second.find(y); if (j == i->second.end()) return ' ';
-        if (j->second.wall)         return '#';
+        if (j->second.wall)                 return '#';
+        if (!j->second.items.items.empty()) return 'i';
         return '.';
     }
 } static maze;
@@ -762,7 +824,8 @@ static void Look() {
         static const std::map<char, const char*> translation = {
             {'@', "`me`"},
             {'#', "`wall`"},
-            {'.', "`road`"}
+            {'.', "`road`"},
+            {'i', "`items`"}
         };
         for (long xo=-5; xo<=5; ++xo) {
             char c = ((xo==0 && yo==0) ? '@' : maze.Char(x+xo, y+yo));
@@ -778,10 +841,10 @@ static void Look() {
     std::ostringstream oss;
     oss << "`reset`In a "  << envTypes[room.env].name << " tunnel at " << std::setw(3) << x << "," << std::setw(3) << -y << "\n"
         << "`reset`Exits:`exit`" << (CanMoveTo(x,y-1) ? " north" : "")
-                           << (CanMoveTo(x,y+1) ? " south" : "")
-                           << (CanMoveTo(x-1,y) ? " west"  : "")
-                           << (CanMoveTo(x+1,y) ? " east"  : "") << "\n\n";
-    const std::string infoStr = oss.str();
+                                 << (CanMoveTo(x,y+1) ? " south" : "")
+                                 << (CanMoveTo(x-1,y) ? " west"  : "")
+                                 << (CanMoveTo(x+1,y) ? " east"  : "") << "\n\n";
+    const std::string infoStr = oss.str() + room.items.Print(false).first;
 
     // Print the map and the information side by side.
     auto m = mapGraph.begin();
@@ -842,6 +905,77 @@ static bool TryMoveBy(int xd, int yd) {
     EatLife(burden);
 
     return true;
+}
+
+/*
+     █████                         █████        █████████    █████      ███    ███
+    ░░███                         ░░███        ███░░░░░███  ░░███      ███    ░░███
+     ░███         ██████   ██████  ░███ █████ ░███    ░███  ███████   ███      ░░███
+     ░███        ███░░███ ███░░███ ░███░░███  ░███████████ ░░░███░   ░███       ░███
+     ░███       ░███ ░███░███ ░███ ░██████░   ░███░░░░░███   ░███    ░███       ░███
+     ░███      █░███ ░███░███ ░███ ░███░░███  ░███    ░███   ░███ ███░░███      ███
+     ███████████░░██████ ░░██████  ████ █████ █████   █████  ░░█████  ░░███    ██░
+    ░░░░░░░░░░░  ░░░░░░   ░░░░░░  ░░░░ ░░░░░ ░░░░░   ░░░░░    ░░░░░    ░░░    ░░░
+*/
+
+static void LookAt(const ItemReference& what, const ItemReference&) {
+    const Room& room = maze.GenerateRoom(x, y, defaultRoom, 0);
+    const Eq& where  = room.items;
+
+    std::string hereStr = "here";
+
+    // Look at items in the room.
+    for (const auto& w : what.refs) {
+        std::pair<std::string, float> output;
+        auto AddItems = [&output](const std::pair<std::string, float>& src) {
+            output.first  += src.first;
+            output.second += src.second;
+        };
+
+        for (long no = 0; (no = where.FindItem(w, no)) >= 0; ) {
+            AddItems(where.LookItem(no++, what.IsSpecific()));
+            if (what.IsSpecific()) break;
+        }
+
+        // Look at money in the room, if there were no items or we're looking at everything.
+        if (what.everything || output.first.empty())
+            for (long no = 0; (no = where.FindMoney(w, no)) >= 0; ) {
+                AddItems(where.LookMoney(no++, what.IsSpecific()));
+                if (what.IsSpecific()) break;
+            }
+
+        bool roomEmpty = output.first.empty();
+
+        // Look at inventory items, if there was nothing particular in the room.
+        if (output.first.empty())
+            for (long no = 0; (no = eq.FindMoney(w, no)) >= 0; ) {
+                AddItems(eq.LookMoney(no++, what.IsSpecific()));
+                if (what.IsSpecific()) break;
+            }
+
+        // Look at inventory money, if ...
+        if (output.first.empty() || (what.everything && roomEmpty))
+            for (long no = 0; (no = eq.FindMoney(w, no)) >= 0; ) {
+                AddItems(eq.LookMoney(no++, what.IsSpecific()));
+                if (what.IsSpecific()) break;
+            }
+
+        if (!what.IsSpecific() && !output.first.empty()) {
+            if (output.second < 1.0f)
+                output.first += "It is of no sales value at all.\n";
+            else
+                output.first += "You estimate that with them you could probably buy " +
+                                 Appraise(output.second, 1, 1) + ".\n";
+        }
+
+        if (!output.first.empty()) term << output.first;
+        else
+            if (what.IsSpecific())
+                term << "There " << (w.what.back() == 's' ? "are" : "is") << " no "
+                     << w.what << " " << hereStr << " that you can look at.\n";
+            else
+                term << "There is nothing " << hereStr + ".\n";
+    }
 }
 
 /*
@@ -985,6 +1119,7 @@ int main() {
 help:
     term << "`reset`Available commands:\n"
             "\tl/look\n"
+            "\tla/look at <item>\n"
             "\tn/s/w/e for moving\n"
             "\tansi off, if the colors don't work for you\n"
             "\tquit\n"
@@ -1026,6 +1161,7 @@ help:
         // Then commands for looking at things.
         // Use the power of regex to recognize complex syntax.
         else if (RM(s, "look( +around)?"_r)) Look();
+        else if (RM(s, res, "look(?: +at)? +(.*?)(?: +in +(.+))?"_r)) LookAt(res[1].str(), res[2].str());
 
         else if (RM(s, res, "ansi +(off|on)"_r)) term.EnableDisable(res[1] == "on");
         else if (RM(s, R"((?:wear|wield|eq)\b.*)"_r))
