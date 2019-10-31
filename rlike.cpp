@@ -17,33 +17,11 @@ static std::mt19937 rnd;    // Random number engine (Mersenne twister algorithm)
 // Generate a random number of specified range.
 #define RAND(size)  std::uniform_int_distribution<>(0, (size)-1)(rnd)
 
-/*
-       █████████                                  █████      ███    ███
-      ███░░░░░███                                ░░███      ███    ░░███
-     ███     ░░░   ██████  █████ ████ ████████   ███████   ███      ░░███
-    ░███          ███░░███░░███ ░███ ░░███░░███ ░░░███░   ░███       ░███
-    ░███         ░███ ░███ ░███ ░███  ░███ ░███   ░███    ░███       ░███
-    ░░███     ███░███ ░███ ░███ ░███  ░███ ░███   ░███ ███░░███      ███
-     ░░█████████ ░░██████  ░░████████ ████ █████  ░░█████  ░░███    ██░
-      ░░░░░░░░░   ░░░░░░    ░░░░░░░░ ░░░░ ░░░░░    ░░░░░    ░░░    ░░░
- */
-
 // Return the size of an array at compile time.
 template<typename T, std::size_t size>
 constexpr std::size_t Count(const T (&arr)[size]) {
     return size;
 }
-
-/*
-     ██ ██    ██ ██                       ███    ███
-    ░██░██   ░██░██                      ███    ░░███
-    ░░ ░░    ░░ ░░            ████████  ███      ░░███
-                             ░░███░░███░███       ░███
-                              ░███ ░░░ ░███       ░███
-                              ░███     ░░███      ███
-                    █████████ █████     ░░███    ██░
-                   ░░░░░░░░░ ░░░░░       ░░░    ░░░
-*/
 
 // Syntactic shorthand for creating regular expressions.
 static std::regex operator""_r(const char* pattern, std::size_t length) {
@@ -52,37 +30,17 @@ static std::regex operator""_r(const char* pattern, std::size_t length) {
 
 // English language word manipulations:
 
-/*
-     ███████████                                                            █████████              █████     ███           ████             ███    ███
-    ░░███░░░░░███                                                          ███░░░░░███            ░░███     ░░░           ░░███            ███    ░░███
-     ░███    ░███   ██████  █████████████    ██████  █████ █████  ██████  ░███    ░███  ████████  ███████   ████   ██████  ░███   ██████  ███      ░░███
-     ░██████████   ███░░███░░███░░███░░███  ███░░███░░███ ░░███  ███░░███ ░███████████ ░░███░░███░░░███░   ░░███  ███░░███ ░███  ███░░███░███       ░███
-     ░███░░░░░███ ░███████  ░███ ░███ ░███ ░███ ░███ ░███  ░███ ░███████  ░███░░░░░███  ░███ ░░░   ░███     ░███ ░███ ░░░  ░███ ░███████ ░███       ░███
-     ░███    ░███ ░███░░░   ░███ ░███ ░███ ░███ ░███ ░░███ ███  ░███░░░   ░███    ░███  ░███       ░███ ███ ░███ ░███  ███ ░███ ░███░░░  ░░███      ███
-     █████   █████░░██████  █████░███ █████░░██████   ░░█████   ░░██████  █████   █████ █████      ░░█████  █████░░██████  █████░░██████  ░░███    ██░
-    ░░░░░   ░░░░░  ░░░░░░  ░░░░░ ░░░ ░░░░░  ░░░░░░     ░░░░░     ░░░░░░  ░░░░░   ░░░░░ ░░░░░        ░░░░░  ░░░░░  ░░░░░░  ░░░░░  ░░░░░░    ░░░    ░░░
- */
 
 static std::string RemoveArticle(const std::string& s) {
     return std::regex_replace(s, "^(?:a|an|the) +"_r, "");
 }
 
-/*
-     ███████████  ████                                 ████   ███                        ███    ███
-    ░░███░░░░░███░░███                                ░░███  ░░░                        ███    ░░███
-     ░███    ░███ ░███  █████ ████ ████████   ██████   ░███  ████   █████████  ██████  ███      ░░███
-     ░██████████  ░███ ░░███ ░███ ░░███░░███ ░░░░░███  ░███ ░░███  ░█░░░░███  ███░░███░███       ░███
-     ░███░░░░░░   ░███  ░███ ░███  ░███ ░░░   ███████  ░███  ░███  ░   ███░  ░███████ ░███       ░███
-     ░███         ░███  ░███ ░███  ░███      ███░░███  ░███  ░███    ███░   █░███░░░  ░░███      ███
-     █████        █████ ░░████████ █████    ░░████████ █████ █████  █████████░░██████  ░░███    ██░
-    ░░░░░        ░░░░░   ░░░░░░░░ ░░░░░      ░░░░░░░░ ░░░░░ ░░░░░  ░░░░░░░░░  ░░░░░░    ░░░    ░░░
- */
-
 static std::string Pluralize(const std::string& s) {
     // Make the name plural by tacking a 's' at the right spot which is usually in the end of the string,
     // but always before any "of" or "make of".
 
-    // Put a placeholder "\001" there first, so we can use it later to decide the correct suffix depending on the word.
+    // Put a placeholder "\001" there first, so we can use it 
+	// later to decide the correct suffix depending on the word.
     auto temp = std::regex_replace(s, R"(^(.*?)( (?:\(|of\b|made of\b).*)?$)"_r, "$1" "\001" "$2");
 
     // The correct form of plural suffix depends on how the word ends.
@@ -99,17 +57,6 @@ static std::string Pluralize(const std::string& s) {
     #undef REPLACE
 }
 
-/*
-       █████████       █████     █████   █████████              █████     ███           ████             ███    ███
-      ███░░░░░███     ░░███     ░░███   ███░░░░░███            ░░███     ░░░           ░░███            ███    ░░███
-     ░███    ░███   ███████   ███████  ░███    ░███  ████████  ███████   ████   ██████  ░███   ██████  ███      ░░███
-     ░███████████  ███░░███  ███░░███  ░███████████ ░░███░░███░░░███░   ░░███  ███░░███ ░███  ███░░███░███       ░███
-     ░███░░░░░███ ░███ ░███ ░███ ░███  ░███░░░░░███  ░███ ░░░   ░███     ░███ ░███ ░░░  ░███ ░███████ ░███       ░███
-     ░███    ░███ ░███ ░███ ░███ ░███  ░███    ░███  ░███       ░███ ███ ░███ ░███  ███ ░███ ░███░░░  ░░███      ███
-     █████   █████░░████████░░████████ █████   █████ █████      ░░█████  █████░░██████  █████░░██████  ░░███    ██░
-    ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░░░░ ░░░░░   ░░░░░ ░░░░░        ░░░░░  ░░░░░  ░░░░░░  ░░░░░  ░░░░░░    ░░░    ░░░
-*/
-
 static std::string AddArticle(const std::string& s, bool definite = false) {
     std::string p = RemoveArticle(s);
     if (definite) return "the " + p;
@@ -119,34 +66,12 @@ static std::string AddArticle(const std::string& s, bool definite = false) {
     return (std::regex_search(p, "^[aeiou]"_r) ? "an " : "a ") + p;
 }
 
-/*
-     █████  █████   █████████  ███████████  ███                     █████      ███    ███
-    ░░███  ░░███   ███░░░░░███░░███░░░░░░█ ░░░                     ░░███      ███    ░░███
-     ░███   ░███  ███     ░░░  ░███   █ ░  ████  ████████   █████  ███████   ███      ░░███
-     ░███   ░███ ░███          ░███████   ░░███ ░░███░░███ ███░░  ░░░███░   ░███       ░███
-     ░███   ░███ ░███          ░███░░░█    ░███  ░███ ░░░ ░░█████   ░███    ░███       ░███
-     ░███   ░███ ░░███     ███ ░███  ░     ░███  ░███      ░░░░███  ░███ ███░░███      ███
-     ░░████████   ░░█████████  █████       █████ █████     ██████   ░░█████  ░░███    ██░
-      ░░░░░░░░     ░░░░░░░░░  ░░░░░       ░░░░░ ░░░░░     ░░░░░░     ░░░░░    ░░░    ░░░
-*/
-
 static std::string UCFirst(const std::string& s) {
     return char(std::toupper(s[0])) + s.substr(1);
 }
 
 static const char* const numerals1To12[12 - 1 + 1] = {"one", "two", "three", "four", "five", "six", "seven",
-                                                      "eight", "nine", "ten", "eleven", "twelve"};
-
-/*
-     █████        ███           █████    █████   ███   █████  ███   █████    █████        █████████                                  █████              ███    ███
-    ░░███        ░░░           ░░███    ░░███   ░███  ░░███  ░░░   ░░███    ░░███        ███░░░░░███                                ░░███              ███    ░░███
-     ░███        ████   █████  ███████   ░███   ░███   ░███  ████  ███████   ░███████   ███     ░░░   ██████  █████ ████ ████████   ███████    █████  ███      ░░███
-     ░███       ░░███  ███░░  ░░░███░    ░███   ░███   ░███ ░░███ ░░░███░    ░███░░███ ░███          ███░░███░░███ ░███ ░░███░░███ ░░░███░    ███░░  ░███       ░███
-     ░███        ░███ ░░█████   ░███     ░░███  █████  ███   ░███   ░███     ░███ ░███ ░███         ░███ ░███ ░███ ░███  ░███ ░███   ░███    ░░█████ ░███       ░███
-     ░███      █ ░███  ░░░░███  ░███ ███  ░░░█████░█████░    ░███   ░███ ███ ░███ ░███ ░░███     ███░███ ░███ ░███ ░███  ░███ ░███   ░███ ███ ░░░░███░░███      ███
-     ███████████ █████ ██████   ░░█████     ░░███ ░░███      █████  ░░█████  ████ █████ ░░█████████ ░░██████  ░░████████ ████ █████  ░░█████  ██████  ░░███    ██░
-    ░░░░░░░░░░░ ░░░░░ ░░░░░░     ░░░░░       ░░░   ░░░      ░░░░░    ░░░░░  ░░░░ ░░░░░   ░░░░░░░░░   ░░░░░░    ░░░░░░░░ ░░░░ ░░░░░    ░░░░░  ░░░░░░    ░░░    ░░░
-*/
+													  "eight", "nine", "ten", "eleven", "twelve"};
 
 static std::string ListWithCounts(std::deque<std::string>&& items, bool oneLiner = true) {
     // Count the number of times each item occurs.
@@ -198,17 +123,6 @@ static const std::map<std::string, unsigned> ansiFeatures = {
     {"flush",   1}
 };
 
-/*
-     ███████████
-    ░█░░░███░░░█
-    ░   ░███  ░   ██████  ████████  █████████████
-        ░███     ███░░███░░███░░███░░███░░███░░███
-        ░███    ░███████  ░███ ░░░  ░███ ░███ ░███
-        ░███    ░███░░░   ░███      ░███ ░███ ░███
-        █████   ░░██████  █████     █████░███ █████
-       ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░
- */
-
 /* Support for color terminals. */
 struct Term {
     int color = 37;
@@ -253,17 +167,6 @@ struct Term {
         if (enabled) *this << "`dfl`";
     }
 } static term;
-
-/*
-     █████  █████                             ███████████               ██████
-    ░░███  ░░███                             ░░███░░░░░███             ███░░███
-     ░███  ███████    ██████  █████████████   ░███    ░███   ██████   ░███ ░░░   ██████  ████████   ██████  ████████    ██████   ██████
-     ░███ ░░░███░    ███░░███░░███░░███░░███  ░██████████   ███░░███ ███████    ███░░███░░███░░███ ███░░███░░███░░███  ███░░███ ███░░███
-     ░███   ░███    ░███████  ░███ ░███ ░███  ░███░░░░░███ ░███████ ░░░███░    ░███████  ░███ ░░░ ░███████  ░███ ░███ ░███ ░░░ ░███████
-     ░███   ░███ ███░███░░░   ░███ ░███ ░███  ░███    ░███ ░███░░░    ░███     ░███░░░   ░███     ░███░░░   ░███ ░███ ░███  ███░███░░░
-     █████  ░░█████ ░░██████  █████░███ █████ █████   █████░░██████   █████    ░░██████  █████    ░░██████  ████ █████░░██████ ░░██████
-    ░░░░░    ░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░ ░░░░░   ░░░░░  ░░░░░░   ░░░░░      ░░░░░░  ░░░░░      ░░░░░░  ░░░░ ░░░░░  ░░░░░░   ░░░░░░
-*/
 
 struct ItemReference {
     // Was this "all" without any specifiers?
@@ -349,17 +252,6 @@ struct ItemReference {
     }
 };
 
-/*
-       █████████                                          ███           ██████████              █████
-      ███░░░░░███                                        ░░░           ░░███░░░░███            ░░███
-     ███     ░░░   ██████  ████████    ██████  ████████  ████   ██████  ░███   ░░███  ██████   ███████    ██████
-    ░███          ███░░███░░███░░███  ███░░███░░███░░███░░███  ███░░███ ░███    ░███ ░░░░░███ ░░░███░    ░░░░░███
-    ░███    █████░███████  ░███ ░███ ░███████  ░███ ░░░  ░███ ░███ ░░░  ░███    ░███  ███████   ░███      ███████
-    ░░███  ░░███ ░███░░░   ░███ ░███ ░███░░░   ░███      ░███ ░███  ███ ░███    ███  ███░░███   ░███ ███ ███░░███
-     ░░█████████ ░░██████  ████ █████░░██████  █████     █████░░██████  ██████████  ░░████████  ░░█████ ░░████████
-      ░░░░░░░░░   ░░░░░░  ░░░░ ░░░░░  ░░░░░░  ░░░░░     ░░░░░  ░░░░░░  ░░░░░░░░░░    ░░░░░░░░    ░░░░░   ░░░░░░░░
- */
-
 /* First, define some stuff for our adventure. */
 struct GenericData {
     // These three generic fields will provide most of our data needs.
@@ -423,20 +315,6 @@ foodTypes[] = {
     {"b tofdlkf pe cvts",                 1, 0}
 }; // key: badcfehgjilknmporqtsvuxwzy
 
-/*
-       █████████                                            ███                     ███    ███
-      ███░░░░░███                                          ░░░                     ███    ░░███
-     ░███    ░███  ████████  ████████  ████████   ██████   ████   █████   ██████  ███      ░░███
-     ░███████████ ░░███░░███░░███░░███░░███░░███ ░░░░░███ ░░███  ███░░   ███░░███░███       ░███
-     ░███░░░░░███  ░███ ░███ ░███ ░███ ░███ ░░░   ███████  ░███ ░░█████ ░███████ ░███       ░███
-     ░███    ░███  ░███ ░███ ░███ ░███ ░███      ███░░███  ░███  ░░░░███░███░░░  ░░███      ███
-     █████   █████ ░███████  ░███████  █████    ░░████████ █████ ██████ ░░██████  ░░███    ██░
-    ░░░░░   ░░░░░  ░███░░░   ░███░░░  ░░░░░      ░░░░░░░░ ░░░░░ ░░░░░░   ░░░░░░    ░░░    ░░░
-                   ░███      ░███
-                   █████     █████
-                  ░░░░░     ░░░░░
-*/
-
 // Determine how well the player character could eat by selling all their treasures.
 static std::string Appraise(double value, int v = 1, std::size_t maxi = 3) {
     std::deque<std::string> list; redo:
@@ -451,20 +329,6 @@ static std::string Appraise(double value, int v = 1, std::size_t maxi = 3) {
     if (list.empty()) return "nothing at all";
     return ListWithCounts(std::move(list));
 }
-
-/*
-     █████  █████                             ███████████
-    ░░███  ░░███                             ░█░░░███░░░█
-     ░███  ███████    ██████  █████████████  ░   ░███  ░  █████ ████ ████████   ██████
-     ░███ ░░░███░    ███░░███░░███░░███░░███     ░███    ░░███ ░███ ░░███░░███ ███░░███
-     ░███   ░███    ░███████  ░███ ░███ ░███     ░███     ░███ ░███  ░███ ░███░███████
-     ░███   ░███ ███░███░░░   ░███ ░███ ░███     ░███     ░███ ░███  ░███ ░███░███░░░
-     █████  ░░█████ ░░██████  █████░███ █████    █████    ░░███████  ░███████ ░░██████
-    ░░░░░    ░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░    ░░░░░      ░░░░░███  ░███░░░   ░░░░░░
-                                                           ███ ░███  ░███
-                                                          ░░██████   █████
-                                                           ░░░░░░   ░░░░░
- */
 
 struct ItemType {
     // Any item has these three attributes.
@@ -490,20 +354,6 @@ struct ItemType {
         return constant * buildTypes[build].worth * itemTypes[type].worth * condTypes[condition].worth;
     }
 };
-
-/*
-     ██████████
-    ░░███░░░░░█
-     ░███  █ ░   ████████
-     ░██████    ███░░███
-     ░███░░█   ░███ ░███
-     ░███ ░   █░███ ░███
-     ██████████░░███████
-    ░░░░░░░░░░  ░░░░░███
-                    ░███
-                    █████
-                   ░░░░░
- */
 
 // Collection of items and money, either in character's pocket, on the ground, or in a container.
 struct Eq {
@@ -648,6 +498,82 @@ struct Eq {
         // Give up if nothing matched.
         return -1;
     }
+
+    // Move items.
+    //      target = Where to move them to.
+    //      what   = What to move.
+    // Result: List of everthing moved & not moved per request.
+    // For list of accepted item names, check findMoney() and finditem().
+    // If any of the individual moves fails, no move is performed.
+    struct MoveResult {
+        std::deque<std::string> moved;
+        std::deque<std::string> notFound;
+    };
+    MoveResult Move(Eq& target, const ItemReference& what) {
+        MoveResult result;
+        // Make backup of both parties of the move.
+        Eq targetBackup = target, meBackup = *this;
+
+        // Deal with the entire list of sub-requests.
+        for (const auto& w : what.refs) {
+            bool foundItem = false, foundMoney = false, all = !w.index;
+
+            // Try finding items matching the description.
+            // Do in two passes. First check if the request is satisfiable, and then enact it.
+            for (int round = 1; round <= 2; ++round) {
+                long remainingItems = w.amount ? w.amount : 1;
+                for (long itemId = 0; (itemId = findItem(w, itemId)) >= 0; ) {
+                    if (round == 2) {
+                        std::string name = AddArticle(items[itemId].Name(0, 1));
+                        // Append the name of moved item to the move list.
+                        result.moved.push_back(name);
+                        // Move the item from our list to the target list.
+                        target.items.push_front(items[itemId]);
+                        items.erase(items.begin() + itemId);
+                    }
+                    else ++itemId;
+
+                    foundItem = true;
+                    if (!all && --remainingItems <= 0) break;
+                }
+                // Get nothing, if the user explicityly specified e.g.
+                // "get 3 shirts" but there was only 2 on the ground.
+                if (round == 1 && foundItem && !all && remainingItems > 0) {
+                    foundItem = false;
+                    break;
+                }
+            }
+
+            // Then do the same for money in the same manner.
+            for (int round = 1; round <= 2; ++round) {
+                long remainingMoney= w.amount ? w.amount : 0x7FFFFFFF1;
+                for (long moneyId = 0; (moneyId = findMoney(w, moneyId)) >= 0; ) {
+                    // Calculate how many coins we can actually pick up.
+                    long getMoney = std::min(remainingMoney, money[moneyId]);
+                    if (getMoney <= 0) break;
+
+                    if (round == 2) {
+                        std::string name = AddArticle(items[itemId].Name(0, 1));
+                        // Append the name of moved item to the move list.
+                        result.moved.push_back(name);
+                        // Move the item from our list to the target list.
+                        target.items.push_front(items[itemId]);
+                        items.erase(items.begin() + itemId);
+                    }
+                    else ++itemId;
+
+                    foundItem = true;
+                    if (!all && --remainingItems <= 0) break;
+                }
+                // Get nothing, if the user explicityly specified e.g.
+                // "get 3 shirts" but there was only 2 on the ground.
+                if (round == 1 && foundItem && !all && remainingItems > 0) {
+                    foundItem = false;
+                    break;
+                }
+            }
+        }
+    }
 } static eq;
 
 std::string ItemType::GetType() const {
@@ -680,17 +606,6 @@ std::string ItemType::Look_(bool specific) const {
     return common + info;
 }
 
-/*
-     ███████████
-    ░░███░░░░░███
-     ░███    ░███   ██████   ██████  █████████████
-     ░██████████   ███░░███ ███░░███░░███░░███░░███
-     ░███░░░░░███ ░███ ░███░███ ░███ ░███ ░███ ░███
-     ░███    ░███ ░███ ░███░███ ░███ ░███ ░███ ░███
-     █████   █████░░██████ ░░██████  █████░███ █████
-    ░░░░░   ░░░░░  ░░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░
- */
-
 // Any particular room in the puzzle may contain the following (Every cell is a room):
 struct Room {
     std::size_t wall = 0, env = 0;      // Indexs.
@@ -698,18 +613,6 @@ struct Room {
     Eq items;                           // What is lying on the floor.
 // Create a model "default" room based on empty definitions.
 } static const defaultRoom;
-
-
-/*
-     ██████   ██████
-    ░░██████ ██████
-     ░███░█████░███   ██████    █████████  ██████
-     ░███░░███ ░███  ░░░░░███  ░█░░░░███  ███░░███
-     ░███ ░░░  ░███   ███████  ░   ███░  ░███████
-     ░███      ░███  ███░░███    ███░   █░███░░░
-     █████     █████░░████████  █████████░░██████
-    ░░░░░     ░░░░░  ░░░░░░░░  ░░░░░░░░░  ░░░░░░
- */
 
 struct Maze {
     // A maze contains rooms.
@@ -753,35 +656,10 @@ struct Maze {
 // Player's location and life.
 static long x = 0, y = 0, life = 1000;
 
-/*
-       █████████                       ██████   ██████                               ███████████            ███    ███
-      ███░░░░░███                     ░░██████ ██████                               ░█░░░███░░░█           ███    ░░███
-     ███     ░░░   ██████   ████████   ░███░█████░███   ██████  █████ █████  ██████ ░   ░███  ░   ██████  ███      ░░███
-    ░███          ░░░░░███ ░░███░░███  ░███░░███ ░███  ███░░███░░███ ░░███  ███░░███    ░███     ███░░███░███       ░███
-    ░███           ███████  ░███ ░███  ░███ ░░░  ░███ ░███ ░███ ░███  ░███ ░███████     ░███    ░███ ░███░███       ░███
-    ░░███     ███ ███░░███  ░███ ░███  ░███      ░███ ░███ ░███ ░░███ ███  ░███░░░      ░███    ░███ ░███░░███      ███
-     ░░█████████ ░░████████ ████ █████ █████     █████░░██████   ░░█████   ░░██████     █████   ░░██████  ░░███    ██░
-      ░░░░░░░░░   ░░░░░░░░ ░░░░ ░░░░░ ░░░░░     ░░░░░  ░░░░░░     ░░░░░     ░░░░░░     ░░░░░     ░░░░░░    ░░░    ░░░
- */
-
 static bool CanMoveTo(long whereX, long whereY, const Room& model = defaultRoom) {
     if (!maze.GenerateRoom(whereX, whereY, model, 0).wall) return true;
     return false;
 }
-
-/*
-      █████████                                                 ███████████                                               ███    ███
-     ███░░░░░███                                               ░░███░░░░░███                                             ███    ░░███
-    ░███    ░░░  ████████   ██████   █████ ███ █████ ████████   ░███    ░███   ██████   ██████  █████████████    █████  ███      ░░███
-    ░░█████████ ░░███░░███ ░░░░░███ ░░███ ░███░░███ ░░███░░███  ░██████████   ███░░███ ███░░███░░███░░███░░███  ███░░  ░███       ░███
-     ░░░░░░░░███ ░███ ░███  ███████  ░███ ░███ ░███  ░███ ░███  ░███░░░░░███ ░███ ░███░███ ░███ ░███ ░███ ░███ ░░█████ ░███       ░███
-     ███    ░███ ░███ ░███ ███░░███  ░░███████████   ░███ ░███  ░███    ░███ ░███ ░███░███ ░███ ░███ ░███ ░███  ░░░░███░░███      ███
-    ░░█████████  ░███████ ░░████████  ░░████░████    ████ █████ █████   █████░░██████ ░░██████  █████░███ █████ ██████  ░░███    ██░
-     ░░░░░░░░░   ░███░░░   ░░░░░░░░    ░░░░ ░░░░    ░░░░ ░░░░░ ░░░░░   ░░░░░  ░░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░ ░░░░░░    ░░░    ░░░
-                 ░███
-                 █████
-                ░░░░░
- */
 
 static Room& SpawnRooms(long whereX, long whereY, const Room& model = defaultRoom) {
     Room& room = maze.GenerateRoom(whereX, whereY, model, 0);
@@ -797,19 +675,6 @@ static Room& SpawnRooms(long whereX, long whereY, const Room& model = defaultRoo
     for (int o=1; o<6 && CanMoveTo(whereX-o, whereY, room); ++o) SPAWN_4_ROOMS(whereX-o, whereY);
     return room;
 }
-
-
-
-/*
-     █████                         █████        ███    ███
-    ░░███                         ░░███        ███    ░░███
-     ░███         ██████   ██████  ░███ █████ ███      ░░███
-     ░███        ███░░███ ███░░███ ░███░░███ ░███       ░███
-     ░███       ░███ ░███░███ ░███ ░██████░  ░███       ░███
-     ░███      █░███ ░███░███ ░███ ░███░░███ ░░███      ███
-     ███████████░░██████ ░░██████  ████ █████ ░░███    ██░
-    ░░░░░░░░░░░  ░░░░░░   ░░░░░░  ░░░░ ░░░░░   ░░░    ░░░
- */
 
 // This routine is responsible for providing the view for the player.
 // It also generates new maze data.
@@ -861,17 +726,6 @@ static void Look() {
     }
 }
 
-/*
-     ██████████            █████    █████        ███     ██████             ███    ███
-    ░░███░░░░░█           ░░███    ░░███        ░░░     ███░░███           ███    ░░███
-     ░███  █ ░   ██████   ███████   ░███        ████   ░███ ░░░   ██████  ███      ░░███
-     ░██████    ░░░░░███ ░░░███░    ░███       ░░███  ███████    ███░░███░███       ░███
-     ░███░░█     ███████   ░███     ░███        ░███ ░░░███░    ░███████ ░███       ░███
-     ░███ ░   █ ███░░███   ░███ ███ ░███      █ ░███   ░███     ░███░░░  ░░███      ███
-     ██████████░░████████  ░░█████  ███████████ █████  █████    ░░██████  ░░███    ██░
-    ░░░░░░░░░░  ░░░░░░░░    ░░░░░  ░░░░░░░░░░░ ░░░░░  ░░░░░      ░░░░░░    ░░░    ░░░
- */
-
 static void EatLife(long l) {
     const char* msg = nullptr;
     if (life>=800 && life-l<800) msg = "You are so hungry!\n";
@@ -880,20 +734,6 @@ static void EatLife(long l) {
     life -= l;
     if (msg) { term << "`alert`" << msg << "`reset`"; }
 }
-
-/*
-     ███████████                      ██████   ██████                               ███████████               ███    ███
-    ░█░░░███░░░█                     ░░██████ ██████                               ░░███░░░░░███             ███    ░░███
-    ░   ░███  ░  ████████  █████ ████ ░███░█████░███   ██████  █████ █████  ██████  ░███    ░███ █████ ████ ███      ░░███
-        ░███    ░░███░░███░░███ ░███  ░███░░███ ░███  ███░░███░░███ ░░███  ███░░███ ░██████████ ░░███ ░███ ░███       ░███
-        ░███     ░███ ░░░  ░███ ░███  ░███ ░░░  ░███ ░███ ░███ ░███  ░███ ░███████  ░███░░░░░███ ░███ ░███ ░███       ░███
-        ░███     ░███      ░███ ░███  ░███      ░███ ░███ ░███ ░░███ ███  ░███░░░   ░███    ░███ ░███ ░███ ░░███      ███
-        █████    █████     ░░███████  █████     █████░░██████   ░░█████   ░░██████  ███████████  ░░███████  ░░███    ██░
-       ░░░░░    ░░░░░       ░░░░░███ ░░░░░     ░░░░░  ░░░░░░     ░░░░░     ░░░░░░  ░░░░░░░░░░░    ░░░░░███   ░░░    ░░░
-                            ███ ░███                                                              ███ ░███
-                           ░░██████                                                              ░░██████
-                            ░░░░░░                                                                ░░░░░░
- */
 
 static bool TryMoveBy(int xd, int yd) {
     // If we are moving diagonally, ensure that there is an actual path.
@@ -907,16 +747,11 @@ static bool TryMoveBy(int xd, int yd) {
     return true;
 }
 
-/*
-     █████                         █████        █████████    █████      ███    ███
-    ░░███                         ░░███        ███░░░░░███  ░░███      ███    ░░███
-     ░███         ██████   ██████  ░███ █████ ░███    ░███  ███████   ███      ░░███
-     ░███        ███░░███ ███░░███ ░███░░███  ░███████████ ░░░███░   ░███       ░███
-     ░███       ░███ ░███░███ ░███ ░██████░   ░███░░░░░███   ░███    ░███       ░███
-     ░███      █░███ ░███░███ ░███ ░███░░███  ░███    ░███   ░███ ███░░███      ███
-     ███████████░░██████ ░░██████  ████ █████ █████   █████  ░░█████  ░░███    ██░
-    ░░░░░░░░░░░  ░░░░░░   ░░░░░░  ░░░░ ░░░░░ ░░░░░   ░░░░░    ░░░░░    ░░░    ░░░
-*/
+static void Inv() {
+    auto p = eq.Print(true);
+    if(!p.second) term << "You are carrying nothing.\n";
+    else               << p.first << "\n";
+}
 
 static void LookAt(const ItemReference& what, const ItemReference&) {
     const Room& room = maze.GenerateRoom(x, y, defaultRoom, 0);
@@ -978,17 +813,6 @@ static void LookAt(const ItemReference& what, const ItemReference&) {
     }
 }
 
-/*
-       █████████   ████   ███
-      ███░░░░░███ ░░███  ░░░
-     ░███    ░███  ░███  ████   ██████    █████
-     ░███████████  ░███ ░░███  ░░░░░███  ███░░
-     ░███░░░░░███  ░███  ░███   ███████ ░░█████
-     ░███    ░███  ░███  ░███  ███░░███  ░░░░███
-     █████   █████ █████ █████░░████████ ██████
-    ░░░░░   ░░░░░ ░░░░░ ░░░░░  ░░░░░░░░ ░░░░░░
- */
-
 struct Alias {
     std::regex  pattern;
     std::string replacement;
@@ -1012,17 +836,6 @@ struct Alias {
     { R"(^\s+)"_r,                      ""                },
     { R"(\s+$)"_r,                      ""                },
 };
-
-/*
-       █████████                                                                    █████ ███████████                          █████
-      ███░░░░░███                                                                  ░░███ ░░███░░░░░███                        ░░███
-     ███     ░░░   ██████  █████████████   █████████████    ██████   ████████    ███████  ░███    ░███   ██████   ██████    ███████   ██████  ████████
-    ░███          ███░░███░░███░░███░░███ ░░███░░███░░███  ░░░░░███ ░░███░░███  ███░░███  ░██████████   ███░░███ ░░░░░███  ███░░███  ███░░███░░███░░███
-    ░███         ░███ ░███ ░███ ░███ ░███  ░███ ░███ ░███   ███████  ░███ ░███ ░███ ░███  ░███░░░░░███ ░███████   ███████ ░███ ░███ ░███████  ░███ ░░░
-    ░░███     ███░███ ░███ ░███ ░███ ░███  ░███ ░███ ░███  ███░░███  ░███ ░███ ░███ ░███  ░███    ░███ ░███░░░   ███░░███ ░███ ░███ ░███░░░   ░███
-     ░░█████████ ░░██████  █████░███ █████ █████░███ █████░░████████ ████ █████░░████████ █████   █████░░██████ ░░████████░░████████░░██████  █████
-      ░░░░░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░ ░░░░░ ░░░ ░░░░░  ░░░░░░░░ ░░░░ ░░░░░  ░░░░░░░░ ░░░░░   ░░░░░  ░░░░░░   ░░░░░░░░  ░░░░░░░░  ░░░░░░  ░░░░░
- */
 
 // A command line history and input engine.
 struct CommandReader {
@@ -1099,17 +912,6 @@ struct CommandReader {
         }
     }
 };
-
-/*
-                                ███               ███    ███
-                               ░░░               ███    ░░███
-     █████████████    ██████   ████  ████████   ███      ░░███
-    ░░███░░███░░███  ░░░░░███ ░░███ ░░███░░███ ░███       ░███
-     ░███ ░███ ░███   ███████  ░███  ░███ ░███ ░███       ░███
-     ░███ ░███ ░███  ███░░███  ░███  ░███ ░███ ░░███      ███
-     █████░███ █████░░████████ █████ ████ █████ ░░███    ██░
-    ░░░░░ ░░░ ░░░░░  ░░░░░░░░ ░░░░░ ░░░░ ░░░░░   ░░░    ░░░
- */
 
 int main() {
     term << "`reset`Welcome to the treasure dungeon.\n";
