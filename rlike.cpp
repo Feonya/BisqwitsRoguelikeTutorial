@@ -30,7 +30,6 @@ static std::regex operator""_r(const char* pattern, std::size_t length) {
 
 // English language word manipulations:
 
-
 static std::string RemoveArticle(const std::string& s) {
     return std::regex_replace(s, "^(?:a|an|the) +"_r, "");
 }
@@ -39,8 +38,8 @@ static std::string Pluralize(const std::string& s) {
     // Make the name plural by tacking a 's' at the right spot which is usually in the end of the string,
     // but always before any "of" or "make of".
 
-    // Put a placeholder "\001" there first, so we can use it 
-	// later to decide the correct suffix depending on the word.
+    // Put a placeholder "\001" there first, so we can use it
+    // later to decide the correct suffix depending on the word.
     auto temp = std::regex_replace(s, R"(^(.*?)( (?:\(|of\b|made of\b).*)?$)"_r, "$1" "\001" "$2");
 
     // The correct form of plural suffix depends on how the word ends.
@@ -71,7 +70,7 @@ static std::string UCFirst(const std::string& s) {
 }
 
 static const char* const numerals1To12[12 - 1 + 1] = {"one", "two", "three", "four", "five", "six", "seven",
-													  "eight", "nine", "ten", "eleven", "twelve"};
+                                                      "eight", "nine", "ten", "eleven", "twelve"};
 
 static std::string ListWithCounts(std::deque<std::string>&& items, bool oneLiner = true) {
     // Count the number of times each item occurs.
@@ -522,7 +521,7 @@ struct Eq {
             // Do in two passes. First check if the request is satisfiable, and then enact it.
             for (int round = 1; round <= 2; ++round) {
                 long remainingItems = w.amount ? w.amount : 1;
-                for (long itemId = 0; (itemId = findItem(w, itemId)) >= 0; ) {
+                for (long itemId = 0; (itemId = FindItem(w, itemId)) >= 0; ) {
                     if (round == 2) {
                         std::string name = AddArticle(items[itemId].Name(0, 1));
                         // Append the name of moved item to the move list.
@@ -546,33 +545,62 @@ struct Eq {
 
             // Then do the same for money in the same manner.
             for (int round = 1; round <= 2; ++round) {
-                long remainingMoney= w.amount ? w.amount : 0x7FFFFFFF1;
-                for (long moneyId = 0; (moneyId = findMoney(w, moneyId)) >= 0; ) {
+                long remainingMoney = w.amount ? w.amount : 0x7FFFFFFF1;
+                // Then check out if there's money that matches this description.
+                for (long moneyId = 0; (moneyId = FindMoney(w, moneyId)) >= 0; ) {
                     // Calculate how many coins we can actually pick up.
                     long getMoney = std::min(remainingMoney, money[moneyId]);
                     if (getMoney <= 0) break;
 
                     if (round == 2) {
-                        std::string name = AddArticle(items[itemId].Name(0, 1));
                         // Append the name of moved item to the move list.
-                        result.moved.push_back(name);
+                        result.moved.push_back(std::to_string(getMoney) +
+                                               moneyTypes[moneyId].name +
+                                               (getMoney == 1 ? "coin" : "coins"));
                         // Move the item from our list to the target list.
-                        target.items.push_front(items[itemId]);
-                        items.erase(items.begin() + itemId);
+                        target.money[moneyId] += getMoney;
+                        money[moneyId] -= getMoney;
                     }
-                    else ++itemId;
+                    else ++moneyId;
 
                     foundItem = true;
-                    if (!all && --remainingItems <= 0) break;
+                    remainingMoney -= getMoney;
+                    if (!all && (!w.amount || remainingMoney <= 0)) break;
                 }
                 // Get nothing, if the user explicityly specified e.g.
                 // "get 3 shirts" but there was only 2 on the ground.
-                if (round == 1 && foundItem && !all && remainingItems > 0) {
-                    foundItem = false;
+                if (round == 1 && foundMoney && !all && remainingMoney > 0) {
+                    foundMoney = false;
                     break;
                 }
             }
+
+            if (!foundItem && !foundMoney && !what.everything)
+                result.notFound.push_back(w.what);
         }
+
+        if (!what.except.empty()) {
+            // Move all the "except" stuff back.
+            ItemReference takeBack("");
+            takeBack.refs = what.except;
+            auto r = target.Move(*this, takeBack);
+            // Merge the "notFound"s.
+            for (const auto& s : r.notFound) result.notFound.push_back(s);
+            // Remove those moveds that were in "except".
+            std::set<std::string> m(r.moved.begin(), r.moved.end());
+            result.moved.erase(
+                std::remove_if(result.moved.begin(), result.moved.end(),
+                    [&m](const std::string& s) { return m.find(s) != m.end(); }),
+                result.moved.end());
+        }
+
+        if (!result.notFound.empty()) result.moved.clear();
+        if (result.moved.empty()) {
+            // Restore backup.
+            target = targetBackup;
+            *this = meBackup;
+        }
+        return result;
     }
 } static eq;
 
@@ -750,7 +778,7 @@ static bool TryMoveBy(int xd, int yd) {
 static void Inv() {
     auto p = eq.Print(true);
     if(!p.second) term << "You are carrying nothing.\n";
-    else               << p.first << "\n";
+    else          term << p.first << "\n";
 }
 
 static void LookAt(const ItemReference& what, const ItemReference&) {

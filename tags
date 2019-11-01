@@ -4,20 +4,41 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddArticle	original src/rlike-phase4.cc	/^            names.push_back( AddArticle(i.name(0, 1)) );$/;"	p	file:
 AddArticle	original src/rlike-phase4.cc	/^static std::string AddArticle(const std::string& s, bool definite = false)$/;"	f	file:
+AddArticle	original src/rlike-phase5.cc	/^            names.push_back( AddArticle(i.name(0, 1)) );$/;"	p	file:
 AddArticle	original src/rlike-phase5.cc	/^static std::string AddArticle(const std::string& s, bool definite = false)$/;"	f	file:
+AddArticle	original src/rlike-phase6.cc	/^                    % AddArticle(container.name(0,1), true);$/;"	p	file:
+AddArticle	original src/rlike-phase6.cc	/^            names.push_back( AddArticle(i.name(0, 1)) );$/;"	p	file:
+AddArticle	original src/rlike-phase6.cc	/^        % AddArticle(open_item.name(0,0), true)$/;"	p	file:
+AddArticle	original src/rlike-phase6.cc	/^        term << "You cannot put things in %s.\\n"_f % AddArticle(container.name(0,1), true);$/;"	p	file:
 AddArticle	original src/rlike-phase6.cc	/^static std::string AddArticle(const std::string& s, bool definite = false)$/;"	f	file:
+AddArticle	original src/rlike-phase7-bugfix.cc	/^                        % AddArticle(container.name(0,1), true);$/;"	p	file:
+AddArticle	original src/rlike-phase7-bugfix.cc	/^            names.push_back( AddArticle(i.name(0, 1)) );$/;"	p	file:
+AddArticle	original src/rlike-phase7-bugfix.cc	/^            term << "You cannot put things in %s.\\n"_f % AddArticle(container.name(0,1), true);$/;"	p	file:
+AddArticle	original src/rlike-phase7-bugfix.cc	/^        % AddArticle(open_item.name(0,0), true)$/;"	p	file:
 AddArticle	original src/rlike-phase7-bugfix.cc	/^static std::string AddArticle(const std::string& s, bool definite = false)$/;"	f	file:
+AddArticle	original src/rlike-phase7-video_ends_here.cc	/^                        % AddArticle(container.name(0,1), true);$/;"	p	file:
+AddArticle	original src/rlike-phase7-video_ends_here.cc	/^            names.push_back( AddArticle(i.name(0, 1)) );$/;"	p	file:
+AddArticle	original src/rlike-phase7-video_ends_here.cc	/^            term << "You cannot put things in %s.\\n"_f % AddArticle(container.name(0,1), true);$/;"	p	file:
+AddArticle	original src/rlike-phase7-video_ends_here.cc	/^        % AddArticle(open_item.name(0,0), true)$/;"	p	file:
 AddArticle	original src/rlike-phase7-video_ends_here.cc	/^static std::string AddArticle(const std::string& s, bool definite = false)$/;"	f	file:
+AddArticle	rlike.cpp	/^            names.push_back(AddArticle(i.Name(0, 1)));$/;"	p	file:
 AddArticle	rlike.cpp	/^static std::string AddArticle(const std::string& s, bool definite = false) {$/;"	f	file:
-Alias	original src/rlike-phase2.cc	/^struct Alias$/;"	s	file:
-Alias	original src/rlike-phase3.cc	/^struct Alias$/;"	s	file:
-Alias	original src/rlike-phase4.cc	/^struct Alias$/;"	s	file:
-Alias	original src/rlike-phase5.cc	/^struct Alias$/;"	s	file:
-Alias	original src/rlike-phase6.cc	/^struct Alias$/;"	s	file:
-Alias	original src/rlike-phase7-bugfix.cc	/^struct Alias$/;"	s	file:
-Alias	original src/rlike-phase7-video_ends_here.cc	/^struct Alias$/;"	s	file:
-Alias	rlike.cpp	/^struct Alias {$/;"	s	file:
+AddItems	original src/rlike-phase4.cc	/^        auto AddItems = [&output](const std::pair<std::string,float>& src)$/;"	l
+AddItems	original src/rlike-phase5.cc	/^        auto AddItems = [&output](const std::pair<std::string,float>& src)$/;"	l
+AddItems	original src/rlike-phase6.cc	/^        auto AddItems = [&output](const std::pair<std::string,float>& src)$/;"	l
+AddItems	original src/rlike-phase7-bugfix.cc	/^        auto AddItems = [&output](const std::pair<std::string,float>& src)$/;"	l
+AddItems	original src/rlike-phase7-video_ends_here.cc	/^        auto AddItems = [&output](const std::pair<std::string,float>& src)$/;"	l
+AddItems	rlike.cpp	/^        auto AddItems = [&output](const std::pair<std::string, float>& src) {$/;"	l
+Alias	original src/rlike-phase2.cc	/^struct Alias$/;"	s	struct:Maze	file:
+Alias	original src/rlike-phase3.cc	/^struct Alias$/;"	s	struct:Maze	file:
+Alias	original src/rlike-phase4.cc	/^struct Alias$/;"	s	struct:Maze	file:
+Alias	original src/rlike-phase5.cc	/^struct Alias$/;"	s	struct:Maze	file:
+Alias	original src/rlike-phase6.cc	/^struct Alias$/;"	s	struct:Maze	file:
+Alias	original src/rlike-phase7-bugfix.cc	/^struct Alias$/;"	s	struct:Maze	file:
+Alias	original src/rlike-phase7-video_ends_here.cc	/^struct Alias$/;"	s	struct:Maze	file:
+Alias	rlike.cpp	/^struct Alias {$/;"	s	struct:Maze	file:
 Appraise	original src/rlike-phase4.cc	/^static std::string Appraise(double value, int v=1, std::size_t maxi=3)$/;"	f	file:
 Appraise	original src/rlike-phase5.cc	/^static std::string Appraise(double value, int v=1, std::size_t maxi=3)$/;"	f	file:
 Appraise	original src/rlike-phase6.cc	/^static std::string Appraise(double value, int v=1, std::size_t maxi=3)$/;"	f	file:
@@ -40,15 +61,16 @@ BuildTypes	original src/rlike-phase6.cc	/^BuildTypes[] =$/;"	v	file:
 BuildTypes	original src/rlike-phase7-bugfix.cc	/^BuildTypes[] =$/;"	v	file:
 BuildTypes	original src/rlike-phase7-video_ends_here.cc	/^BuildTypes[] =$/;"	v	file:
 Burden	rlike.cpp	/^    long Burden() const {$/;"	f	struct:Eq
-CanMoveTo	original src/rlike-phase1.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	original src/rlike-phase2.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	original src/rlike-phase3.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	original src/rlike-phase4.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	original src/rlike-phase5.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	original src/rlike-phase6.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	original src/rlike-phase7-bugfix.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	original src/rlike-phase7-video_ends_here.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-CanMoveTo	rlike.cpp	/^static bool CanMoveTo(long whereX, long whereY, const Room& model = defaultRoom) {$/;"	f	file:
+CanMoveTo	original src/rlike-phase1.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	original src/rlike-phase2.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	original src/rlike-phase3.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	original src/rlike-phase4.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	original src/rlike-phase5.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	original src/rlike-phase6.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	original src/rlike-phase7-bugfix.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	original src/rlike-phase7-video_ends_here.cc	/^static bool CanMoveTo(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+CanMoveTo	rlike.cpp	/^        << "`reset`Exits:`exit`" << (CanMoveTo(x,y-1) ? " north" : "")$/;"	p	file:
+CanMoveTo	rlike.cpp	/^static bool CanMoveTo(long whereX, long whereY, const Room& model = defaultRoom) {$/;"	f	struct:Maze
 Categorize	original src/printf.cc	/^    class Categorize { };\/\/: public std::integral_constant<int,0> { };$/;"	c	namespace:__anon1	file:
 Categorize	original src/printf.cc	/^    template<> class Categorize<const char*,false,false>: public std::integral_constant<int,3> { };$/;"	c	namespace:__anon1	file:
 Categorize	original src/printf.cc	/^    template<> class Categorize<const char16_t*,false,false>: public std::integral_constant<int,3> { };$/;"	c	namespace:__anon1	file:
@@ -59,15 +81,7 @@ Categorize	original src/printf.cc	/^    template<> class Categorize<const wchar_
 Categorize	original src/printf.cc	/^    template<typename T> class Categorize<T,false,true>: public std::integral_constant<int,2> { };$/;"	c	namespace:__anon1	file:
 Categorize	original src/printf.cc	/^    template<typename T> class Categorize<T,true,false>: public std::integral_constant<int,1> { };$/;"	c	namespace:__anon1	file:
 Categorize	original src/printf.cc	/^    template<typename T> class Categorize<std::basic_string<T>,false,false>: public std::integral_constant<int,4> { };$/;"	c	namespace:__anon1	file:
-Char	original src/rlike-phase1.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	original src/rlike-phase2.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	original src/rlike-phase3.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	original src/rlike-phase4.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	original src/rlike-phase5.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	original src/rlike-phase6.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	original src/rlike-phase7-bugfix.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	original src/rlike-phase7-video_ends_here.cc	/^    char Char(long x,long y) const$/;"	f	struct:Maze
-Char	rlike.cpp	/^    char Char(long x, long y) const {$/;"	f	struct:Maze
+Clear	rlike.cpp	/^            room.items.Clear();$/;"	p	file:
 Clear	rlike.cpp	/^    void Clear(std::size_t n = 0) {$/;"	f	struct:Eq
 ColorMask	original src/rlike-phase3.cc	/^enum { Normal=64, Bold=128, ColorMask=63 };$/;"	e	enum:__anon3	file:
 ColorMask	original src/rlike-phase4.cc	/^enum { Normal=64, Bold=128, ColorMask=63 };$/;"	e	enum:__anon5	file:
@@ -76,14 +90,14 @@ ColorMask	original src/rlike-phase6.cc	/^enum { Normal=64, Bold=128, ColorMask=6
 ColorMask	original src/rlike-phase7-bugfix.cc	/^enum { Normal=64, Bold=128, ColorMask=63 };$/;"	e	enum:__anon11	file:
 ColorMask	original src/rlike-phase7-video_ends_here.cc	/^enum { Normal=64, Bold=128, ColorMask=63 };$/;"	e	enum:__anon13	file:
 ColorMask	rlike.cpp	/^enum { Normal = 64, Bold = 128, ColorMask = 63 };$/;"	e	enum:__anon15	file:
-CommandReader	original src/rlike-phase2.cc	/^struct CommandReader$/;"	s	file:
-CommandReader	original src/rlike-phase3.cc	/^struct CommandReader$/;"	s	file:
-CommandReader	original src/rlike-phase4.cc	/^struct CommandReader$/;"	s	file:
-CommandReader	original src/rlike-phase5.cc	/^struct CommandReader$/;"	s	file:
-CommandReader	original src/rlike-phase6.cc	/^struct CommandReader$/;"	s	file:
-CommandReader	original src/rlike-phase7-bugfix.cc	/^struct CommandReader$/;"	s	file:
-CommandReader	original src/rlike-phase7-video_ends_here.cc	/^struct CommandReader$/;"	s	file:
-CommandReader	rlike.cpp	/^struct CommandReader {$/;"	s	file:
+CommandReader	original src/rlike-phase2.cc	/^struct CommandReader$/;"	s	struct:Maze	file:
+CommandReader	original src/rlike-phase3.cc	/^struct CommandReader$/;"	s	struct:Maze	file:
+CommandReader	original src/rlike-phase4.cc	/^struct CommandReader$/;"	s	struct:Maze	file:
+CommandReader	original src/rlike-phase5.cc	/^struct CommandReader$/;"	s	struct:Maze	file:
+CommandReader	original src/rlike-phase6.cc	/^struct CommandReader$/;"	s	struct:Maze	file:
+CommandReader	original src/rlike-phase7-bugfix.cc	/^struct CommandReader$/;"	s	struct:Maze	file:
+CommandReader	original src/rlike-phase7-video_ends_here.cc	/^struct CommandReader$/;"	s	struct:Maze	file:
+CommandReader	rlike.cpp	/^struct CommandReader {$/;"	s	struct:Maze	file:
 CondTypes	original src/rlike-phase4.cc	/^CondTypes[] =$/;"	v	file:
 CondTypes	original src/rlike-phase5.cc	/^CondTypes[] =$/;"	v	file:
 CondTypes	original src/rlike-phase6.cc	/^CondTypes[] =$/;"	v	file:
@@ -92,28 +106,47 @@ CondTypes	original src/rlike-phase7-video_ends_here.cc	/^CondTypes[] =$/;"	v	fil
 CountItems	rlike.cpp	/^    std::size_t CountItems() const {$/;"	f	struct:Eq
 DigitBufLo	original src/printf.cc	/^static const char DigitBufLo[16] = {'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};$/;"	v	file:
 DigitBufUp	original src/printf.cc	/^static const char DigitBufUp[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};$/;"	v	file:
+Do	original src/printf.cc	/^                PrintfFormatDo<double>::Do(arg, result, d);$/;"	p	class:__anon1::PrintfFormatDo	file:
+Do	original src/printf.cc	/^                PrintfFormatDo<long long>::Do($/;"	p	class:__anon1::PrintfFormatDo	file:
+Do	original src/printf.cc	/^                PrintfFormatDo<long long>::Do(arg, result, IntValue(part));$/;"	p	class:__anon1::PrintfFormatDo	file:
+Do	original src/printf.cc	/^                PrintfFormatDo<std::basic_string<ctype>>::Do($/;"	p	class:__anon1::PrintfFormatDo	file:
+Do	original src/printf.cc	/^        static void Do(PrintfFormatter::argsmall& arg, std::basic_string<char32_t> & result, T part);$/;"	p	struct:__anon1::PrintfFormatDo	file:
+Do	original src/printf.cc	/^        static void Do(PrintfFormatter::argsmall& arg, std::basic_string<char32_t> & result, const T& part);$/;"	p	struct:__anon1::PrintfFormatDo	file:
+Do	original src/printf.cc	/^    PrintfFormatDo<TT>::Do(a, state.result, part);$/;"	p	class:PrintfFormatDo	file:
 Do	original src/printf.cc	/^    void PrintfFormatDo<T,1>::Do(PrintfFormatter::argsmall& arg, std::basic_string<char32_t> & result, T part)$/;"	f	class:__anon1::PrintfFormatDo
 Do	original src/printf.cc	/^    void PrintfFormatDo<T,2>::Do(PrintfFormatter::argsmall& arg, std::basic_string<char32_t> & result, T part)$/;"	f	class:__anon1::PrintfFormatDo
 Do	original src/printf.cc	/^    void PrintfFormatDo<T,3>::Do(PrintfFormatter::argsmall& arg, std::basic_string<char32_t> & result, T part)$/;"	f	class:__anon1::PrintfFormatDo
 Do	original src/printf.cc	/^    void PrintfFormatDo<T,4>::Do(PrintfFormatter::argsmall& arg, std::basic_string<char32_t> & result, const T& part)$/;"	f	class:__anon1::PrintfFormatDo
+DoString	original src/printf.cc	/^                PrintfFormatDo<const char*>::DoString(arg, result, s.data(), s.size());$/;"	p	class:__anon1::PrintfFormatDo	file:
+DoString	original src/printf.cc	/^                PrintfFormatDo<const char*>::DoString(arg, result, s2.data(), s2.size());$/;"	p	class:__anon1::PrintfFormatDo	file:
+DoString	original src/printf.cc	/^                PrintfFormatDo<const char32_t*>::DoString(arg, result, &n, 1);$/;"	p	class:__anon1::PrintfFormatDo	file:
+DoString	original src/printf.cc	/^                PrintfFormatDo<const ctype*>::DoString(arg, result, part.data(), part.size() );$/;"	p	class:__anon1::PrintfFormatDo	file:
+DoString	original src/printf.cc	/^        static void DoString(PrintfFormatter::argsmall& arg, std::basic_string<char32_t> & result, T part, std::size_t length);$/;"	p	struct:__anon1::PrintfFormatDo	file:
 DoString	original src/printf.cc	/^    void PrintfFormatDo<T,3>::DoString($/;"	f	class:__anon1::PrintfFormatDo
 ENDS_WITH	rlike.cpp	49;"	d	file:
 ENDS_WITH	rlike.cpp	56;"	d	file:
-EatLife	original src/rlike-phase1.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	original src/rlike-phase2.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	original src/rlike-phase3.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	original src/rlike-phase4.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	original src/rlike-phase5.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	original src/rlike-phase6.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	original src/rlike-phase7-bugfix.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	original src/rlike-phase7-video_ends_here.cc	/^static void EatLife(long l)$/;"	f	file:
-EatLife	rlike.cpp	/^static void EatLife(long l) {$/;"	f	file:
+EatLife	original src/rlike-phase1.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	original src/rlike-phase2.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	original src/rlike-phase3.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	original src/rlike-phase4.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	original src/rlike-phase5.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	original src/rlike-phase6.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	original src/rlike-phase7-bugfix.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	original src/rlike-phase7-video_ends_here.cc	/^static void EatLife(long l)$/;"	f	struct:Maze
+EatLife	rlike.cpp	/^static void EatLife(long l) {$/;"	f	struct:Maze
+EnableDisable	original src/rlike-phase3.cc	/^        else if(rm(s, res, "ansi +(off|on)"_r))  term.EnableDisable(res[1]=="on");$/;"	p	file:
 EnableDisable	original src/rlike-phase3.cc	/^    void EnableDisable(bool state)$/;"	f	struct:Term
+EnableDisable	original src/rlike-phase4.cc	/^        else if(rm(s, res, "ansi +(off|on)"_r))  term.EnableDisable(res[1]=="on");$/;"	p	file:
 EnableDisable	original src/rlike-phase4.cc	/^    void EnableDisable(bool state)$/;"	f	struct:Term
+EnableDisable	original src/rlike-phase5.cc	/^        else if(rm(s, res, "ansi +(off|on)"_r))  term.EnableDisable(res[1]=="on");$/;"	p	file:
 EnableDisable	original src/rlike-phase5.cc	/^    void EnableDisable(bool state)$/;"	f	struct:Term
+EnableDisable	original src/rlike-phase6.cc	/^        else if(rm(s, res, "ansi +(off|on)"_r))  term.EnableDisable(res[1]=="on");$/;"	p	file:
 EnableDisable	original src/rlike-phase6.cc	/^    void EnableDisable(bool state)$/;"	f	struct:Term
+EnableDisable	original src/rlike-phase7-bugfix.cc	/^        else if(rm(s, res, "ansi +(off|on)"_r))  term.EnableDisable(res[1]=="on");$/;"	p	file:
 EnableDisable	original src/rlike-phase7-bugfix.cc	/^    void EnableDisable(bool state)$/;"	f	struct:Term
+EnableDisable	original src/rlike-phase7-video_ends_here.cc	/^        else if(rm(s, res, "ansi +(off|on)"_r))  term.EnableDisable(res[1]=="on");$/;"	p	file:
 EnableDisable	original src/rlike-phase7-video_ends_here.cc	/^    void EnableDisable(bool state)$/;"	f	struct:Term
+EnableDisable	rlike.cpp	/^        else if (RM(s, res, "ansi +(off|on)"_r)) term.EnableDisable(res[1] == "on");$/;"	p	file:
 EnableDisable	rlike.cpp	/^    void EnableDisable(bool state) {$/;"	f	struct:Term
 Env	original src/rlike-phase1.cc	/^    std::size_t Wall=0, Env=0;  \/\/ Indexes$/;"	m	struct:Room	file:
 Env	original src/rlike-phase2.cc	/^    std::size_t Wall=0, Env=0;  \/\/ Indexes$/;"	m	struct:Room	file:
@@ -137,10 +170,32 @@ Eq	original src/rlike-phase6.cc	/^struct Eq$/;"	s	file:
 Eq	original src/rlike-phase7-bugfix.cc	/^struct Eq$/;"	s	file:
 Eq	original src/rlike-phase7-video_ends_here.cc	/^struct Eq$/;"	s	file:
 Eq	rlike.cpp	/^struct Eq {$/;"	s	file:
+Execute	original src/printf.cc	/^    arg.data->first.Execute(arg.data->second);$/;"	p	file:
+Execute	original src/printf.cc	/^    b.data->first.Execute(b.data->second);$/;"	p	file:
 Execute	original src/printf.cc	/^void PrintfFormatter::Execute(PrintfFormatter::State& state)$/;"	f	class:PrintfFormatter
+Execute	original src/printf.hh	/^    void Execute(State& state);$/;"	p
 Execute	original src/printf.hh	/^    void Execute(State& state, const T& a, const T2&... rest)$/;"	f
 Execute	original src/printf.hh	/^    void Execute(State& state, const T(& a)[size], const T2&... rest)$/;"	f
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, bool);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, char);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, char16_t);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, char32_t);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, const char*);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, const std::basic_string<char32_t>&);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, const std::string&);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, double);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, float);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, int);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, long long);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, long);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, short);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, unsigned char);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, unsigned int);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, unsigned long long);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, unsigned long);$/;"	p	class:PrintfFormatter	file:
+ExecutePart	original src/printf.cc	/^template void PrintfFormatter::ExecutePart(PrintfFormatter::State&, unsigned short);$/;"	p	class:PrintfFormatter	file:
 ExecutePart	original src/printf.cc	/^void PrintfFormatter::ExecutePart(PrintfFormatter::State& state, T part)$/;"	f	class:PrintfFormatter
+ExecutePart	original src/printf.hh	/^    void ExecutePart(State& state, T part);$/;"	p
 FRAND	rlike.cpp	16;"	d	file:
 FindItem	rlike.cpp	/^    long FindItem(const ItemReference::SingleReference& w, std::size_t first = 0) const {$/;"	f	struct:Eq
 FindMoney	rlike.cpp	/^    long FindMoney(const ItemReference::SingleReference& w, std::size_t first = 0) const {$/;"	f	struct:Eq
@@ -167,49 +222,72 @@ GenericData	original src/rlike-phase6.cc	/^struct GenericData$/;"	s	file:
 GenericData	original src/rlike-phase7-bugfix.cc	/^struct GenericData$/;"	s	file:
 GenericData	original src/rlike-phase7-video_ends_here.cc	/^struct GenericData$/;"	s	file:
 GenericData	rlike.cpp	/^struct GenericData {$/;"	s	file:
-Get	original src/rlike-phase5.cc	/^static void Get(const ItemReference& what, const ItemReference& )$/;"	f	file:
-Get	original src/rlike-phase6.cc	/^static void Get(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-Get	original src/rlike-phase7-bugfix.cc	/^static void Get(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-Get	original src/rlike-phase7-video_ends_here.cc	/^static void Get(const ItemReference& what, const ItemReference& where)$/;"	f	file:
+Get	original src/rlike-phase5.cc	/^static void Get(const ItemReference& what, const ItemReference& )$/;"	f	struct:Maze
+Get	original src/rlike-phase6.cc	/^static void Get(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+Get	original src/rlike-phase7-bugfix.cc	/^static void Get(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+Get	original src/rlike-phase7-video_ends_here.cc	/^static void Get(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+GetCondition	original src/rlike-phase4.cc	/^    std::string GetCondition() const;$/;"	p	struct:ItemType	file:
 GetCondition	original src/rlike-phase4.cc	/^std::string ItemType::GetCondition() const$/;"	f	class:ItemType
+GetCondition	original src/rlike-phase5.cc	/^    std::string GetCondition() const;$/;"	p	struct:ItemType	file:
 GetCondition	original src/rlike-phase5.cc	/^std::string ItemType::GetCondition() const$/;"	f	class:ItemType
+GetCondition	original src/rlike-phase6.cc	/^                    % item.GetCondition();$/;"	p	file:
+GetCondition	original src/rlike-phase6.cc	/^    std::string GetCondition() const;$/;"	p	struct:ItemType	file:
 GetCondition	original src/rlike-phase6.cc	/^std::string ItemType::GetCondition() const$/;"	f	class:ItemType
+GetCondition	original src/rlike-phase7-bugfix.cc	/^                    % item.GetCondition();$/;"	p	file:
+GetCondition	original src/rlike-phase7-bugfix.cc	/^    std::string GetCondition() const;$/;"	p	struct:ItemType	file:
 GetCondition	original src/rlike-phase7-bugfix.cc	/^std::string ItemType::GetCondition() const$/;"	f	class:ItemType
+GetCondition	original src/rlike-phase7-video_ends_here.cc	/^                    % item.GetCondition();$/;"	p	file:
+GetCondition	original src/rlike-phase7-video_ends_here.cc	/^    std::string GetCondition() const;$/;"	p	struct:ItemType	file:
 GetCondition	original src/rlike-phase7-video_ends_here.cc	/^std::string ItemType::GetCondition() const$/;"	f	class:ItemType
+GetCondition	rlike.cpp	/^    std::string GetCondition() const;$/;"	p	struct:ItemType	file:
 GetCondition	rlike.cpp	/^std::string ItemType::GetCondition() const {$/;"	f	class:ItemType
-GetFrom	original src/rlike-phase5.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	file:
-GetFrom	original src/rlike-phase6.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	file:
-GetFrom	original src/rlike-phase7-bugfix.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	file:
-GetFrom	original src/rlike-phase7-video_ends_here.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	file:
+GetFrom	original src/rlike-phase5.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	struct:Maze
+GetFrom	original src/rlike-phase6.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	struct:Maze
+GetFrom	original src/rlike-phase7-bugfix.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	struct:Maze
+GetFrom	original src/rlike-phase7-video_ends_here.cc	/^static void GetFrom(Eq& source, const ItemReference& what,$/;"	f	struct:Maze
+GetMaterial	original src/rlike-phase4.cc	/^    std::string GetMaterial() const;$/;"	p	struct:ItemType	file:
 GetMaterial	original src/rlike-phase4.cc	/^std::string ItemType::GetMaterial() const$/;"	f	class:ItemType
+GetMaterial	original src/rlike-phase5.cc	/^    std::string GetMaterial() const;$/;"	p	struct:ItemType	file:
 GetMaterial	original src/rlike-phase5.cc	/^std::string ItemType::GetMaterial() const$/;"	f	class:ItemType
+GetMaterial	original src/rlike-phase6.cc	/^    std::string GetMaterial() const;$/;"	p	struct:ItemType	file:
 GetMaterial	original src/rlike-phase6.cc	/^std::string ItemType::GetMaterial() const$/;"	f	class:ItemType
+GetMaterial	original src/rlike-phase7-bugfix.cc	/^    std::string GetMaterial() const;$/;"	p	struct:ItemType	file:
 GetMaterial	original src/rlike-phase7-bugfix.cc	/^std::string ItemType::GetMaterial() const$/;"	f	class:ItemType
+GetMaterial	original src/rlike-phase7-video_ends_here.cc	/^    std::string GetMaterial() const;$/;"	p	struct:ItemType	file:
 GetMaterial	original src/rlike-phase7-video_ends_here.cc	/^std::string ItemType::GetMaterial() const$/;"	f	class:ItemType
+GetMaterial	rlike.cpp	/^    std::string GetMaterial() const;$/;"	p	struct:ItemType	file:
 GetMaterial	rlike.cpp	/^std::string ItemType::GetMaterial() const {$/;"	f	class:ItemType
+GetType	original src/rlike-phase4.cc	/^    std::string GetType() const;$/;"	p	struct:ItemType	file:
 GetType	original src/rlike-phase4.cc	/^std::string ItemType::GetType() const$/;"	f	class:ItemType
+GetType	original src/rlike-phase5.cc	/^    std::string GetType() const;$/;"	p	struct:ItemType	file:
 GetType	original src/rlike-phase5.cc	/^std::string ItemType::GetType() const$/;"	f	class:ItemType
+GetType	original src/rlike-phase6.cc	/^    std::string GetType() const;$/;"	p	struct:ItemType	file:
 GetType	original src/rlike-phase6.cc	/^std::string ItemType::GetType() const$/;"	f	class:ItemType
+GetType	original src/rlike-phase7-bugfix.cc	/^    std::string GetType() const;$/;"	p	struct:ItemType	file:
 GetType	original src/rlike-phase7-bugfix.cc	/^std::string ItemType::GetType() const$/;"	f	class:ItemType
+GetType	original src/rlike-phase7-video_ends_here.cc	/^    std::string GetType() const;$/;"	p	struct:ItemType	file:
 GetType	original src/rlike-phase7-video_ends_here.cc	/^std::string ItemType::GetType() const$/;"	f	class:ItemType
+GetType	rlike.cpp	/^    std::string GetType() const;$/;"	p	struct:ItemType	file:
 GetType	rlike.cpp	/^std::string ItemType::GetType() const {$/;"	f	class:ItemType
-HistMin	original src/rlike-phase2.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
-HistMin	original src/rlike-phase3.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
-HistMin	original src/rlike-phase4.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
-HistMin	original src/rlike-phase5.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
-HistMin	original src/rlike-phase6.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
-HistMin	original src/rlike-phase7-bugfix.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
-HistMin	original src/rlike-phase7-video_ends_here.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
-HistMin	rlike.cpp	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:CommandReader	typeref:enum:CommandReader::	file:
+HistMin	original src/rlike-phase2.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
+HistMin	original src/rlike-phase3.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
+HistMin	original src/rlike-phase4.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
+HistMin	original src/rlike-phase5.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
+HistMin	original src/rlike-phase6.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
+HistMin	original src/rlike-phase7-bugfix.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
+HistMin	original src/rlike-phase7-video_ends_here.cc	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
+HistMin	rlike.cpp	/^    enum : unsigned { HistLen = 10, HistMin = 5 };$/;"	m	struct:Maze::CommandReader	typeref:enum:Maze::CommandReader::	file:
 IntValue	original src/printf.cc	/^        static T IntValue(T part) { return part; }$/;"	f	struct:__anon1::PrintfFormatDo
 IntValue	original src/printf.cc	/^        static long long IntValue(T part) { return part; }$/;"	f	struct:__anon1::PrintfFormatDo
+IntValue	original src/printf.cc	/^        static long long IntValue(T part);$/;"	p	struct:__anon1::PrintfFormatDo	file:
+IntValue	original src/printf.cc	/^        static long long IntValue(const T& part);$/;"	p	struct:__anon1::PrintfFormatDo	file:
 IntValue	original src/printf.cc	/^    long long PrintfFormatDo<T,3>::IntValue(T part)$/;"	f	class:__anon1::PrintfFormatDo
 IntValue	original src/printf.cc	/^    long long PrintfFormatDo<T,4>::IntValue(const T& part)$/;"	f	class:__anon1::PrintfFormatDo
-Inv	original src/rlike-phase5.cc	/^static void Inv()$/;"	f	file:
-Inv	original src/rlike-phase6.cc	/^static void Inv()$/;"	f	file:
-Inv	original src/rlike-phase7-bugfix.cc	/^static void Inv()$/;"	f	file:
-Inv	original src/rlike-phase7-video_ends_here.cc	/^static void Inv()$/;"	f	file:
-Inv	rlike.cpp	/^static void Inv() {$/;"	f	file:
+Inv	original src/rlike-phase5.cc	/^static void Inv()$/;"	f	struct:Maze
+Inv	original src/rlike-phase6.cc	/^static void Inv()$/;"	f	struct:Maze
+Inv	original src/rlike-phase7-bugfix.cc	/^static void Inv()$/;"	f	struct:Maze
+Inv	original src/rlike-phase7-video_ends_here.cc	/^static void Inv()$/;"	f	struct:Maze
+Inv	rlike.cpp	/^static void Inv() {$/;"	f	struct:Maze
 IsNegative	original src/printf.cc	/^    struct IsNegative$/;"	s	namespace:__anon1	file:
 IsNegative	original src/printf.cc	/^    struct IsNegative<T, false>$/;"	s	namespace:__anon1	file:
 IsSpecific	original src/rlike-phase4.cc	/^    bool IsSpecific() const$/;"	f	struct:ItemReference
@@ -238,8 +316,11 @@ ItemReference	rlike.cpp	/^    ItemReference(const std::string& what) {$/;"	f	str
 ItemReference	rlike.cpp	/^struct ItemReference {$/;"	s	file:
 ItemType	original src/rlike-phase4.cc	/^struct ItemType$/;"	s	file:
 ItemType	original src/rlike-phase5.cc	/^struct ItemType$/;"	s	file:
+ItemType	original src/rlike-phase6.cc	/^            room.items.Items.push_front(ItemType());$/;"	p	file:
 ItemType	original src/rlike-phase6.cc	/^struct ItemType$/;"	s	file:
+ItemType	original src/rlike-phase7-bugfix.cc	/^            room.items.Items.push_front(ItemType());$/;"	p	file:
 ItemType	original src/rlike-phase7-bugfix.cc	/^struct ItemType$/;"	s	file:
+ItemType	original src/rlike-phase7-video_ends_here.cc	/^            room.items.Items.push_front(ItemType());$/;"	p	file:
 ItemType	original src/rlike-phase7-video_ends_here.cc	/^struct ItemType$/;"	s	file:
 ItemType	rlike.cpp	/^struct ItemType {$/;"	s	file:
 ItemTypes	original src/rlike-phase4.cc	/^ItemTypes[] =$/;"	v	file:
@@ -258,30 +339,34 @@ ListWithCounts	original src/rlike-phase6.cc	/^static std::string ListWithCounts(
 ListWithCounts	original src/rlike-phase7-bugfix.cc	/^static std::string ListWithCounts(std::deque<std::string>&& items, bool oneliner=true)$/;"	f	file:
 ListWithCounts	original src/rlike-phase7-video_ends_here.cc	/^static std::string ListWithCounts(std::deque<std::string>&& items, bool oneliner=true)$/;"	f	file:
 ListWithCounts	rlike.cpp	/^static std::string ListWithCounts(std::deque<std::string>&& items, bool oneLiner = true) {$/;"	f	file:
-Look	original src/rlike-phase1.cc	/^static void Look()$/;"	f	file:
-Look	original src/rlike-phase2.cc	/^static void Look()$/;"	f	file:
-Look	original src/rlike-phase3.cc	/^static void Look()$/;"	f	file:
-Look	original src/rlike-phase4.cc	/^static void Look()$/;"	f	file:
-Look	original src/rlike-phase5.cc	/^static void Look()$/;"	f	file:
-Look	original src/rlike-phase6.cc	/^static void Look()$/;"	f	file:
-Look	original src/rlike-phase7-bugfix.cc	/^static void Look()$/;"	f	file:
-Look	original src/rlike-phase7-video_ends_here.cc	/^static void Look()$/;"	f	file:
-Look	rlike.cpp	/^static void Look() {$/;"	f	file:
-LookAt	original src/rlike-phase4.cc	/^static void LookAt(const ItemReference& what, const ItemReference& )$/;"	f	file:
-LookAt	original src/rlike-phase5.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-LookAt	original src/rlike-phase6.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-LookAt	original src/rlike-phase7-bugfix.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-LookAt	original src/rlike-phase7-video_ends_here.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-LookAt	rlike.cpp	/^static void LookAt(const ItemReference& what, const ItemReference&) {$/;"	f	file:
-LookAtIn	original src/rlike-phase5.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	file:
-LookAtIn	original src/rlike-phase6.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	file:
-LookAtIn	original src/rlike-phase7-bugfix.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	file:
-LookAtIn	original src/rlike-phase7-video_ends_here.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	file:
+Look	original src/rlike-phase1.cc	/^static void Look()$/;"	f	struct:Maze
+Look	original src/rlike-phase2.cc	/^static void Look()$/;"	f	struct:Maze
+Look	original src/rlike-phase3.cc	/^static void Look()$/;"	f	struct:Maze
+Look	original src/rlike-phase4.cc	/^static void Look()$/;"	f	struct:Maze
+Look	original src/rlike-phase5.cc	/^static void Look()$/;"	f	struct:Maze
+Look	original src/rlike-phase6.cc	/^static void Look()$/;"	f	struct:Maze
+Look	original src/rlike-phase7-bugfix.cc	/^static void Look()$/;"	f	struct:Maze
+Look	original src/rlike-phase7-video_ends_here.cc	/^static void Look()$/;"	f	struct:Maze
+Look	rlike.cpp	/^static void Look() {$/;"	f	struct:Maze
+LookAt	original src/rlike-phase4.cc	/^static void LookAt(const ItemReference& what, const ItemReference& )$/;"	f	struct:Maze
+LookAt	original src/rlike-phase5.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+LookAt	original src/rlike-phase6.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+LookAt	original src/rlike-phase7-bugfix.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+LookAt	original src/rlike-phase7-video_ends_here.cc	/^static void LookAt(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+LookAt	rlike.cpp	/^static void LookAt(const ItemReference& what, const ItemReference&) {$/;"	f	struct:Maze
+LookAtIn	original src/rlike-phase5.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	struct:Maze
+LookAtIn	original src/rlike-phase6.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	struct:Maze
+LookAtIn	original src/rlike-phase7-bugfix.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	struct:Maze
+LookAtIn	original src/rlike-phase7-video_ends_here.cc	/^static void LookAtIn(const Eq& where, const ItemReference& what,$/;"	f	struct:Maze
 LookItem	rlike.cpp	/^    std::pair<std::string, float> LookItem(std::size_t n, bool specific) const {$/;"	f	struct:Eq
 LookMoney	rlike.cpp	/^    std::pair<std::string, float> LookMoney(long m, bool specific) const {$/;"	f	struct:Eq
+Look_	rlike.cpp	/^    std::string Look_(bool specific) const;$/;"	p	struct:ItemType	file:
 Look_	rlike.cpp	/^std::string ItemType::Look_(bool specific) const {$/;"	f	class:ItemType
+MakeFrom	original src/printf.cc	/^template void PrintfFormatter::MakeFrom(const std::basic_string<char32_t>&);$/;"	p	class:PrintfFormatter	file:
+MakeFrom	original src/printf.cc	/^template void PrintfFormatter::MakeFrom(const std::basic_string<char>&);$/;"	p	class:PrintfFormatter	file:
 MakeFrom	original src/printf.cc	/^void PrintfFormatter::MakeFrom(const std::basic_string<CT>& format)$/;"	f	class:PrintfFormatter
 MakeFrom	original src/printf.hh	/^    void MakeFrom(const CT* format)$/;"	f
+MakeFrom	original src/printf.hh	/^    void MakeFrom(const std::basic_string<C>& format);$/;"	p
 Maze	original src/rlike-phase1.cc	/^struct Maze$/;"	s	file:
 Maze	original src/rlike-phase2.cc	/^struct Maze$/;"	s	file:
 Maze	original src/rlike-phase3.cc	/^struct Maze$/;"	s	file:
@@ -306,6 +391,7 @@ MoneyTypes	original src/rlike-phase7-bugfix.cc	/^MoneyTypes[] =$/;"	v	file:
 MoneyTypes	original src/rlike-phase7-video_ends_here.cc	/^MoneyTypes[] =$/;"	v	file:
 Move	rlike.cpp	/^    MoveResult Move(Eq& target, const ItemReference& what) {$/;"	f	struct:Eq
 MoveResult	rlike.cpp	/^    struct MoveResult {$/;"	s	struct:Eq	file:
+Name	rlike.cpp	/^    std::string Name(int cond = 0, int mat = 0) const;$/;"	p	struct:ItemType	file:
 Name	rlike.cpp	/^std::string ItemType::Name(int cond, int mat) const {$/;"	f	class:ItemType
 Normal	original src/rlike-phase3.cc	/^enum { Normal=64, Bold=128, ColorMask=63 };$/;"	e	enum:__anon3	file:
 Normal	original src/rlike-phase4.cc	/^enum { Normal=64, Bold=128, ColorMask=63 };$/;"	e	enum:__anon5	file:
@@ -319,20 +405,26 @@ Numerals1to12	original src/rlike-phase5.cc	/^static const char* const Numerals1t
 Numerals1to12	original src/rlike-phase6.cc	/^static const char* const Numerals1to12[12-1+1] =$/;"	v	file:
 Numerals1to12	original src/rlike-phase7-bugfix.cc	/^static const char* const Numerals1to12[12-1+1] =$/;"	v	file:
 Numerals1to12	original src/rlike-phase7-video_ends_here.cc	/^static const char* const Numerals1to12[12-1+1] =$/;"	v	file:
-Open	original src/rlike-phase6.cc	/^static void Open(const ItemReference& what, const ItemReference& withwhat)$/;"	f	file:
-Open	original src/rlike-phase7-bugfix.cc	/^static void Open(const ItemReference& what, const ItemReference& withwhat)$/;"	f	file:
-Open	original src/rlike-phase7-video_ends_here.cc	/^static void Open(const ItemReference& what, const ItemReference& withwhat)$/;"	f	file:
+Open	original src/rlike-phase6.cc	/^static void Open(const ItemReference& what, const ItemReference& withwhat)$/;"	f	struct:Maze
+Open	original src/rlike-phase7-bugfix.cc	/^static void Open(const ItemReference& what, const ItemReference& withwhat)$/;"	f	struct:Maze
+Open	original src/rlike-phase7-video_ends_here.cc	/^static void Open(const ItemReference& what, const ItemReference& withwhat)$/;"	f	struct:Maze
 ParseReferences	original src/rlike-phase4.cc	/^    void ParseReferences(std::deque<SingleReference>& list, const std::string& what)$/;"	f	struct:ItemReference
 ParseReferences	original src/rlike-phase5.cc	/^    void ParseReferences(std::deque<SingleReference>& list, const std::string& what)$/;"	f	struct:ItemReference
 ParseReferences	original src/rlike-phase6.cc	/^    void ParseReferences(std::deque<SingleReference>& list, const std::string& what)$/;"	f	struct:ItemReference
 ParseReferences	original src/rlike-phase7-bugfix.cc	/^    void ParseReferences(std::deque<SingleReference>& list, const std::string& what)$/;"	f	struct:ItemReference
 ParseReferences	original src/rlike-phase7-video_ends_here.cc	/^    void ParseReferences(std::deque<SingleReference>& list, const std::string& what)$/;"	f	struct:ItemReference
 ParseReferences	rlike.cpp	/^    void ParseReferences(std::deque<SingleReference>& list, const std::string& what) {$/;"	f	struct:ItemReference
+ParseSingleReference	original src/rlike-phase4.cc	/^            list.push_back( ParseSingleReference( res[1] ) );$/;"	p	file:
 ParseSingleReference	original src/rlike-phase4.cc	/^    SingleReference ParseSingleReference(const std::string& part) const$/;"	f	struct:ItemReference
+ParseSingleReference	original src/rlike-phase5.cc	/^            list.push_back( ParseSingleReference( res[1] ) );$/;"	p	file:
 ParseSingleReference	original src/rlike-phase5.cc	/^    SingleReference ParseSingleReference(const std::string& part) const$/;"	f	struct:ItemReference
+ParseSingleReference	original src/rlike-phase6.cc	/^            list.push_back( ParseSingleReference( res[1] ) );$/;"	p	file:
 ParseSingleReference	original src/rlike-phase6.cc	/^    SingleReference ParseSingleReference(const std::string& part) const$/;"	f	struct:ItemReference
+ParseSingleReference	original src/rlike-phase7-bugfix.cc	/^            list.push_back( ParseSingleReference( res[1] ) );$/;"	p	file:
 ParseSingleReference	original src/rlike-phase7-bugfix.cc	/^    SingleReference ParseSingleReference(const std::string& part) const$/;"	f	struct:ItemReference
+ParseSingleReference	original src/rlike-phase7-video_ends_here.cc	/^            list.push_back( ParseSingleReference( res[1] ) );$/;"	p	file:
 ParseSingleReference	original src/rlike-phase7-video_ends_here.cc	/^    SingleReference ParseSingleReference(const std::string& part) const$/;"	f	struct:ItemReference
+ParseSingleReference	rlike.cpp	/^            list.push_back(ParseSingleReference(res[1]));$/;"	p	file:
 ParseSingleReference	rlike.cpp	/^    SingleReference ParseSingleReference(const std::string& part) const {$/;"	f	struct:ItemReference
 Pluralize	original src/rlike-phase4.cc	/^static std::string Pluralize(const std::string& s)$/;"	f	file:
 Pluralize	original src/rlike-phase5.cc	/^static std::string Pluralize(const std::string& s)$/;"	f	file:
@@ -341,40 +433,48 @@ Pluralize	original src/rlike-phase7-bugfix.cc	/^static std::string Pluralize(con
 Pluralize	original src/rlike-phase7-video_ends_here.cc	/^static std::string Pluralize(const std::string& s)$/;"	f	file:
 Pluralize	rlike.cpp	/^static std::string Pluralize(const std::string& s) {$/;"	f	file:
 Print	rlike.cpp	/^    std::pair<std::string, bool> Print(bool isInv) const {$/;"	f	struct:Eq
-PrintHistory	original src/rlike-phase2.cc	/^    void PrintHistory()$/;"	f	struct:CommandReader
-PrintHistory	original src/rlike-phase3.cc	/^    void PrintHistory()$/;"	f	struct:CommandReader
-PrintHistory	original src/rlike-phase4.cc	/^    void PrintHistory()$/;"	f	struct:CommandReader
-PrintHistory	original src/rlike-phase5.cc	/^    void PrintHistory()$/;"	f	struct:CommandReader
-PrintHistory	original src/rlike-phase6.cc	/^    void PrintHistory()$/;"	f	struct:CommandReader
-PrintHistory	original src/rlike-phase7-bugfix.cc	/^    void PrintHistory()$/;"	f	struct:CommandReader
-PrintHistory	original src/rlike-phase7-video_ends_here.cc	/^    void PrintHistory()$/;"	f	struct:CommandReader
-PrintHistory	rlike.cpp	/^    void PrintHistory() {$/;"	f	struct:CommandReader
+PrintHistory	original src/rlike-phase2.cc	/^        if(s == "!?" || s == "history")     cmd.PrintHistory();$/;"	p	file:
+PrintHistory	original src/rlike-phase2.cc	/^    void PrintHistory()$/;"	f	struct:Maze::CommandReader
+PrintHistory	original src/rlike-phase3.cc	/^        if(s == "!?" || s == "history")     cmd.PrintHistory();$/;"	p	file:
+PrintHistory	original src/rlike-phase3.cc	/^    void PrintHistory()$/;"	f	struct:Maze::CommandReader
+PrintHistory	original src/rlike-phase4.cc	/^        if(s == "!?" || s == "history")     cmd.PrintHistory();$/;"	p	file:
+PrintHistory	original src/rlike-phase4.cc	/^    void PrintHistory()$/;"	f	struct:Maze::CommandReader
+PrintHistory	original src/rlike-phase5.cc	/^        if(s == "!?" || s == "history")     cmd.PrintHistory();$/;"	p	file:
+PrintHistory	original src/rlike-phase5.cc	/^    void PrintHistory()$/;"	f	struct:Maze::CommandReader
+PrintHistory	original src/rlike-phase6.cc	/^        if(s == "!?" || s == "history")     cmd.PrintHistory();$/;"	p	file:
+PrintHistory	original src/rlike-phase6.cc	/^    void PrintHistory()$/;"	f	struct:Maze::CommandReader
+PrintHistory	original src/rlike-phase7-bugfix.cc	/^        if(s == "!?" || s == "history")     cmd.PrintHistory();$/;"	p	file:
+PrintHistory	original src/rlike-phase7-bugfix.cc	/^    void PrintHistory()$/;"	f	struct:Maze::CommandReader
+PrintHistory	original src/rlike-phase7-video_ends_here.cc	/^        if(s == "!?" || s == "history")     cmd.PrintHistory();$/;"	p	file:
+PrintHistory	original src/rlike-phase7-video_ends_here.cc	/^    void PrintHistory()$/;"	f	struct:Maze::CommandReader
+PrintHistory	rlike.cpp	/^        if (s == "!?" || s == "history") cmd.PrintHistory();$/;"	p	file:
+PrintHistory	rlike.cpp	/^    void PrintHistory() {$/;"	f	struct:Maze::CommandReader
 PrintfFormatDo	original src/printf.cc	/^    struct PrintfFormatDo { };$/;"	s	namespace:__anon1	file:
 PrintfFormatDo	original src/printf.cc	/^    struct PrintfFormatDo<T, 1> \/\/ ints$/;"	s	namespace:__anon1	file:
 PrintfFormatDo	original src/printf.cc	/^    struct PrintfFormatDo<T, 2> \/\/ floats$/;"	s	namespace:__anon1	file:
 PrintfFormatDo	original src/printf.cc	/^    struct PrintfFormatDo<T, 3> \/\/ char-pointers$/;"	s	namespace:__anon1	file:
 PrintfFormatDo	original src/printf.cc	/^    struct PrintfFormatDo<T, 4> \/\/ strings$/;"	s	namespace:__anon1	file:
 PrintfFormatter	original src/printf.hh	/^class PrintfFormatter$/;"	c
-Put	original src/rlike-phase5.cc	/^static void Put(const ItemReference& what, const ItemReference& )$/;"	f	file:
-Put	original src/rlike-phase6.cc	/^static void Put(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-Put	original src/rlike-phase7-bugfix.cc	/^static void Put(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-Put	original src/rlike-phase7-video_ends_here.cc	/^static void Put(const ItemReference& what, const ItemReference& where)$/;"	f	file:
-PutTo	original src/rlike-phase5.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	file:
-PutTo	original src/rlike-phase6.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	file:
-PutTo	original src/rlike-phase7-bugfix.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	file:
-PutTo	original src/rlike-phase7-video_ends_here.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	file:
+Put	original src/rlike-phase5.cc	/^static void Put(const ItemReference& what, const ItemReference& )$/;"	f	struct:Maze
+Put	original src/rlike-phase6.cc	/^static void Put(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+Put	original src/rlike-phase7-bugfix.cc	/^static void Put(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+Put	original src/rlike-phase7-video_ends_here.cc	/^static void Put(const ItemReference& what, const ItemReference& where)$/;"	f	struct:Maze
+PutTo	original src/rlike-phase5.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	struct:Maze
+PutTo	original src/rlike-phase6.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	struct:Maze
+PutTo	original src/rlike-phase7-bugfix.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	struct:Maze
+PutTo	original src/rlike-phase7-video_ends_here.cc	/^static void PutTo(Eq& target, const ItemReference& what,$/;"	f	struct:Maze
 RAND	rlike.cpp	18;"	d	file:
 REPLACE	rlike.cpp	50;"	d	file:
 REPLACE	rlike.cpp	57;"	d	file:
-RM	rlike.cpp	904;"	d	file:
-ReadCommand	original src/rlike-phase2.cc	/^    std::string ReadCommand()$/;"	f	struct:CommandReader
-ReadCommand	original src/rlike-phase3.cc	/^    std::string ReadCommand()$/;"	f	struct:CommandReader
-ReadCommand	original src/rlike-phase4.cc	/^    std::string ReadCommand()$/;"	f	struct:CommandReader
-ReadCommand	original src/rlike-phase5.cc	/^    std::string ReadCommand()$/;"	f	struct:CommandReader
-ReadCommand	original src/rlike-phase6.cc	/^    std::string ReadCommand()$/;"	f	struct:CommandReader
-ReadCommand	original src/rlike-phase7-bugfix.cc	/^    std::string ReadCommand()$/;"	f	struct:CommandReader
-ReadCommand	original src/rlike-phase7-video_ends_here.cc	/^    std::string ReadCommand()$/;"	f	struct:CommandReader
-ReadCommand	rlike.cpp	/^    std::string ReadCommand() {$/;"	f	struct:CommandReader
+RM	rlike.cpp	968;"	d	file:
+ReadCommand	original src/rlike-phase2.cc	/^    std::string ReadCommand()$/;"	f	struct:Maze::CommandReader
+ReadCommand	original src/rlike-phase3.cc	/^    std::string ReadCommand()$/;"	f	struct:Maze::CommandReader
+ReadCommand	original src/rlike-phase4.cc	/^    std::string ReadCommand()$/;"	f	struct:Maze::CommandReader
+ReadCommand	original src/rlike-phase5.cc	/^    std::string ReadCommand()$/;"	f	struct:Maze::CommandReader
+ReadCommand	original src/rlike-phase6.cc	/^    std::string ReadCommand()$/;"	f	struct:Maze::CommandReader
+ReadCommand	original src/rlike-phase7-bugfix.cc	/^    std::string ReadCommand()$/;"	f	struct:Maze::CommandReader
+ReadCommand	original src/rlike-phase7-video_ends_here.cc	/^    std::string ReadCommand()$/;"	f	struct:Maze::CommandReader
+ReadCommand	rlike.cpp	/^    std::string ReadCommand() {$/;"	f	struct:Maze::CommandReader
 RemoveArticle	original src/rlike-phase4.cc	/^static std::string RemoveArticle(const std::string& s)$/;"	f	file:
 RemoveArticle	original src/rlike-phase5.cc	/^static std::string RemoveArticle(const std::string& s)$/;"	f	file:
 RemoveArticle	original src/rlike-phase6.cc	/^static std::string RemoveArticle(const std::string& s)$/;"	f	file:
@@ -390,7 +490,7 @@ Room	original src/rlike-phase6.cc	/^struct Room$/;"	s	file:
 Room	original src/rlike-phase7-bugfix.cc	/^struct Room$/;"	s	file:
 Room	original src/rlike-phase7-video_ends_here.cc	/^struct Room$/;"	s	file:
 Room	rlike.cpp	/^struct Room {$/;"	s	file:
-SPAWN_4_ROOMS	rlike.cpp	625;"	d	file:
+SPAWN_4_ROOMS	rlike.cpp	689;"	d	file:
 SetColor	original src/rlike-phase3.cc	/^    std::string SetColor(bool newbold,int newcolor)$/;"	f	struct:Term
 SetColor	original src/rlike-phase4.cc	/^    std::string SetColor(bool newbold,int newcolor)$/;"	f	struct:Term
 SetColor	original src/rlike-phase5.cc	/^    std::string SetColor(bool newbold,int newcolor)$/;"	f	struct:Term
@@ -398,14 +498,15 @@ SetColor	original src/rlike-phase6.cc	/^    std::string SetColor(bool newbold,in
 SetColor	original src/rlike-phase7-bugfix.cc	/^    std::string SetColor(bool newbold,int newcolor)$/;"	f	struct:Term
 SetColor	original src/rlike-phase7-video_ends_here.cc	/^    std::string SetColor(bool newbold,int newcolor)$/;"	f	struct:Term
 SetColor	rlike.cpp	/^    std::string SetColor(bool newBold, int newColor) {$/;"	f	struct:Term
-SetPrompt	original src/rlike-phase2.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
-SetPrompt	original src/rlike-phase3.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
-SetPrompt	original src/rlike-phase4.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
-SetPrompt	original src/rlike-phase5.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
-SetPrompt	original src/rlike-phase6.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
-SetPrompt	original src/rlike-phase7-bugfix.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
-SetPrompt	original src/rlike-phase7-video_ends_here.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
-SetPrompt	rlike.cpp	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:CommandReader
+SetPrompt	original src/rlike-phase2.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
+SetPrompt	original src/rlike-phase3.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
+SetPrompt	original src/rlike-phase4.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
+SetPrompt	original src/rlike-phase5.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
+SetPrompt	original src/rlike-phase6.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
+SetPrompt	original src/rlike-phase7-bugfix.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
+SetPrompt	original src/rlike-phase7-video_ends_here.cc	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
+SetPrompt	rlike.cpp	/^        cmd.SetPrompt(oss.str());$/;"	p	file:
+SetPrompt	rlike.cpp	/^    void SetPrompt(const std::string& s) { prompt = s; }$/;"	f	struct:Maze::CommandReader
 SingleReference	original src/rlike-phase4.cc	/^    struct SingleReference$/;"	s	struct:ItemReference	file:
 SingleReference	original src/rlike-phase5.cc	/^    struct SingleReference$/;"	s	struct:ItemReference	file:
 SingleReference	original src/rlike-phase6.cc	/^    struct SingleReference$/;"	s	struct:ItemReference	file:
@@ -420,15 +521,15 @@ Spawn4rooms	original src/rlike-phase5.cc	785;"	d	file:
 Spawn4rooms	original src/rlike-phase6.cc	834;"	d	file:
 Spawn4rooms	original src/rlike-phase7-bugfix.cc	859;"	d	file:
 Spawn4rooms	original src/rlike-phase7-video_ends_here.cc	859;"	d	file:
-SpawnRooms	original src/rlike-phase1.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	original src/rlike-phase2.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	original src/rlike-phase3.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	original src/rlike-phase4.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	original src/rlike-phase5.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	original src/rlike-phase6.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	original src/rlike-phase7-bugfix.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	original src/rlike-phase7-video_ends_here.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	file:
-SpawnRooms	rlike.cpp	/^static Room& SpawnRooms(long whereX, long whereY, const Room& model = defaultRoom) {$/;"	f	file:
+SpawnRooms	original src/rlike-phase1.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	original src/rlike-phase2.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	original src/rlike-phase3.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	original src/rlike-phase4.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	original src/rlike-phase5.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	original src/rlike-phase6.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	original src/rlike-phase7-bugfix.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	original src/rlike-phase7-video_ends_here.cc	/^static Room& SpawnRooms(long wherex,long wherey, const Room& model = defaultroom)$/;"	f	struct:Maze
+SpawnRooms	rlike.cpp	/^static Room& SpawnRooms(long whereX, long whereY, const Room& model = defaultRoom) {$/;"	f	struct:Maze
 State	original src/printf.hh	/^    struct State$/;"	s
 Term	original src/rlike-phase3.cc	/^struct Term$/;"	s	file:
 Term	original src/rlike-phase4.cc	/^struct Term$/;"	s	file:
@@ -439,21 +540,22 @@ Term	original src/rlike-phase7-video_ends_here.cc	/^struct Term$/;"	s	file:
 Term	rlike.cpp	/^struct Term {$/;"	s	file:
 Test	original src/printf.cc	/^        static bool Test(T value) { return value < 0; }$/;"	f	struct:__anon1::IsNegative
 Test	original src/printf.cc	/^        static bool Test(T) { return false; }$/;"	f	struct:__anon1::IsNegative
-TryMoveBy	original src/rlike-phase1.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	original src/rlike-phase2.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	original src/rlike-phase3.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	original src/rlike-phase4.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	original src/rlike-phase5.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	original src/rlike-phase6.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	original src/rlike-phase7-bugfix.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	original src/rlike-phase7-video_ends_here.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	file:
-TryMoveBy	rlike.cpp	/^static bool TryMoveBy(int xd, int yd) {$/;"	f	file:
+TryMoveBy	original src/rlike-phase1.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	original src/rlike-phase2.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	original src/rlike-phase3.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	original src/rlike-phase4.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	original src/rlike-phase5.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	original src/rlike-phase6.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	original src/rlike-phase7-bugfix.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	original src/rlike-phase7-video_ends_here.cc	/^static bool TryMoveBy(int xd,int yd)$/;"	f	struct:Maze
+TryMoveBy	rlike.cpp	/^static bool TryMoveBy(int xd, int yd) {$/;"	f	struct:Maze
 UCFirst	rlike.cpp	/^static std::string UCFirst(const std::string& s) {$/;"	f	file:
 UCfirst	original src/rlike-phase4.cc	/^static std::string UCfirst(const std::string& s)$/;"	f	file:
 UCfirst	original src/rlike-phase5.cc	/^static std::string UCfirst(const std::string& s)$/;"	f	file:
 UCfirst	original src/rlike-phase6.cc	/^static std::string UCfirst(const std::string& s)$/;"	f	file:
 UCfirst	original src/rlike-phase7-bugfix.cc	/^static std::string UCfirst(const std::string& s)$/;"	f	file:
 UCfirst	original src/rlike-phase7-video_ends_here.cc	/^static std::string UCfirst(const std::string& s)$/;"	f	file:
+Value	rlike.cpp	/^                << "You estimate that these possessions could earn you " << Appraise(Value()) << "\\n";$/;"	p	file:
 Value	rlike.cpp	/^    float Value() const {$/;"	f	struct:Eq
 Value	rlike.cpp	/^    float Value(float constant = 300.0f) const {$/;"	f	struct:ItemType
 Wall	original src/rlike-phase1.cc	/^    std::size_t Wall=0, Env=0;  \/\/ Indexes$/;"	m	struct:Room	file:
@@ -476,14 +578,30 @@ _r	original src/rlike-phase6.cc	/^static std::regex operator ""_r(const char* pa
 _r	original src/rlike-phase7-bugfix.cc	/^static std::regex operator ""_r(const char* pattern, std::size_t length)$/;"	f	file:
 _r	original src/rlike-phase7-video_ends_here.cc	/^static std::regex operator ""_r(const char* pattern, std::size_t length)$/;"	f	file:
 _r	rlike.cpp	/^static std::regex operator""_r(const char* pattern, std::size_t length) {$/;"	f	file:
-aliases	original src/rlike-phase2.cc	/^} static const aliases[] =$/;"	v	file:
-aliases	original src/rlike-phase3.cc	/^} static const aliases[] =$/;"	v	file:
-aliases	original src/rlike-phase4.cc	/^} static const aliases[] =$/;"	v	file:
-aliases	original src/rlike-phase5.cc	/^} static const aliases[] =$/;"	v	file:
-aliases	original src/rlike-phase6.cc	/^} static const aliases[] =$/;"	v	file:
-aliases	original src/rlike-phase7-bugfix.cc	/^} static const aliases[] =$/;"	v	file:
-aliases	original src/rlike-phase7-video_ends_here.cc	/^} static const aliases[] =$/;"	v	file:
-aliases	rlike.cpp	/^} static const aliases[] = {$/;"	v	file:
+a	original src/rlike-phase4.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+a	original src/rlike-phase4.cc	/^        size_t a=0;$/;"	l
+a	original src/rlike-phase5.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+a	original src/rlike-phase5.cc	/^        size_t a=0;$/;"	l
+a	original src/rlike-phase6.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+a	original src/rlike-phase6.cc	/^        size_t a=0;$/;"	l
+a	original src/rlike-phase7-bugfix.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+a	original src/rlike-phase7-bugfix.cc	/^        size_t a=0;$/;"	l
+a	original src/rlike-phase7-video_ends_here.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+a	original src/rlike-phase7-video_ends_here.cc	/^        size_t a=0;$/;"	l
+a	rlike.cpp	/^        float result = 0.0f; size_t a = 0;$/;"	l
+aliases	original src/rlike-phase2.cc	/^} static const aliases[] =$/;"	m	struct:Maze	file:
+aliases	original src/rlike-phase3.cc	/^} static const aliases[] =$/;"	m	struct:Maze	file:
+aliases	original src/rlike-phase4.cc	/^} static const aliases[] =$/;"	m	struct:Maze	file:
+aliases	original src/rlike-phase5.cc	/^} static const aliases[] =$/;"	m	struct:Maze	file:
+aliases	original src/rlike-phase6.cc	/^} static const aliases[] =$/;"	m	struct:Maze	file:
+aliases	original src/rlike-phase7-bugfix.cc	/^} static const aliases[] =$/;"	m	struct:Maze	file:
+aliases	original src/rlike-phase7-video_ends_here.cc	/^} static const aliases[] =$/;"	m	struct:Maze	file:
+aliases	rlike.cpp	/^} static const aliases[] = {$/;"	m	struct:Maze	file:
+all	original src/rlike-phase5.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+all	original src/rlike-phase6.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+all	original src/rlike-phase7-bugfix.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+all	original src/rlike-phase7-video_ends_here.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+all	rlike.cpp	/^            bool foundItem = false, foundMoney = false, all = !w.index;$/;"	l
 amount	original src/rlike-phase4.cc	/^        long        amount = 0;$/;"	m	struct:ItemReference::SingleReference	file:
 amount	original src/rlike-phase5.cc	/^        long        amount = 0;$/;"	m	struct:ItemReference::SingleReference	file:
 amount	original src/rlike-phase6.cc	/^        long        amount = 0;$/;"	m	struct:ItemReference::SingleReference	file:
@@ -497,12 +615,26 @@ ansi_features	original src/rlike-phase5.cc	/^static const std::map<std::string, 
 ansi_features	original src/rlike-phase6.cc	/^static const std::map<std::string, unsigned> ansi_features =$/;"	v	file:
 ansi_features	original src/rlike-phase7-bugfix.cc	/^static const std::map<std::string, unsigned> ansi_features =$/;"	v	file:
 ansi_features	original src/rlike-phase7-video_ends_here.cc	/^static const std::map<std::string, unsigned> ansi_features =$/;"	v	file:
+append	original src/printf.cc	/^        state.result.append(formats[pos].before);$/;"	p	file:
 arg	original src/printf.hh	/^    struct arg: public argsmall$/;"	s
 argsmall	original src/printf.hh	/^        argsmall() { }$/;"	f	class:PrintfFormatter
 argsmall	original src/printf.hh	/^        argsmall(unsigned mi,unsigned ma,bool la, bool si, bool zp, basetype b, formattype f)$/;"	f	class:PrintfFormatter
 argsmall	original src/printf.hh	/^    struct argsmall$/;"	s	class:PrintfFormatter
+argument	original src/printf.cc	/^            arg argument;$/;"	l
 as_float	original src/printf.hh	/^        enum formattype : char { as_char, as_int, as_float, as_string } format = as_string;$/;"	m	struct:PrintfFormatter::argsmall	typeref:enum:PrintfFormatter::argsmall::
 as_int	original src/printf.hh	/^        enum formattype : char { as_char, as_int, as_float, as_string } format = as_string;$/;"	m	struct:PrintfFormatter::argsmall	typeref:enum:PrintfFormatter::argsmall::
+b	original src/rlike-phase1.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	original src/rlike-phase2.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	original src/rlike-phase3.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	original src/rlike-phase4.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	original src/rlike-phase5.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	original src/rlike-phase6.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	original src/rlike-phase7-bugfix.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	original src/rlike-phase7-video_ends_here.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+b	rlike.cpp	/^    auto b = infoStr.begin(), e = infoStr.end();$/;"	l
+base	original src/printf.cc	/^                int base = arg.base & ~64;$/;"	l
+basetype	original src/printf.hh	/^        enum basetype   : char { decimal=10, hex=16,  hexup=16+64,  oct=8, bin=2 } base   = decimal;$/;"	x
+basic_string	original src/printf.hh	/^        MakeFrom( std::basic_string<CT> (format) );$/;"	p
 before	original src/printf.hh	/^        std::basic_string<char32_t> before;$/;"	m	struct:arg
 bin	original src/printf.hh	/^        enum basetype   : char { decimal=10, hex=16,  hexup=16+64,  oct=8, bin=2 } base   = decimal;$/;"	m	struct:PrintfFormatter::argsmall	typeref:enum:PrintfFormatter::argsmall::
 bold	original src/rlike-phase3.cc	/^    bool bold=false, enabled=true;$/;"	m	struct:Term	file:
@@ -520,28 +652,96 @@ build	original src/rlike-phase7-bugfix.cc	/^    std::size_t build     = frand() 
 build	original src/rlike-phase7-video_ends_here.cc	/^    std::size_t build     = frand() > 0.4 ? rand(count(BuildTypes)) : rand(2);$/;"	m	struct:ItemType	file:
 build	rlike.cpp	/^    std::size_t build     = FRAND() > 0.4 ? RAND(Count(buildTypes)) : RAND(2);$/;"	m	struct:ItemType	file:
 buildTypes	rlike.cpp	/^buildTypes[] = {$/;"	v	file:
+burden	original src/rlike-phase1.cc	/^    long burden = 1;$/;"	l
+burden	original src/rlike-phase2.cc	/^    long burden = 1;$/;"	l
+burden	original src/rlike-phase3.cc	/^    long burden = 1;$/;"	l
+burden	original src/rlike-phase4.cc	/^    long burden = 1;$/;"	l
 burden	original src/rlike-phase4.cc	/^    long burden() const$/;"	f	struct:Eq
+burden	original src/rlike-phase5.cc	/^    long burden = eq.burden();$/;"	l
 burden	original src/rlike-phase5.cc	/^    long burden() const$/;"	f	struct:Eq
+burden	original src/rlike-phase6.cc	/^    long burden = eq.burden();$/;"	l
 burden	original src/rlike-phase6.cc	/^    long burden() const$/;"	f	struct:Eq
+burden	original src/rlike-phase7-bugfix.cc	/^    long burden = eq.burden();$/;"	l
 burden	original src/rlike-phase7-bugfix.cc	/^    long burden() const$/;"	f	struct:Eq
+burden	original src/rlike-phase7-video_ends_here.cc	/^    long burden = eq.burden();$/;"	l
 burden	original src/rlike-phase7-video_ends_here.cc	/^    long burden() const$/;"	f	struct:Eq
+burden	rlike.cpp	/^    long burden = 1;$/;"	l
+c	original src/printf.cc	/^        CT c = format[a];$/;"	l
+c	original src/rlike-phase1.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	original src/rlike-phase2.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	original src/rlike-phase3.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	original src/rlike-phase4.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	original src/rlike-phase5.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	original src/rlike-phase6.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	original src/rlike-phase7-bugfix.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	original src/rlike-phase7-video_ends_here.cc	/^            char c = ((xo==0&&yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
+c	rlike.cpp	/^            char c = ((xo==0 && yo==0) ? '@' : maze.Char(x+xo, y+yo));$/;"	l
 cart	original src/rlike-phase7-bugfix.cc	/^    std::shared_ptr<struct Eq> cart;$/;"	m	struct:ItemType	file:
 cart	original src/rlike-phase7-video_ends_here.cc	/^    std::shared_ptr<struct Eq> cart;$/;"	m	struct:ItemType	file:
+cart_burden	original src/rlike-phase7-bugfix.cc	/^        long cart_burden = 0;$/;"	l
+cart_burden	original src/rlike-phase7-video_ends_here.cc	/^        long cart_burden = 0;$/;"	l
+char32_t	original src/printf.cc	/^            result.push_back( char32_t( part[a] ) );$/;"	p	file:
 chest	original src/rlike-phase6.cc	/^    float       chest = 0.f;$/;"	m	struct:ItemType	file:
 chest	original src/rlike-phase7-bugfix.cc	/^    float       chest = 0.f;$/;"	m	struct:ItemType	file:
 chest	original src/rlike-phase7-video_ends_here.cc	/^    float       chest = 0.f;$/;"	m	struct:ItemType	file:
+chest_no	original src/rlike-phase6.cc	/^    long chest_no = room.items.find_item(what.refs.front());$/;"	l
+chest_no	original src/rlike-phase7-bugfix.cc	/^    long chest_no = room.items.find_item(what.refs.front());$/;"	l
+chest_no	original src/rlike-phase7-video_ends_here.cc	/^    long chest_no = room.items.find_item(what.refs.front());$/;"	l
+chestrand	original src/rlike-phase6.cc	/^            float chestrand = frand();$/;"	l
+chestrand	original src/rlike-phase7-bugfix.cc	/^            float chestrand = frand();$/;"	l
+chestrand	original src/rlike-phase7-video_ends_here.cc	/^            float chestrand = frand();$/;"	l
+clear	original src/printf.cc	/^    formats.clear();$/;"	p	file:
+clear	original src/printf.cc	/^    trail.clear();$/;"	p	file:
+clear	original src/rlike-phase4.cc	/^            room.items.clear();$/;"	p	file:
 clear	original src/rlike-phase4.cc	/^    void clear(std::size_t n = 0)$/;"	f	struct:Eq
+clear	original src/rlike-phase5.cc	/^            room.items.clear();$/;"	p	file:
+clear	original src/rlike-phase5.cc	/^        if(!result.notfound.empty()) result.moved.clear();$/;"	p	file:
 clear	original src/rlike-phase5.cc	/^    void clear(std::size_t n = 0)$/;"	f	struct:Eq
+clear	original src/rlike-phase6.cc	/^            room.items.clear();$/;"	p	file:
+clear	original src/rlike-phase6.cc	/^        if(!result.notfound.empty()) result.moved.clear();$/;"	p	file:
 clear	original src/rlike-phase6.cc	/^    void clear(std::size_t n = 0)$/;"	f	struct:Eq
+clear	original src/rlike-phase7-bugfix.cc	/^            room.items.clear();$/;"	p	file:
+clear	original src/rlike-phase7-bugfix.cc	/^        if(!result.notfound.empty()) result.moved.clear();$/;"	p	file:
 clear	original src/rlike-phase7-bugfix.cc	/^    void clear(std::size_t n = 0)$/;"	f	struct:Eq
+clear	original src/rlike-phase7-video_ends_here.cc	/^            room.items.clear();$/;"	p	file:
+clear	original src/rlike-phase7-video_ends_here.cc	/^        if(!result.notfound.empty()) result.moved.clear();$/;"	p	file:
 clear	original src/rlike-phase7-video_ends_here.cc	/^    void clear(std::size_t n = 0)$/;"	f	struct:Eq
+cmd	original src/rlike-phase2.cc	/^            std::string cmd;$/;"	l
+cmd	original src/rlike-phase2.cc	/^    CommandReader cmd;$/;"	l
+cmd	original src/rlike-phase3.cc	/^            std::string cmd;$/;"	l
+cmd	original src/rlike-phase3.cc	/^    CommandReader cmd;$/;"	l
+cmd	original src/rlike-phase4.cc	/^            std::string cmd;$/;"	l
+cmd	original src/rlike-phase4.cc	/^    CommandReader cmd;$/;"	l
+cmd	original src/rlike-phase5.cc	/^            std::string cmd;$/;"	l
+cmd	original src/rlike-phase5.cc	/^    CommandReader cmd;$/;"	l
+cmd	original src/rlike-phase6.cc	/^            std::string cmd;$/;"	l
+cmd	original src/rlike-phase6.cc	/^    CommandReader cmd;$/;"	l
+cmd	original src/rlike-phase7-bugfix.cc	/^            std::string cmd;$/;"	l
+cmd	original src/rlike-phase7-bugfix.cc	/^    CommandReader cmd;$/;"	l
+cmd	original src/rlike-phase7-video_ends_here.cc	/^            std::string cmd;$/;"	l
+cmd	original src/rlike-phase7-video_ends_here.cc	/^    CommandReader cmd;$/;"	l
+cmd	rlike.cpp	/^            std::string cmd;$/;"	l
+cmd	rlike.cpp	/^    CommandReader cmd;$/;"	l
 color	original src/rlike-phase3.cc	/^    int color=37;$/;"	m	struct:Term	file:
 color	original src/rlike-phase4.cc	/^    int color=37;$/;"	m	struct:Term	file:
 color	original src/rlike-phase5.cc	/^    int color=37;$/;"	m	struct:Term	file:
 color	original src/rlike-phase6.cc	/^    int color=37;$/;"	m	struct:Term	file:
 color	original src/rlike-phase7-bugfix.cc	/^    int color=37;$/;"	m	struct:Term	file:
 color	original src/rlike-phase7-video_ends_here.cc	/^    int color=37;$/;"	m	struct:Term	file:
+color	rlike.cpp	/^            std::ostringstream oss; oss << "\\33[" << (int)bold << ";" << color << "m";$/;"	l
 color	rlike.cpp	/^    int color = 37;$/;"	m	struct:Term	file:
+common	original src/rlike-phase4.cc	/^        std::string info, common =$/;"	l
+common	original src/rlike-phase4.cc	/^    std::string info, common = specific$/;"	l
+common	original src/rlike-phase5.cc	/^        std::string info, common =$/;"	l
+common	original src/rlike-phase5.cc	/^    std::string info, common = specific$/;"	l
+common	original src/rlike-phase6.cc	/^        std::string info, common =$/;"	l
+common	original src/rlike-phase6.cc	/^    std::string info, common = specific$/;"	l
+common	original src/rlike-phase7-bugfix.cc	/^        std::string info, common =$/;"	l
+common	original src/rlike-phase7-bugfix.cc	/^    std::string info, common = specific$/;"	l
+common	original src/rlike-phase7-video_ends_here.cc	/^        std::string info, common =$/;"	l
+common	original src/rlike-phase7-video_ends_here.cc	/^    std::string info, common = specific$/;"	l
+common	rlike.cpp	/^        std::string info, common = oss.str();$/;"	l
+common	rlike.cpp	/^    std::string info, common = specific ? "It is " + AddArticle(Name(0, 2)) + ". It is in " + GetCondition() + " condition.\\n"$/;"	l
 condTypes	rlike.cpp	/^condTypes[] = {$/;"	v	file:
 condition	original src/rlike-phase4.cc	/^    std::size_t condition = frand() > 0.8 ? rand(count(CondTypes))  : rand(3);$/;"	m	struct:ItemType	file:
 condition	original src/rlike-phase5.cc	/^    std::size_t condition = frand() > 0.8 ? rand(count(CondTypes))  : rand(3);$/;"	m	struct:ItemType	file:
@@ -549,12 +749,48 @@ condition	original src/rlike-phase6.cc	/^    std::size_t condition = frand() > 0
 condition	original src/rlike-phase7-bugfix.cc	/^    std::size_t condition = frand() > 0.8 ? rand(count(CondTypes))  : rand(3);$/;"	m	struct:ItemType	file:
 condition	original src/rlike-phase7-video_ends_here.cc	/^    std::size_t condition = frand() > 0.8 ? rand(count(CondTypes))  : rand(3);$/;"	m	struct:ItemType	file:
 condition	rlike.cpp	/^    std::size_t condition = FRAND() > 0.8 ? RAND(Count(condTypes))  : RAND(3);$/;"	m	struct:ItemType	file:
+container	original src/rlike-phase5.cc	/^                const auto& container = room.items.Items[no++];$/;"	l
+container	original src/rlike-phase6.cc	/^                auto& container = room.items.Items[no++];$/;"	l
+container	original src/rlike-phase6.cc	/^                const auto& container = room.items.Items[no++];$/;"	l
+container	original src/rlike-phase6.cc	/^        auto& container = room.items.Items[container_no];$/;"	l
+container	original src/rlike-phase7-bugfix.cc	/^                auto& container = room.items.Items[no++];$/;"	l
+container	original src/rlike-phase7-bugfix.cc	/^                const auto& container = room.items.Items[no++];$/;"	l
+container	original src/rlike-phase7-bugfix.cc	/^        auto& container = room.items.Items[container_no];$/;"	l
+container	original src/rlike-phase7-video_ends_here.cc	/^                auto& container = room.items.Items[no++];$/;"	l
+container	original src/rlike-phase7-video_ends_here.cc	/^                const auto& container = room.items.Items[no++];$/;"	l
+container	original src/rlike-phase7-video_ends_here.cc	/^        auto& container = room.items.Items[container_no];$/;"	l
+container_no	original src/rlike-phase6.cc	/^        long container_no = room.items.find_item(where.refs.front());$/;"	l
+container_no	original src/rlike-phase7-bugfix.cc	/^        long container_no = room.items.find_item(where.refs.front());$/;"	l
+container_no	original src/rlike-phase7-video_ends_here.cc	/^        long container_no = room.items.find_item(where.refs.front());$/;"	l
+count	original src/rlike-phase4.cc	/^    std::map<std::string, unsigned> count;$/;"	l
+count	original src/rlike-phase5.cc	/^    std::map<std::string, unsigned> count;$/;"	l
+count	original src/rlike-phase6.cc	/^    std::map<std::string, unsigned> count;$/;"	l
+count	original src/rlike-phase7-bugfix.cc	/^    std::map<std::string, unsigned> count;$/;"	l
+count	original src/rlike-phase7-video_ends_here.cc	/^    std::map<std::string, unsigned> count;$/;"	l
+count	rlike.cpp	/^    std::map<std::string, unsigned> count;$/;"	l
 count_items	original src/rlike-phase4.cc	/^    std::size_t count_items() const$/;"	f	struct:Eq
 count_items	original src/rlike-phase5.cc	/^    std::size_t count_items() const$/;"	f	struct:Eq
 count_items	original src/rlike-phase6.cc	/^    std::size_t count_items() const$/;"	f	struct:Eq
 count_items	original src/rlike-phase7-bugfix.cc	/^    std::size_t count_items() const$/;"	f	struct:Eq
 count_items	original src/rlike-phase7-video_ends_here.cc	/^    std::size_t count_items() const$/;"	f	struct:Eq
+cout	original src/rlike-phase1.cc	/^            std::cout << "You are scavenging for survival and not playing an RPG character.\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase1.cc	/^            std::cout << "You have nothing edible! You are hoping to collect something you can sell for food.\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase1.cc	/^        else std::cout << "what?\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase1.cc	/^        { std::cout << "You cannot go that way.\\n"; return false; }$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase1.cc	/^    std::cout << "Welcome to the treasure dungeon.\\n\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase1.cc	/^    std::cout <<$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase2.cc	/^            std::cout << "You are scavenging for survival and not playing an RPG character.\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase2.cc	/^            std::cout << "You have nothing edible! You are hoping to collect something you can sell for food.\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase2.cc	/^        else std::cout << "what?\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase2.cc	/^        { std::cout << "You cannot go that way.\\n"; return false; }$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase2.cc	/^    std::cout << "Welcome to the treasure dungeon.\\n\\n";$/;"	m	class:Maze::std	file:
+cout	original src/rlike-phase2.cc	/^    std::cout <<$/;"	m	class:Maze::std	file:
 ctype	original src/printf.cc	/^                                       >::type>::type ctype;$/;"	t	struct:__anon1::PrintfFormatDo	file:
+d	original src/printf.cc	/^                double d = 0.;$/;"	l
+d	original src/printf.cc	/^                s >> d;$/;"	l
+damage_resistance	original src/rlike-phase6.cc	/^    float damage_resistance = (0.5 * 1.5) \/ (0.9*0.09*0.1); \/\/ 92.593$/;"	l
+damage_resistance	original src/rlike-phase7-bugfix.cc	/^    float damage_resistance = (0.5 * 1.5) \/ (0.9*0.09*0.1); \/\/ 92.593$/;"	l
+damage_resistance	original src/rlike-phase7-video_ends_here.cc	/^    float damage_resistance = (0.5 * 1.5) \/ (0.9*0.09*0.1); \/\/ 92.593$/;"	l
 defaultRoom	rlike.cpp	/^} static const defaultRoom;$/;"	v	file:
 defaultroom	original src/rlike-phase1.cc	/^} static const defaultroom;$/;"	v	file:
 defaultroom	original src/rlike-phase2.cc	/^} static const defaultroom;$/;"	v	file:
@@ -564,6 +800,20 @@ defaultroom	original src/rlike-phase5.cc	/^} static const defaultroom;$/;"	v	fil
 defaultroom	original src/rlike-phase6.cc	/^} static const defaultroom;$/;"	v	file:
 defaultroom	original src/rlike-phase7-bugfix.cc	/^} static const defaultroom;$/;"	v	file:
 defaultroom	original src/rlike-phase7-video_ends_here.cc	/^} static const defaultroom;$/;"	v	file:
+digitbuf	original src/printf.cc	/^                std::string digitbuf;$/;"	l
+digits	original src/printf.cc	/^                const char* digits = (arg.base & 64) ? DigitBufUp : DigitBufLo;$/;"	l
+e	original src/rlike-phase1.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	original src/rlike-phase2.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	original src/rlike-phase3.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	original src/rlike-phase4.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	original src/rlike-phase5.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	original src/rlike-phase6.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	original src/rlike-phase7-bugfix.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	original src/rlike-phase7-video_ends_here.cc	/^    auto b = info_str.begin(), e = info_str.end();$/;"	l
+e	rlike.cpp	/^    auto b = infoStr.begin(), e = infoStr.end();$/;"	l
+effort_cost	original src/rlike-phase6.cc	/^    long  effort_cost       = 8;$/;"	l
+effort_cost	original src/rlike-phase7-bugfix.cc	/^    long  effort_cost       = 8;$/;"	l
+effort_cost	original src/rlike-phase7-video_ends_here.cc	/^    long  effort_cost       = 8;$/;"	l
 enabled	original src/rlike-phase3.cc	/^    bool bold=false, enabled=true;$/;"	m	struct:Term	file:
 enabled	original src/rlike-phase4.cc	/^    bool bold=false, enabled=true;$/;"	m	struct:Term	file:
 enabled	original src/rlike-phase5.cc	/^    bool bold=false, enabled=true;$/;"	m	struct:Term	file:
@@ -571,6 +821,14 @@ enabled	original src/rlike-phase6.cc	/^    bool bold=false, enabled=true;$/;"	m	
 enabled	original src/rlike-phase7-bugfix.cc	/^    bool bold=false, enabled=true;$/;"	m	struct:Term	file:
 enabled	original src/rlike-phase7-video_ends_here.cc	/^    bool bold=false, enabled=true;$/;"	m	struct:Term	file:
 enabled	rlike.cpp	/^    bool bold = false, enabled = true;$/;"	m	struct:Term	file:
+end	original src/rlike-phase5.cc	/^                result.moved.end());$/;"	p	file:
+end	original src/rlike-phase6.cc	/^                result.immovable.end());$/;"	p	file:
+end	original src/rlike-phase6.cc	/^                result.moved.end());$/;"	p	file:
+end	original src/rlike-phase7-bugfix.cc	/^                result.immovable.end());$/;"	p	file:
+end	original src/rlike-phase7-bugfix.cc	/^                result.moved.end());$/;"	p	file:
+end	original src/rlike-phase7-video_ends_here.cc	/^                result.immovable.end());$/;"	p	file:
+end	original src/rlike-phase7-video_ends_here.cc	/^                result.moved.end());$/;"	p	file:
+end	rlike.cpp	/^                result.moved.end());$/;"	p	file:
 endswith	original src/rlike-phase4.cc	56;"	d	file:
 endswith	original src/rlike-phase4.cc	64;"	d	file:
 endswith	original src/rlike-phase5.cc	56;"	d	file:
@@ -589,6 +847,25 @@ eq	original src/rlike-phase6.cc	/^} static eq;$/;"	v	file:
 eq	original src/rlike-phase7-bugfix.cc	/^} static eq;$/;"	v	file:
 eq	original src/rlike-phase7-video_ends_here.cc	/^} static eq;$/;"	v	file:
 eq	rlike.cpp	/^} static eq;$/;"	v	file:
+erase	original src/rlike-phase4.cc	/^            items.erase( items.begin() + a-- );$/;"	p	file:
+erase	original src/rlike-phase5.cc	/^                        Items.erase( Items.begin() + item_id );$/;"	p	file:
+erase	original src/rlike-phase5.cc	/^            items.erase( items.begin() + a-- );$/;"	p	file:
+erase	original src/rlike-phase6.cc	/^                            Items.erase( Items.begin() + item_id );$/;"	p	file:
+erase	original src/rlike-phase6.cc	/^                eq.Items.erase( eq.Items.begin() + item_no );$/;"	p	file:
+erase	original src/rlike-phase6.cc	/^            items.erase( items.begin() + a-- );$/;"	p	file:
+erase	original src/rlike-phase6.cc	/^    room.items.Items.erase( room.items.Items.begin() + chest_no );$/;"	p	file:
+erase	original src/rlike-phase7-bugfix.cc	/^                            Items.erase( Items.begin() + item_id );$/;"	p	file:
+erase	original src/rlike-phase7-bugfix.cc	/^                eq.Items.erase( eq.Items.begin() + item_no );$/;"	p	file:
+erase	original src/rlike-phase7-bugfix.cc	/^            items.erase( items.begin() + a-- );$/;"	p	file:
+erase	original src/rlike-phase7-bugfix.cc	/^            room.items.Items.erase( room.items.Items.begin() + no );$/;"	p	file:
+erase	original src/rlike-phase7-bugfix.cc	/^    room.items.Items.erase( room.items.Items.begin() + chest_no );$/;"	p	file:
+erase	original src/rlike-phase7-video_ends_here.cc	/^                            Items.erase( Items.begin() + item_id );$/;"	p	file:
+erase	original src/rlike-phase7-video_ends_here.cc	/^                eq.Items.erase( eq.Items.begin() + item_no );$/;"	p	file:
+erase	original src/rlike-phase7-video_ends_here.cc	/^            items.erase( items.begin() + a-- );$/;"	p	file:
+erase	original src/rlike-phase7-video_ends_here.cc	/^            room.items.Items.erase( room.items.Items.begin() + no );$/;"	p	file:
+erase	original src/rlike-phase7-video_ends_here.cc	/^    room.items.Items.erase( room.items.Items.begin() + chest_no );$/;"	p	file:
+erase	rlike.cpp	/^                        items.erase(items.begin() + itemId);$/;"	p	file:
+erase	rlike.cpp	/^            items.erase(items.begin() + a--);$/;"	p	file:
 everything	original src/rlike-phase4.cc	/^    bool everything = false;$/;"	m	struct:ItemReference	file:
 everything	original src/rlike-phase5.cc	/^    bool everything = false;$/;"	m	struct:ItemReference	file:
 everything	original src/rlike-phase6.cc	/^    bool everything = false;$/;"	m	struct:ItemReference	file:
@@ -601,6 +878,14 @@ except	original src/rlike-phase6.cc	/^    std::deque<SingleReference> refs, exce
 except	original src/rlike-phase7-bugfix.cc	/^    std::deque<SingleReference> refs, except;$/;"	m	struct:ItemReference	file:
 except	original src/rlike-phase7-video_ends_here.cc	/^    std::deque<SingleReference> refs, except;$/;"	m	struct:ItemReference	file:
 except	rlike.cpp	/^    std::deque<SingleReference> refs, except;$/;"	m	struct:ItemReference	file:
+explanation	original src/rlike-phase5.cc	/^            term << "You drop %s.\\n"_f % explanation;$/;"	l
+explanation	original src/rlike-phase5.cc	/^        std::string explanation = ListWithCounts( std::move(moved.moved) );$/;"	l
+explanation	original src/rlike-phase6.cc	/^            term << "You drop %s.\\n"_f % explanation;$/;"	l
+explanation	original src/rlike-phase6.cc	/^        std::string explanation = ListWithCounts( std::move(moved.moved) );$/;"	l
+explanation	original src/rlike-phase7-bugfix.cc	/^            term << "You drop %s.\\n"_f % explanation;$/;"	l
+explanation	original src/rlike-phase7-bugfix.cc	/^        std::string explanation = ListWithCounts( std::move(moved.moved) );$/;"	l
+explanation	original src/rlike-phase7-video_ends_here.cc	/^            term << "You drop %s.\\n"_f % explanation;$/;"	l
+explanation	original src/rlike-phase7-video_ends_here.cc	/^        std::string explanation = ListWithCounts( std::move(moved.moved) );$/;"	l
 find_item	original src/rlike-phase4.cc	/^    long find_item(const ItemReference::SingleReference& w, std::size_t first=0) const$/;"	f	struct:Eq
 find_item	original src/rlike-phase5.cc	/^    long find_item(const ItemReference::SingleReference& w, std::size_t first=0) const$/;"	f	struct:Eq
 find_item	original src/rlike-phase6.cc	/^    long find_item(const ItemReference::SingleReference& w, std::size_t first=0) const$/;"	f	struct:Eq
@@ -611,16 +896,44 @@ find_money	original src/rlike-phase5.cc	/^    long find_money(const ItemReferenc
 find_money	original src/rlike-phase6.cc	/^    long find_money(const ItemReference::SingleReference& w, std::size_t first=0) const$/;"	f	struct:Eq
 find_money	original src/rlike-phase7-bugfix.cc	/^    long find_money(const ItemReference::SingleReference& w, std::size_t first=0) const$/;"	f	struct:Eq
 find_money	original src/rlike-phase7-video_ends_here.cc	/^    long find_money(const ItemReference::SingleReference& w, std::size_t first=0) const$/;"	f	struct:Eq
+fixed	original src/printf.cc	/^                s << std::fixed;$/;"	m	class:__anon1::std	file:
+flush	original src/rlike-phase1.cc	/^        std::cout << "[life:%ld]> "_f % life << std::flush;$/;"	m	class:Maze::std	file:
+flush	original src/rlike-phase2.cc	/^            std::cout << std::flush;$/;"	m	class:Maze::CommandReader::std	file:
+flush	original src/rlike-phase3.cc	/^                        case 1: std::cout << std::flush; break;$/;"	m	class:Term::std	file:
+flush	original src/rlike-phase4.cc	/^                        case 1: std::cout << std::flush; break;$/;"	m	class:Term::std	file:
+flush	original src/rlike-phase5.cc	/^                        case 1: std::cout << std::flush; break;$/;"	m	class:Term::std	file:
+flush	original src/rlike-phase6.cc	/^                        case 1: std::cout << std::flush; break;$/;"	m	class:Term::std	file:
+flush	original src/rlike-phase7-bugfix.cc	/^                        case 1: std::cout << std::flush; break;$/;"	m	class:Term::std	file:
+flush	original src/rlike-phase7-video_ends_here.cc	/^                        case 1: std::cout << std::flush; break;$/;"	m	class:Term::std	file:
+flush	rlike.cpp	/^                        case 1: std::cout << std::flush; break;$/;"	m	class:Term::std	file:
 foodTypes	rlike.cpp	/^foodTypes[] = {$/;"	v	file:
 format	original src/printf.hh	/^        enum formattype : char { as_char, as_int, as_float, as_string } format = as_string;$/;"	m	class:PrintfFormatter	typeref:struct:PrintfFormatter::argsmall
+format	original src/rlike-phase3.cc	/^        std::cout << format(what);$/;"	p	file:
 format	original src/rlike-phase3.cc	/^    std::string format(const std::string& what)$/;"	f	struct:Term
+format	original src/rlike-phase4.cc	/^        std::cout << format(what);$/;"	p	file:
 format	original src/rlike-phase4.cc	/^    std::string format(const std::string& what)$/;"	f	struct:Term
+format	original src/rlike-phase5.cc	/^        std::cout << format(what);$/;"	p	file:
 format	original src/rlike-phase5.cc	/^    std::string format(const std::string& what)$/;"	f	struct:Term
+format	original src/rlike-phase6.cc	/^        std::cout << format(what);$/;"	p	file:
 format	original src/rlike-phase6.cc	/^    std::string format(const std::string& what)$/;"	f	struct:Term
+format	original src/rlike-phase7-bugfix.cc	/^        std::cout << format(what);$/;"	p	file:
 format	original src/rlike-phase7-bugfix.cc	/^    std::string format(const std::string& what)$/;"	f	struct:Term
+format	original src/rlike-phase7-video_ends_here.cc	/^        std::cout << format(what);$/;"	p	file:
 format	original src/rlike-phase7-video_ends_here.cc	/^    std::string format(const std::string& what)$/;"	f	struct:Term
+format	rlike.cpp	/^        std::cout << format(what);$/;"	p	file:
 format	rlike.cpp	/^    std::string format(const std::string& what) {$/;"	f	struct:Term
 formats	original src/printf.hh	/^    std::vector<arg>            formats;$/;"	v
+formattype	original src/printf.hh	/^        enum formattype : char { as_char, as_int, as_float, as_string } format = as_string;$/;"	x
+foundItem	rlike.cpp	/^            bool foundItem = false, foundMoney = false, all = !w.index;$/;"	l
+foundMoney	rlike.cpp	/^            bool foundItem = false, foundMoney = false, all = !w.index;$/;"	l
+found_item	original src/rlike-phase5.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+found_item	original src/rlike-phase6.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+found_item	original src/rlike-phase7-bugfix.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+found_item	original src/rlike-phase7-video_ends_here.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+found_money	original src/rlike-phase5.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+found_money	original src/rlike-phase6.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+found_money	original src/rlike-phase7-bugfix.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
+found_money	original src/rlike-phase7-video_ends_here.cc	/^            bool found_item=false, found_money=false, all = !w.index;$/;"	l
 frand	original src/rlike-phase1.cc	16;"	d	file:
 frand	original src/rlike-phase2.cc	16;"	d	file:
 frand	original src/rlike-phase3.cc	16;"	d	file:
@@ -629,16 +942,82 @@ frand	original src/rlike-phase5.cc	16;"	d	file:
 frand	original src/rlike-phase6.cc	16;"	d	file:
 frand	original src/rlike-phase7-bugfix.cc	16;"	d	file:
 frand	original src/rlike-phase7-video_ends_here.cc	16;"	d	file:
+from_str	original src/rlike-phase5.cc	/^        term << "Nothing taken%s.\\n"_f % from_str;$/;"	l
+from_str	original src/rlike-phase5.cc	/^        term << "You take %s%s.\\n"_f % explanation % from_str;$/;"	l
+from_str	original src/rlike-phase6.cc	/^        term << "Nothing taken%s.\\n"_f % from_str;$/;"	l
+from_str	original src/rlike-phase6.cc	/^        term << "You take %s%s.\\n"_f % explanation % from_str;$/;"	l
+from_str	original src/rlike-phase7-bugfix.cc	/^        term << "Nothing taken%s.\\n"_f % from_str;$/;"	l
+from_str	original src/rlike-phase7-bugfix.cc	/^        term << "You take %s%s.\\n"_f % explanation % from_str;$/;"	l
+from_str	original src/rlike-phase7-video_ends_here.cc	/^        term << "Nothing taken%s.\\n"_f % from_str;$/;"	l
+from_str	original src/rlike-phase7-video_ends_here.cc	/^        term << "You take %s%s.\\n"_f % explanation % from_str;$/;"	l
+getMoney	rlike.cpp	/^                    long getMoney = std::min(remainingMoney, money[moneyId]);$/;"	l
+get_money	original src/rlike-phase5.cc	/^                    long get_money = std::min(remaining_money, Money[money_id]);$/;"	l
+get_money	original src/rlike-phase6.cc	/^                    long get_money = std::min(remaining_money, Money[money_id]);$/;"	l
+get_money	original src/rlike-phase7-bugfix.cc	/^                    long get_money = std::min(remaining_money, Money[money_id]);$/;"	l
+get_money	original src/rlike-phase7-video_ends_here.cc	/^                    long get_money = std::min(remaining_money, Money[money_id]);$/;"	l
+getline	original src/rlike-phase1.cc	/^        std::getline(std::cin, s);$/;"	p	class:Maze::std	file:
+getline	original src/rlike-phase2.cc	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+getline	original src/rlike-phase3.cc	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+getline	original src/rlike-phase4.cc	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+getline	original src/rlike-phase5.cc	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+getline	original src/rlike-phase6.cc	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+getline	original src/rlike-phase7-bugfix.cc	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+getline	original src/rlike-phase7-video_ends_here.cc	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+getline	rlike.cpp	/^                std::getline(std::cin, cmd);$/;"	p	class:Maze::CommandReader::std	file:
+hereStr	rlike.cpp	/^                term << "There is nothing " << hereStr + ".\\n";$/;"	l
+hereStr	rlike.cpp	/^    std::string hereStr = "here";$/;"	l
+here_str	original src/rlike-phase4.cc	/^                term << "There is nothing %s.\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase4.cc	/^    std::string here_str = "here";$/;"	l
+here_str	original src/rlike-phase5.cc	/^                term << "There is nothing %s.\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase5.cc	/^            term << "There is nothing %s you can take!\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase6.cc	/^                term << "There is nothing %s.\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase6.cc	/^            term << "There is nothing %s you can take!\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase7-bugfix.cc	/^                term << "There is nothing %s.\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase7-bugfix.cc	/^            term << "There is nothing %s you can take!\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase7-video_ends_here.cc	/^                term << "There is nothing %s.\\n"_f % here_str;$/;"	l
+here_str	original src/rlike-phase7-video_ends_here.cc	/^            term << "There is nothing %s you can take!\\n"_f % here_str;$/;"	l
 hex	original src/printf.hh	/^        enum basetype   : char { decimal=10, hex=16,  hexup=16+64,  oct=8, bin=2 } base   = decimal;$/;"	m	struct:PrintfFormatter::argsmall	typeref:enum:PrintfFormatter::argsmall::
 hexup	original src/printf.hh	/^        enum basetype   : char { decimal=10, hex=16,  hexup=16+64,  oct=8, bin=2 } base   = decimal;$/;"	m	struct:PrintfFormatter::argsmall	typeref:enum:PrintfFormatter::argsmall::
-history	original src/rlike-phase2.cc	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
-history	original src/rlike-phase3.cc	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
-history	original src/rlike-phase4.cc	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
-history	original src/rlike-phase5.cc	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
-history	original src/rlike-phase6.cc	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
-history	original src/rlike-phase7-bugfix.cc	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
-history	original src/rlike-phase7-video_ends_here.cc	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
-history	rlike.cpp	/^    std::deque<std::string> history;$/;"	m	struct:CommandReader	file:
+history	original src/rlike-phase2.cc	/^                        std::cout << "Repeating <%s>\\n"_f % history[a];$/;"	l
+history	original src/rlike-phase2.cc	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+history	original src/rlike-phase3.cc	/^                        term << "Repeating <%s>\\n"_f % history[a];$/;"	l
+history	original src/rlike-phase3.cc	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+history	original src/rlike-phase4.cc	/^                        term << "Repeating <%s>\\n"_f % history[a];$/;"	l
+history	original src/rlike-phase4.cc	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+history	original src/rlike-phase5.cc	/^                        term << "Repeating <%s>\\n"_f % history[a];$/;"	l
+history	original src/rlike-phase5.cc	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+history	original src/rlike-phase6.cc	/^                        term << "Repeating <%s>\\n"_f % history[a];$/;"	l
+history	original src/rlike-phase6.cc	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+history	original src/rlike-phase7-bugfix.cc	/^                        term << "Repeating <%s>\\n"_f % history[a];$/;"	l
+history	original src/rlike-phase7-bugfix.cc	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+history	original src/rlike-phase7-video_ends_here.cc	/^                        term << "Repeating <%s>\\n"_f % history[a];$/;"	l
+history	original src/rlike-phase7-video_ends_here.cc	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+history	rlike.cpp	/^                        term << "Repeating " << history[a] << "\\n";$/;"	l
+history	rlike.cpp	/^            std::ostringstream oss; oss << std::setw(3) << a + 1 << " : " << history[a] << "\\n";$/;"	l
+history	rlike.cpp	/^    std::deque<std::string> history;$/;"	m	struct:Maze::CommandReader	file:
+i	original src/rlike-phase3.cc	/^                auto i = ansi_features.find(res[1]);$/;"	l
+i	original src/rlike-phase3.cc	/^            auto i = translation.find(c);$/;"	l
+i	original src/rlike-phase4.cc	/^                auto i = ansi_features.find(res[1]);$/;"	l
+i	original src/rlike-phase4.cc	/^            auto i = translation.find(c);$/;"	l
+i	original src/rlike-phase4.cc	/^        auto i = count.find(n);$/;"	l
+i	original src/rlike-phase5.cc	/^                auto i = ansi_features.find(res[1]);$/;"	l
+i	original src/rlike-phase5.cc	/^            auto i = translation.find(c);$/;"	l
+i	original src/rlike-phase5.cc	/^        auto i = count.find(n);$/;"	l
+i	original src/rlike-phase6.cc	/^                auto i = ansi_features.find(res[1]);$/;"	l
+i	original src/rlike-phase6.cc	/^            auto i = translation.find(c);$/;"	l
+i	original src/rlike-phase6.cc	/^            std::set<std::string> i(r.immovable.begin(), r.immovable.end());$/;"	p	file:
+i	original src/rlike-phase6.cc	/^        auto i = count.find(n);$/;"	l
+i	original src/rlike-phase7-bugfix.cc	/^                auto i = ansi_features.find(res[1]);$/;"	l
+i	original src/rlike-phase7-bugfix.cc	/^            auto i = translation.find(c);$/;"	l
+i	original src/rlike-phase7-bugfix.cc	/^            std::set<std::string> i(r.immovable.begin(), r.immovable.end());$/;"	p	file:
+i	original src/rlike-phase7-bugfix.cc	/^        auto i = count.find(n);$/;"	l
+i	original src/rlike-phase7-video_ends_here.cc	/^                auto i = ansi_features.find(res[1]);$/;"	l
+i	original src/rlike-phase7-video_ends_here.cc	/^            auto i = translation.find(c);$/;"	l
+i	original src/rlike-phase7-video_ends_here.cc	/^            std::set<std::string> i(r.immovable.begin(), r.immovable.end());$/;"	p	file:
+i	original src/rlike-phase7-video_ends_here.cc	/^        auto i = count.find(n);$/;"	l
+i	rlike.cpp	/^                auto i = ansiFeatures.find(res[1]);$/;"	l
+i	rlike.cpp	/^            auto i = translation.find(c);$/;"	l
+i	rlike.cpp	/^        auto i = count.find(n);$/;"	l
 immovable	original src/rlike-phase6.cc	/^        std::deque<std::string> immovable;$/;"	m	struct:Eq::moveresult	file:
 immovable	original src/rlike-phase6.cc	/^    bool immovable() const$/;"	f	struct:ItemType
 immovable	original src/rlike-phase7-bugfix.cc	/^        std::deque<std::string> immovable;$/;"	m	struct:Eq::moveresult	file:
@@ -651,7 +1030,55 @@ index	original src/rlike-phase6.cc	/^        long        index = 1;$/;"	m	struct
 index	original src/rlike-phase7-bugfix.cc	/^        long        index = 1;$/;"	m	struct:ItemReference::SingleReference	file:
 index	original src/rlike-phase7-video_ends_here.cc	/^        long        index = 1;$/;"	m	struct:ItemReference::SingleReference	file:
 index	rlike.cpp	/^        long index = 1;$/;"	m	struct:ItemReference::SingleReference	file:
+info	original src/rlike-phase4.cc	/^        std::string info, common =$/;"	l
+info	original src/rlike-phase4.cc	/^    std::string info, common = specific$/;"	l
+info	original src/rlike-phase5.cc	/^        std::string info, common =$/;"	l
+info	original src/rlike-phase5.cc	/^    std::string info, common = specific$/;"	l
+info	original src/rlike-phase6.cc	/^        std::string info, common =$/;"	l
+info	original src/rlike-phase6.cc	/^    std::string info, common = specific$/;"	l
+info	original src/rlike-phase7-bugfix.cc	/^        std::string info, common =$/;"	l
+info	original src/rlike-phase7-bugfix.cc	/^    std::string info, common = specific$/;"	l
+info	original src/rlike-phase7-video_ends_here.cc	/^        std::string info, common =$/;"	l
+info	original src/rlike-phase7-video_ends_here.cc	/^    std::string info, common = specific$/;"	l
+info	rlike.cpp	/^        std::string info, common = oss.str();$/;"	l
+info	rlike.cpp	/^    std::string info, common = specific ? "It is " + AddArticle(Name(0, 2)) + ". It is in " + GetCondition() + " condition.\\n"$/;"	l
+infoStr	rlike.cpp	/^    const std::string infoStr = oss.str() + room.items.Print(false).first;$/;"	l
+info_str	original src/rlike-phase1.cc	/^    const std::string info_str =$/;"	l
+info_str	original src/rlike-phase2.cc	/^    const std::string info_str =$/;"	l
+info_str	original src/rlike-phase3.cc	/^    const std::string info_str =$/;"	l
+info_str	original src/rlike-phase4.cc	/^    const std::string info_str =$/;"	l
+info_str	original src/rlike-phase5.cc	/^    const std::string info_str =$/;"	l
+info_str	original src/rlike-phase6.cc	/^    const std::string info_str =$/;"	l
+info_str	original src/rlike-phase7-bugfix.cc	/^    const std::string info_str =$/;"	l
+info_str	original src/rlike-phase7-video_ends_here.cc	/^    const std::string info_str =$/;"	l
+insRes	rlike.cpp	/^        auto insRes = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase1.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase2.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase3.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase4.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase5.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase6.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase7-bugfix.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+insres	original src/rlike-phase7-video_ends_here.cc	/^        auto insres = rooms[x].insert( {y, model} );$/;"	l
+item	original src/rlike-phase4.cc	/^        const auto& item = Items[n];$/;"	l
+item	original src/rlike-phase5.cc	/^        const auto& item = Items[n];$/;"	l
+item	original src/rlike-phase6.cc	/^            auto& item = eq.Items[item_no];$/;"	l
+item	original src/rlike-phase6.cc	/^        const auto& item = Items[n];$/;"	l
+item	original src/rlike-phase6.cc	/^        const auto& item = eq.Items[item_no];$/;"	l
+item	original src/rlike-phase7-bugfix.cc	/^            auto& item = eq.Items[item_no];$/;"	l
+item	original src/rlike-phase7-bugfix.cc	/^        const auto& item = Items[n];$/;"	l
+item	original src/rlike-phase7-bugfix.cc	/^        const auto& item = eq.Items[item_no];$/;"	l
+item	original src/rlike-phase7-video_ends_here.cc	/^            auto& item = eq.Items[item_no];$/;"	l
+item	original src/rlike-phase7-video_ends_here.cc	/^        const auto& item = Items[n];$/;"	l
+item	original src/rlike-phase7-video_ends_here.cc	/^        const auto& item = eq.Items[item_no];$/;"	l
+item	rlike.cpp	/^        const auto& item = items[n];$/;"	l
 itemTypes	rlike.cpp	/^itemTypes[] = {$/;"	v	file:
+item_damaged	original src/rlike-phase6.cc	/^        bool item_damaged = (item_no >= 0 && frand() >= 0.25f);$/;"	l
+item_damaged	original src/rlike-phase7-bugfix.cc	/^        bool item_damaged = (item_no >= 0 && frand() >= 0.25f);$/;"	l
+item_damaged	original src/rlike-phase7-video_ends_here.cc	/^        bool item_damaged = (item_no >= 0 && frand() >= 0.25f);$/;"	l
+item_no	original src/rlike-phase6.cc	/^    long item_no = -1;$/;"	l
+item_no	original src/rlike-phase7-bugfix.cc	/^    long item_no = -1;$/;"	l
+item_no	original src/rlike-phase7-video_ends_here.cc	/^    long item_no = -1;$/;"	l
 items	original src/rlike-phase4.cc	/^    Eq items;                   \/\/ What is lying on the floor$/;"	m	struct:Room	file:
 items	original src/rlike-phase5.cc	/^    Eq items;                   \/\/ What is lying on the floor$/;"	m	struct:Room	file:
 items	original src/rlike-phase6.cc	/^    Eq items;                   \/\/ What is lying on the floor$/;"	m	struct:Room	file:
@@ -659,21 +1086,58 @@ items	original src/rlike-phase7-bugfix.cc	/^    Eq items;                   \/\/
 items	original src/rlike-phase7-video_ends_here.cc	/^    Eq items;                   \/\/ What is lying on the floor$/;"	m	struct:Room	file:
 items	rlike.cpp	/^    Eq items;                           \/\/ What is lying on the floor.$/;"	m	struct:Room	file:
 items	rlike.cpp	/^    std::deque<ItemType> items;$/;"	m	struct:Eq	file:
+itemsValue	rlike.cpp	/^        float itemsValue = 0.0f, moneyValue = 0.0f;$/;"	l
+itemsvalue	original src/rlike-phase4.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+itemsvalue	original src/rlike-phase5.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+itemsvalue	original src/rlike-phase6.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+itemsvalue	original src/rlike-phase7-bugfix.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+itemsvalue	original src/rlike-phase7-video_ends_here.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+k	original src/rlike-phase4.cc	/^            std::string k = f.name;$/;"	l
+k	original src/rlike-phase5.cc	/^            std::string k = f.name;$/;"	l
+k	original src/rlike-phase6.cc	/^            std::string k = f.name;$/;"	l
+k	original src/rlike-phase7-bugfix.cc	/^            std::string k = f.name;$/;"	l
+k	original src/rlike-phase7-video_ends_here.cc	/^            std::string k = f.name;$/;"	l
+k	rlike.cpp	/^            std::string k = f.name;$/;"	l
+l	original src/printf.cc	/^        long long l = 0;$/;"	l
+l	original src/printf.cc	/^        s >> l;$/;"	l
 leftalign	original src/printf.hh	/^        bool        leftalign = false;$/;"	m	struct:State
 leftalign	original src/printf.hh	/^        bool leftalign      = false, sign      = false, zeropad = false;$/;"	m	struct:PrintfFormatter::argsmall
-life	original src/rlike-phase1.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	original src/rlike-phase2.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	original src/rlike-phase3.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	original src/rlike-phase4.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	original src/rlike-phase5.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	original src/rlike-phase6.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	original src/rlike-phase7-bugfix.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	original src/rlike-phase7-video_ends_here.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-life	rlike.cpp	/^static long x = 0, y = 0, life = 1000;$/;"	v	file:
+length	original src/printf.cc	/^        std::size_t length = 0;$/;"	l
+life	original src/rlike-phase1.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	original src/rlike-phase2.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	original src/rlike-phase3.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	original src/rlike-phase4.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	original src/rlike-phase5.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	original src/rlike-phase6.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	original src/rlike-phase7-bugfix.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	original src/rlike-phase7-video_ends_here.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+life	rlike.cpp	/^        std::ostringstream oss; oss << "[life:" << life << "]> ";$/;"	l
+life	rlike.cpp	/^static long x = 0, y = 0, life = 1000;$/;"	m	struct:Maze	file:
+line	original src/rlike-phase1.cc	/^        std::string line;$/;"	l
+line	original src/rlike-phase2.cc	/^        std::string line;$/;"	l
+line	original src/rlike-phase3.cc	/^        std::string line;$/;"	l
+line	original src/rlike-phase4.cc	/^        std::string line;$/;"	l
+line	original src/rlike-phase5.cc	/^        std::string line;$/;"	l
+line	original src/rlike-phase6.cc	/^        std::string line;$/;"	l
+line	original src/rlike-phase7-bugfix.cc	/^        std::string line;$/;"	l
+line	original src/rlike-phase7-video_ends_here.cc	/^        std::string line;$/;"	l
+line	rlike.cpp	/^        std::ostringstream oss; oss << "`dfl`" << line << "`reset`";$/;"	l
+line	rlike.cpp	/^        std::string line;$/;"	l
+list	original src/rlike-phase4.cc	/^    std::deque<std::string> list; redo:$/;"	l
+list	original src/rlike-phase5.cc	/^    std::deque<std::string> list; redo:$/;"	l
+list	original src/rlike-phase6.cc	/^    std::deque<std::string> list; redo:$/;"	l
+list	original src/rlike-phase7-bugfix.cc	/^    std::deque<std::string> list; redo:$/;"	l
+list	original src/rlike-phase7-video_ends_here.cc	/^    std::deque<std::string> list; redo:$/;"	l
+list	rlike.cpp	/^    std::deque<std::string> list; redo:$/;"	l
+look	original src/rlike-phase4.cc	/^    std::string look(bool specific) const;$/;"	p	struct:ItemType	file:
 look	original src/rlike-phase4.cc	/^std::string ItemType::look(bool specific) const$/;"	f	class:ItemType
+look	original src/rlike-phase5.cc	/^    std::string look(bool specific) const;$/;"	p	struct:ItemType	file:
 look	original src/rlike-phase5.cc	/^std::string ItemType::look(bool specific) const$/;"	f	class:ItemType
+look	original src/rlike-phase6.cc	/^    std::string look(bool specific) const;$/;"	p	struct:ItemType	file:
 look	original src/rlike-phase6.cc	/^std::string ItemType::look(bool specific) const$/;"	f	class:ItemType
+look	original src/rlike-phase7-bugfix.cc	/^    std::string look(bool specific) const;$/;"	p	struct:ItemType	file:
 look	original src/rlike-phase7-bugfix.cc	/^std::string ItemType::look(bool specific) const$/;"	f	class:ItemType
+look	original src/rlike-phase7-video_ends_here.cc	/^    std::string look(bool specific) const;$/;"	p	struct:ItemType	file:
 look	original src/rlike-phase7-video_ends_here.cc	/^std::string ItemType::look(bool specific) const$/;"	f	class:ItemType
 look_item	original src/rlike-phase4.cc	/^    std::pair<std::string, float> look_item(std::size_t n, bool specific) const$/;"	f	struct:Eq
 look_item	original src/rlike-phase5.cc	/^    std::pair<std::string, float> look_item(std::size_t n, bool specific) const$/;"	f	struct:Eq
@@ -685,64 +1149,204 @@ look_money	original src/rlike-phase5.cc	/^    std::pair<std::string, float> look
 look_money	original src/rlike-phase6.cc	/^    std::pair<std::string, float> look_money(long m, bool specific) const$/;"	f	struct:Eq
 look_money	original src/rlike-phase7-bugfix.cc	/^    std::pair<std::string, float> look_money(long m, bool specific) const$/;"	f	struct:Eq
 look_money	original src/rlike-phase7-video_ends_here.cc	/^    std::pair<std::string, float> look_money(long m, bool specific) const$/;"	f	struct:Eq
-main	original src/rlike-phase1.cc	/^int main()$/;"	f
-main	original src/rlike-phase2.cc	/^int main()$/;"	f
-main	original src/rlike-phase3.cc	/^int main()$/;"	f
-main	original src/rlike-phase4.cc	/^int main()$/;"	f
-main	original src/rlike-phase5.cc	/^int main()$/;"	f
-main	original src/rlike-phase6.cc	/^int main()$/;"	f
-main	original src/rlike-phase7-bugfix.cc	/^int main()$/;"	f
-main	original src/rlike-phase7-video_ends_here.cc	/^int main()$/;"	f
-main	rlike.cpp	/^int main() {$/;"	f
+m	original src/rlike-phase1.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase2.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase3.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase4.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase4.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+m	original src/rlike-phase5.cc	/^            std::set<std::string> m(r.moved.begin(), r.moved.end());$/;"	p	file:
+m	original src/rlike-phase5.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase5.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+m	original src/rlike-phase6.cc	/^            std::set<std::string> m(r.moved.begin(), r.moved.end());$/;"	p	file:
+m	original src/rlike-phase6.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase6.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+m	original src/rlike-phase7-bugfix.cc	/^            std::set<std::string> m(r.moved.begin(), r.moved.end());$/;"	p	file:
+m	original src/rlike-phase7-bugfix.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase7-bugfix.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+m	original src/rlike-phase7-video_ends_here.cc	/^            std::set<std::string> m(r.moved.begin(), r.moved.end());$/;"	p	file:
+m	original src/rlike-phase7-video_ends_here.cc	/^    auto m = mapgraph.begin();$/;"	l
+m	original src/rlike-phase7-video_ends_here.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+m	rlike.cpp	/^            std::set<std::string> m(r.moved.begin(), r.moved.end());$/;"	p	file:
+m	rlike.cpp	/^    auto m = mapGraph.begin();$/;"	l
+m	rlike.cpp	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+main	original src/rlike-phase1.cc	/^int main()$/;"	f	struct:Maze
+main	original src/rlike-phase2.cc	/^int main()$/;"	f	struct:Maze
+main	original src/rlike-phase3.cc	/^int main()$/;"	f	struct:Maze
+main	original src/rlike-phase4.cc	/^int main()$/;"	f	struct:Maze
+main	original src/rlike-phase5.cc	/^int main()$/;"	f	struct:Maze
+main	original src/rlike-phase6.cc	/^int main()$/;"	f	struct:Maze
+main	original src/rlike-phase7-bugfix.cc	/^int main()$/;"	f	struct:Maze
+main	original src/rlike-phase7-video_ends_here.cc	/^int main()$/;"	f	struct:Maze
+main	rlike.cpp	/^int main() {$/;"	f	struct:Maze
+mapGraph	rlike.cpp	/^    std::vector<std::string> mapGraph;$/;"	l
+mapgraph	original src/rlike-phase1.cc	/^    std::vector<std::string> mapgraph;$/;"	l
+mapgraph	original src/rlike-phase2.cc	/^    std::vector<std::string> mapgraph;$/;"	l
+mapgraph	original src/rlike-phase3.cc	/^    std::vector<std::string> mapgraph;$/;"	l
+mapgraph	original src/rlike-phase4.cc	/^    std::vector<std::string> mapgraph;$/;"	l
+mapgraph	original src/rlike-phase5.cc	/^    std::vector<std::string> mapgraph;$/;"	l
+mapgraph	original src/rlike-phase6.cc	/^    std::vector<std::string> mapgraph;$/;"	l
+mapgraph	original src/rlike-phase7-bugfix.cc	/^    std::vector<std::string> mapgraph;$/;"	l
+mapgraph	original src/rlike-phase7-video_ends_here.cc	/^    std::vector<std::string> mapgraph;$/;"	l
 max_width	original src/printf.hh	/^        unsigned min_width  = 0,     max_width = ~0u;$/;"	m	struct:PrintfFormatter::argsmall
 maxwidth	original src/printf.hh	/^        unsigned    maxwidth = 0;$/;"	m	struct:State
-maze	original src/rlike-phase1.cc	/^} static maze;$/;"	v	file:
-maze	original src/rlike-phase2.cc	/^} static maze;$/;"	v	file:
-maze	original src/rlike-phase3.cc	/^} static maze;$/;"	v	file:
-maze	original src/rlike-phase4.cc	/^} static maze;$/;"	v	file:
-maze	original src/rlike-phase5.cc	/^} static maze;$/;"	v	file:
-maze	original src/rlike-phase6.cc	/^} static maze;$/;"	v	file:
-maze	original src/rlike-phase7-bugfix.cc	/^} static maze;$/;"	v	file:
-maze	original src/rlike-phase7-video_ends_here.cc	/^} static maze;$/;"	v	file:
-maze	rlike.cpp	/^} static maze;$/;"	v	file:
+maze	original src/rlike-phase1.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	original src/rlike-phase2.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	original src/rlike-phase3.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	original src/rlike-phase4.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	original src/rlike-phase5.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	original src/rlike-phase6.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	original src/rlike-phase7-bugfix.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	original src/rlike-phase7-video_ends_here.cc	/^} static maze;$/;"	m	struct:Maze	file:
+maze	rlike.cpp	/^} static maze;$/;"	m	struct:Maze	file:
+meBackup	rlike.cpp	/^        Eq targetBackup = target, meBackup = *this;$/;"	l
+me_backup	original src/rlike-phase5.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
+me_backup	original src/rlike-phase6.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
+me_backup	original src/rlike-phase7-bugfix.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
+me_backup	original src/rlike-phase7-video_ends_here.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
 min_width	original src/printf.hh	/^        unsigned min_width  = 0,     max_width = ~0u;$/;"	m	struct:PrintfFormatter::argsmall
 minwidth	original src/printf.hh	/^        unsigned    minwidth = 0;$/;"	m	struct:State
 money	rlike.cpp	/^    long money[Count(moneyTypes)] = { 0 };$/;"	m	struct:Eq	file:
 moneyTypes	rlike.cpp	/^moneyTypes[] = {$/;"	v	file:
+moneyValue	rlike.cpp	/^        float itemsValue = 0.0f, moneyValue = 0.0f;$/;"	l
+moneytype	original src/rlike-phase6.cc	/^            unsigned moneytype((1.0-std::pow(frand(), 4)) * (count(MoneyTypes)-1));$/;"	p	file:
+moneytype	original src/rlike-phase7-bugfix.cc	/^            unsigned moneytype((1.0-std::pow(frand(), 4)) * (count(MoneyTypes)-1));$/;"	p	file:
+moneytype	original src/rlike-phase7-video_ends_here.cc	/^            unsigned moneytype((1.0-std::pow(frand(), 4)) * (count(MoneyTypes)-1));$/;"	p	file:
+moneyvalue	original src/rlike-phase4.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+moneyvalue	original src/rlike-phase5.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+moneyvalue	original src/rlike-phase6.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+moneyvalue	original src/rlike-phase7-bugfix.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+moneyvalue	original src/rlike-phase7-video_ends_here.cc	/^        float itemsvalue = 0.f, moneyvalue = 0.f;$/;"	l
+move	original src/rlike-phase5.cc	/^                    % ListWithCounts( std::move(moved.notfound) );$/;"	p	file:
 move	original src/rlike-phase5.cc	/^    moveresult move(Eq& target, const ItemReference& what)$/;"	f	struct:Eq
+move	original src/rlike-phase6.cc	/^                    % ListWithCounts( std::move(moved.notfound) );$/;"	p	file:
 move	original src/rlike-phase6.cc	/^    moveresult move(Eq& target, const ItemReference& what)$/;"	f	struct:Eq
+move	original src/rlike-phase7-bugfix.cc	/^                    % ListWithCounts( std::move(moved.notfound) );$/;"	p	file:
 move	original src/rlike-phase7-bugfix.cc	/^    moveresult move(Eq& target, const ItemReference& what)$/;"	f	struct:Eq
+move	original src/rlike-phase7-video_ends_here.cc	/^                    % ListWithCounts( std::move(moved.notfound) );$/;"	p	file:
 move	original src/rlike-phase7-video_ends_here.cc	/^    moveresult move(Eq& target, const ItemReference& what)$/;"	f	struct:Eq
 moved	original src/rlike-phase5.cc	/^        std::deque<std::string> moved;$/;"	m	struct:Eq::moveresult	file:
+moved	original src/rlike-phase5.cc	/^    auto moved = eq.move(target, what);$/;"	l
+moved	original src/rlike-phase5.cc	/^    auto moved = source.move(eq, what);$/;"	l
 moved	original src/rlike-phase6.cc	/^        std::deque<std::string> moved;$/;"	m	struct:Eq::moveresult	file:
+moved	original src/rlike-phase6.cc	/^    auto moved = eq.move(target, what);$/;"	l
+moved	original src/rlike-phase6.cc	/^    auto moved = source.move(eq, what);$/;"	l
 moved	original src/rlike-phase7-bugfix.cc	/^        std::deque<std::string> moved;$/;"	m	struct:Eq::moveresult	file:
+moved	original src/rlike-phase7-bugfix.cc	/^    auto moved = eq.move(target, what);$/;"	l
+moved	original src/rlike-phase7-bugfix.cc	/^    auto moved = source.move(eq, what);$/;"	l
 moved	original src/rlike-phase7-video_ends_here.cc	/^        std::deque<std::string> moved;$/;"	m	struct:Eq::moveresult	file:
+moved	original src/rlike-phase7-video_ends_here.cc	/^    auto moved = eq.move(target, what);$/;"	l
+moved	original src/rlike-phase7-video_ends_here.cc	/^    auto moved = source.move(eq, what);$/;"	l
 moved	rlike.cpp	/^        std::deque<std::string> moved;$/;"	m	struct:Eq::MoveResult	file:
 moveresult	original src/rlike-phase5.cc	/^    struct moveresult$/;"	s	struct:Eq	file:
 moveresult	original src/rlike-phase6.cc	/^    struct moveresult$/;"	s	struct:Eq	file:
 moveresult	original src/rlike-phase7-bugfix.cc	/^    struct moveresult$/;"	s	struct:Eq	file:
 moveresult	original src/rlike-phase7-video_ends_here.cc	/^    struct moveresult$/;"	s	struct:Eq	file:
+msg	original src/rlike-phase1.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase1.cc	/^    if(msg) { std::cout << msg; }$/;"	l
+msg	original src/rlike-phase2.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase2.cc	/^    if(msg) { std::cout << msg; }$/;"	l
+msg	original src/rlike-phase3.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase3.cc	/^    if(msg) { term << "`alert`%s`reset`"_f % msg; }$/;"	l
+msg	original src/rlike-phase4.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase4.cc	/^    if(msg) { term << "`alert`%s`reset`"_f % msg; }$/;"	l
+msg	original src/rlike-phase5.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase5.cc	/^    if(msg) { term << "`alert`%s`reset`"_f % msg; }$/;"	l
+msg	original src/rlike-phase6.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase6.cc	/^    if(msg) { term << "`alert`%s`reset`"_f % msg; }$/;"	l
+msg	original src/rlike-phase7-bugfix.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase7-bugfix.cc	/^    if(msg) { term << "`alert`%s`reset`"_f % msg; }$/;"	l
+msg	original src/rlike-phase7-video_ends_here.cc	/^    const char* msg = nullptr;$/;"	l
+msg	original src/rlike-phase7-video_ends_here.cc	/^    if(msg) { term << "`alert`%s`reset`"_f % msg; }$/;"	l
+msg	rlike.cpp	/^    const char* msg = nullptr;$/;"	l
+msg	rlike.cpp	/^    if (msg) { term << "`alert`" << msg << "`reset`"; }$/;"	l
+n	original src/printf.cc	/^                char32_t n = part;$/;"	l
+n	original src/rlike-phase4.cc	/^                std::string n = Items[a].name((level\/3)%2, level%3);$/;"	l
+n	original src/rlike-phase4.cc	/^        std::string& n = items[a];$/;"	l
+n	original src/rlike-phase5.cc	/^                std::string n = Items[a].name((level\/3)%2, level%3);$/;"	l
+n	original src/rlike-phase5.cc	/^            unsigned n = 0;$/;"	l
+n	original src/rlike-phase5.cc	/^        std::string& n = items[a];$/;"	l
+n	original src/rlike-phase6.cc	/^                std::string n = Items[a].name((level\/3)%2, level%3);$/;"	l
+n	original src/rlike-phase6.cc	/^            unsigned n = 0;$/;"	l
+n	original src/rlike-phase6.cc	/^        std::string& n = items[a];$/;"	l
+n	original src/rlike-phase7-bugfix.cc	/^                std::string n = Items[a].name((level\/3)%2, level%3);$/;"	l
+n	original src/rlike-phase7-bugfix.cc	/^            unsigned n = 0;$/;"	l
+n	original src/rlike-phase7-bugfix.cc	/^        std::size_t n = cart->count_items();$/;"	l
+n	original src/rlike-phase7-bugfix.cc	/^        std::string& n = items[a];$/;"	l
+n	original src/rlike-phase7-video_ends_here.cc	/^                std::string n = Items[a].name((level\/3)%2, level%3);$/;"	l
+n	original src/rlike-phase7-video_ends_here.cc	/^            unsigned n = 0;$/;"	l
+n	original src/rlike-phase7-video_ends_here.cc	/^        std::size_t n = cart->count_items();$/;"	l
+n	original src/rlike-phase7-video_ends_here.cc	/^        std::string& n = items[a];$/;"	l
+n	rlike.cpp	/^                std::string n = items[a].Name((level \/ 3) % 2, level % 3);$/;"	l
+n	rlike.cpp	/^        std::string& n = items[a];$/;"	l
+n_sources	original src/rlike-phase5.cc	/^        unsigned n_sources = 0;$/;"	l
+n_sources	original src/rlike-phase6.cc	/^        unsigned n_sources = 0;$/;"	l
+n_sources	original src/rlike-phase7-bugfix.cc	/^        unsigned n_sources = 0;$/;"	l
+n_sources	original src/rlike-phase7-video_ends_here.cc	/^        unsigned n_sources = 0;$/;"	l
 name	original src/rlike-phase1.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
 name	original src/rlike-phase2.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
 name	original src/rlike-phase3.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
 name	original src/rlike-phase4.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
+name	original src/rlike-phase4.cc	/^    std::string name(int cond=0, int mat=0) const;$/;"	p	struct:ItemType	file:
 name	original src/rlike-phase4.cc	/^std::string ItemType::name(int cond, int mat) const$/;"	f	class:ItemType
+name	original src/rlike-phase5.cc	/^                        std::string name = AddArticle(Items[item_id].name(0,1));$/;"	l
 name	original src/rlike-phase5.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
+name	original src/rlike-phase5.cc	/^    std::string name(int cond=0, int mat=0) const;$/;"	p	struct:ItemType	file:
 name	original src/rlike-phase5.cc	/^std::string ItemType::name(int cond, int mat) const$/;"	f	class:ItemType
+name	original src/rlike-phase6.cc	/^                        std::string name = AddArticle(Items[item_id].name(0,1));$/;"	l
+name	original src/rlike-phase6.cc	/^                term << "`alert`Your %s gets damaged! It is utterly destroyed.\\n"_f % name;$/;"	l
+name	original src/rlike-phase6.cc	/^            std::string name = item.name(1,1);$/;"	l
 name	original src/rlike-phase6.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
+name	original src/rlike-phase6.cc	/^    std::string name(int cond=0, int mat=0) const;$/;"	p	struct:ItemType	file:
 name	original src/rlike-phase6.cc	/^std::string ItemType::name(int cond, int mat) const$/;"	f	class:ItemType
+name	original src/rlike-phase7-bugfix.cc	/^                        std::string name = AddArticle(Items[item_id].name(0,1));$/;"	l
+name	original src/rlike-phase7-bugfix.cc	/^                term << "`alert`Your %s gets damaged! It is utterly destroyed.\\n"_f % name;$/;"	l
+name	original src/rlike-phase7-bugfix.cc	/^            std::string name = item.name(1,1);$/;"	l
 name	original src/rlike-phase7-bugfix.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
+name	original src/rlike-phase7-bugfix.cc	/^    std::string name(int cond=0, int mat=0) const;$/;"	p	struct:ItemType	file:
 name	original src/rlike-phase7-bugfix.cc	/^std::string ItemType::name(int cond, int mat) const$/;"	f	class:ItemType
+name	original src/rlike-phase7-video_ends_here.cc	/^                        std::string name = AddArticle(Items[item_id].name(0,1));$/;"	l
+name	original src/rlike-phase7-video_ends_here.cc	/^                term << "`alert`Your %s gets damaged! It is utterly destroyed.\\n"_f % name;$/;"	l
+name	original src/rlike-phase7-video_ends_here.cc	/^            std::string name = item.name(1,1);$/;"	l
 name	original src/rlike-phase7-video_ends_here.cc	/^    const char* name;$/;"	m	struct:GenericData	file:
+name	original src/rlike-phase7-video_ends_here.cc	/^    std::string name(int cond=0, int mat=0) const;$/;"	p	struct:ItemType	file:
 name	original src/rlike-phase7-video_ends_here.cc	/^std::string ItemType::name(int cond, int mat) const$/;"	f	class:ItemType
+name	rlike.cpp	/^                                               moneyTypes[moneyId].name + $/;"	p	file:
+name	rlike.cpp	/^                        std::string name = AddArticle(items[itemId].Name(0, 1));$/;"	l
+name	rlike.cpp	/^        std::ostringstream oss; oss << money[m] << moneyTypes[m].name << (money[m] == 1 ? "coin" : "coins");$/;"	p	file:
 name	rlike.cpp	/^    const char* name;$/;"	m	struct:GenericData	file:
+names	original src/rlike-phase4.cc	/^        std::deque<std::string> names;$/;"	l
+names	original src/rlike-phase5.cc	/^        std::deque<std::string> names;$/;"	l
+names	original src/rlike-phase6.cc	/^        std::deque<std::string> names;$/;"	l
+names	original src/rlike-phase7-bugfix.cc	/^        std::deque<std::string> names;$/;"	l
+names	original src/rlike-phase7-video_ends_here.cc	/^        std::deque<std::string> names;$/;"	l
+names	rlike.cpp	/^        std::deque<std::string> names;$/;"	l
 notFound	rlike.cpp	/^        std::deque<std::string> notFound;$/;"	m	struct:Eq::MoveResult	file:
 notfound	original src/rlike-phase5.cc	/^        std::deque<std::string> notfound;$/;"	m	struct:Eq::moveresult	file:
 notfound	original src/rlike-phase6.cc	/^        std::deque<std::string> notfound;$/;"	m	struct:Eq::moveresult	file:
 notfound	original src/rlike-phase7-bugfix.cc	/^        std::deque<std::string> notfound;$/;"	m	struct:Eq::moveresult	file:
 notfound	original src/rlike-phase7-video_ends_here.cc	/^        std::deque<std::string> notfound;$/;"	m	struct:Eq::moveresult	file:
+num	original src/rlike-phase5.cc	/^        auto num = moved.moved.size();$/;"	l
+num	original src/rlike-phase6.cc	/^        auto num = moved.moved.size();$/;"	l
+num	original src/rlike-phase7-bugfix.cc	/^        auto num = moved.moved.size();$/;"	l
+num	original src/rlike-phase7-video_ends_here.cc	/^        auto num = moved.moved.size();$/;"	l
+numberStr	rlike.cpp	/^        std::string numberStr = res[2];    \/\/ The number, if any; empty otherwise.$/;"	l
+number_str	original src/rlike-phase4.cc	/^        std::string number_str = res[2]; \/\/ The number, if any; empty otherwise$/;"	l
+number_str	original src/rlike-phase5.cc	/^        std::string number_str = res[2]; \/\/ The number, if any; empty otherwise$/;"	l
+number_str	original src/rlike-phase6.cc	/^        std::string number_str = res[2]; \/\/ The number, if any; empty otherwise$/;"	l
+number_str	original src/rlike-phase7-bugfix.cc	/^        std::string number_str = res[2]; \/\/ The number, if any; empty otherwise$/;"	l
+number_str	original src/rlike-phase7-video_ends_here.cc	/^        std::string number_str = res[2]; \/\/ The number, if any; empty otherwise$/;"	l
+numerals1To12	rlike.cpp	/^            std::ostringstream oss; oss << "(^" << numerals1To12[a - 1] << "\\\\b)";$/;"	l
 numerals1To12	rlike.cpp	/^static const char* const numerals1To12[12 - 1 + 1] = {"one", "two", "three", "four", "five", "six", "seven",$/;"	v	file:
+occurrences	original src/rlike-phase4.cc	/^        long occurrences = 0;$/;"	l
+occurrences	original src/rlike-phase5.cc	/^        long occurrences = 0;$/;"	l
+occurrences	original src/rlike-phase6.cc	/^        long occurrences = 0;$/;"	l
+occurrences	original src/rlike-phase7-bugfix.cc	/^        long occurrences = 0;$/;"	l
+occurrences	original src/rlike-phase7-video_ends_here.cc	/^        long occurrences = 0;$/;"	l
+occurrences	rlike.cpp	/^        long occurrences = 0;$/;"	l
 oct	original src/printf.hh	/^        enum basetype   : char { decimal=10, hex=16,  hexup=16+64,  oct=8, bin=2 } base   = decimal;$/;"	m	struct:PrintfFormatter::argsmall	typeref:enum:PrintfFormatter::argsmall::
+open_item	original src/rlike-phase6.cc	/^    auto& open_item = room.items.Items[chest_no];$/;"	l
+open_item	original src/rlike-phase7-bugfix.cc	/^    auto& open_item = room.items.Items[chest_no];$/;"	l
+open_item	original src/rlike-phase7-video_ends_here.cc	/^    auto& open_item = room.items.Items[chest_no];$/;"	l
 operator %	original src/printf.cc	/^PrintfProxy PrintfProxy::operator %(PrintfProxy&& arg) &&$/;"	f	class:PrintfProxy
 operator +	original src/printf.cc	/^PrintfProxy PrintfProxy::operator+ (PrintfProxy&& b) &&$/;"	f	class:PrintfProxy
 operator <<	original src/rlike-phase3.cc	/^    Term& operator<< (const std::string& what)$/;"	f	struct:Term
@@ -752,38 +1356,177 @@ operator <<	original src/rlike-phase6.cc	/^    Term& operator<< (const std::stri
 operator <<	original src/rlike-phase7-bugfix.cc	/^    Term& operator<< (const std::string& what)$/;"	f	struct:Term
 operator <<	original src/rlike-phase7-video_ends_here.cc	/^    Term& operator<< (const std::string& what)$/;"	f	struct:Term
 operator <<	rlike.cpp	/^    Term& operator<<(const std::string& what) {$/;"	f	struct:Term
+origCmd	rlike.cpp	/^                std::string origCmd = cmd;$/;"	l
+orig_cmd	original src/rlike-phase2.cc	/^                std::string orig_cmd = cmd;$/;"	l
+orig_cmd	original src/rlike-phase3.cc	/^                std::string orig_cmd = cmd;$/;"	l
+orig_cmd	original src/rlike-phase4.cc	/^                std::string orig_cmd = cmd;$/;"	l
+orig_cmd	original src/rlike-phase5.cc	/^                std::string orig_cmd = cmd;$/;"	l
+orig_cmd	original src/rlike-phase6.cc	/^                std::string orig_cmd = cmd;$/;"	l
+orig_cmd	original src/rlike-phase7-bugfix.cc	/^                std::string orig_cmd = cmd;$/;"	l
+orig_cmd	original src/rlike-phase7-video_ends_here.cc	/^                std::string orig_cmd = cmd;$/;"	l
 original	original src/rlike-phase4.cc	/^    std::string original;$/;"	m	struct:ItemReference	file:
 original	original src/rlike-phase5.cc	/^    std::string original;$/;"	m	struct:ItemReference	file:
 original	original src/rlike-phase6.cc	/^    std::string original;$/;"	m	struct:ItemReference	file:
 original	original src/rlike-phase7-bugfix.cc	/^    std::string original;$/;"	m	struct:ItemReference	file:
 original	original src/rlike-phase7-video_ends_here.cc	/^    std::string original;$/;"	m	struct:ItemReference	file:
 original	rlike.cpp	/^    std::string original;$/;"	m	struct:ItemReference	file:
+oss	rlike.cpp	/^            std::ostringstream oss; oss << "(^" << numerals1To12[a - 1] << "\\\\b)";$/;"	l
+oss	rlike.cpp	/^            std::ostringstream oss; oss << "The total value of your items is " << std::fixed << std::setprecision(2)$/;"	l
+oss	rlike.cpp	/^            std::ostringstream oss; oss << "\\33[" << (int)bold << ";" << color << "m";$/;"	l
+oss	rlike.cpp	/^            std::ostringstream oss; oss << std::setw(3) << a + 1 << " : " << history[a] << "\\n";$/;"	l
+oss	rlike.cpp	/^            std::ostringstream oss;$/;"	l
+oss	rlike.cpp	/^        std::ostringstream oss; oss << "[life:" << life << "]> ";$/;"	l
+oss	rlike.cpp	/^        std::ostringstream oss; oss << "`dfl`" << line << "`reset`";$/;"	l
+oss	rlike.cpp	/^        std::ostringstream oss; oss << "`reset`Your latest commands of at least " << int(HistMin) << " characters:\\n";$/;"	l
+oss	rlike.cpp	/^        std::ostringstream oss; oss << money[m] << moneyTypes[m].name << (money[m] == 1 ? "coin" : "coins");$/;"	l
+oss	rlike.cpp	/^    std::ostringstream oss;$/;"	l
+output	original src/rlike-phase4.cc	/^        std::pair<std::string,float> output;$/;"	l
+output	original src/rlike-phase4.cc	/^    std::string output;$/;"	l
+output	original src/rlike-phase5.cc	/^        std::pair<std::string,float> output;$/;"	l
+output	original src/rlike-phase5.cc	/^    std::string output;$/;"	l
+output	original src/rlike-phase6.cc	/^        std::pair<std::string,float> output;$/;"	l
+output	original src/rlike-phase6.cc	/^    std::string output;$/;"	l
+output	original src/rlike-phase7-bugfix.cc	/^        std::pair<std::string,float> output;$/;"	l
+output	original src/rlike-phase7-bugfix.cc	/^    std::string output;$/;"	l
+output	original src/rlike-phase7-video_ends_here.cc	/^        std::pair<std::string,float> output;$/;"	l
+output	original src/rlike-phase7-video_ends_here.cc	/^    std::string output;$/;"	l
+output	rlike.cpp	/^        std::pair<std::string, float> output;$/;"	l
+output	rlike.cpp	/^    std::string output;$/;"	l
+p	original src/printf.cc	/^            auto p = PrintfFormatDo<TT>::IntValue(part);$/;"	l
+p	original src/printf.cc	/^    PrintfProxy p;$/;"	l
+p	original src/rlike-phase4.cc	/^    std::string p = RemoveArticle(s);$/;"	l
+p	original src/rlike-phase5.cc	/^    auto p = eq.print(true);$/;"	l
+p	original src/rlike-phase5.cc	/^    std::string p = RemoveArticle(s);$/;"	l
+p	original src/rlike-phase6.cc	/^    auto p = eq.print(true);$/;"	l
+p	original src/rlike-phase6.cc	/^    std::string p = RemoveArticle(s);$/;"	l
+p	original src/rlike-phase7-bugfix.cc	/^    auto p = eq.print(true);$/;"	l
+p	original src/rlike-phase7-bugfix.cc	/^    std::string p = RemoveArticle(s);$/;"	l
+p	original src/rlike-phase7-video_ends_here.cc	/^    auto p = eq.print(true);$/;"	l
+p	original src/rlike-phase7-video_ends_here.cc	/^    std::string p = RemoveArticle(s);$/;"	l
+p	rlike.cpp	/^    auto p = eq.Print(true);$/;"	l
+p	rlike.cpp	/^    std::string p = RemoveArticle(s);$/;"	l
+pad	original src/printf.cc	/^            result.append( std::size_t(arg.min_width-length), pad );$/;"	l
+pad	original src/printf.cc	/^        char32_t pad = arg.zeropad ? L'0' : L' ';$/;"	l
 param_maxwidth	original src/printf.hh	/^        bool param_minwidth = false, param_maxwidth = false;$/;"	m	struct:arg
 param_minwidth	original src/printf.hh	/^        bool param_minwidth = false, param_maxwidth = false;$/;"	m	struct:arg
-pattern	original src/rlike-phase2.cc	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
-pattern	original src/rlike-phase3.cc	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
-pattern	original src/rlike-phase4.cc	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
-pattern	original src/rlike-phase5.cc	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
-pattern	original src/rlike-phase6.cc	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
-pattern	original src/rlike-phase7-bugfix.cc	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
-pattern	original src/rlike-phase7-video_ends_here.cc	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
-pattern	rlike.cpp	/^    std::regex  pattern;$/;"	m	struct:Alias	file:
+part	original src/printf.cc	/^                s << part;$/;"	l
+part	original src/printf.cc	/^        s << part;$/;"	l
+pat	original src/rlike-phase1.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	original src/rlike-phase2.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	original src/rlike-phase3.cc	/^        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;$/;"	l	file:
+pat	original src/rlike-phase3.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	original src/rlike-phase4.cc	/^        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;$/;"	l	file:
+pat	original src/rlike-phase4.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	original src/rlike-phase5.cc	/^        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;$/;"	l	file:
+pat	original src/rlike-phase5.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	original src/rlike-phase6.cc	/^        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;$/;"	l	file:
+pat	original src/rlike-phase6.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	original src/rlike-phase7-bugfix.cc	/^        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;$/;"	l	file:
+pat	original src/rlike-phase7-bugfix.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	original src/rlike-phase7-video_ends_here.cc	/^        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;$/;"	l	file:
+pat	original src/rlike-phase7-video_ends_here.cc	/^    auto pat = "([^\\n]*)\\n"_r;$/;"	l
+pat	rlike.cpp	/^        static std::regex pat = "`([a-z]+)`|([^`]+|.)"_r;$/;"	l	file:
+pat	rlike.cpp	/^    auto pat = "([^\\n]*)\\n"_r;  \/\/ There're two regexs: "[^\\n]*\\n" and "[^\\n]*".$/;"	l
+pattern	original src/rlike-phase2.cc	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+pattern	original src/rlike-phase3.cc	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+pattern	original src/rlike-phase4.cc	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+pattern	original src/rlike-phase5.cc	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+pattern	original src/rlike-phase6.cc	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+pattern	original src/rlike-phase7-bugfix.cc	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+pattern	original src/rlike-phase7-video_ends_here.cc	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+pattern	rlike.cpp	/^    std::regex  pattern;$/;"	m	struct:Maze::Alias	file:
+percent_begin	original src/printf.cc	/^            std::size_t percent_begin = a++;$/;"	l
+pop_front	original src/rlike-phase2.cc	/^                if(history.size() > HistLen) history.pop_front();$/;"	p	file:
+pop_front	original src/rlike-phase3.cc	/^                if(history.size() > HistLen) history.pop_front();$/;"	p	file:
+pop_front	original src/rlike-phase4.cc	/^                if(history.size() > HistLen) history.pop_front();$/;"	p	file:
+pop_front	original src/rlike-phase5.cc	/^                if(history.size() > HistLen) history.pop_front();$/;"	p	file:
+pop_front	original src/rlike-phase6.cc	/^                if(history.size() > HistLen) history.pop_front();$/;"	p	file:
+pop_front	original src/rlike-phase7-bugfix.cc	/^                if(history.size() > HistLen) history.pop_front();$/;"	p	file:
+pop_front	original src/rlike-phase7-video_ends_here.cc	/^                if(history.size() > HistLen) history.pop_front();$/;"	p	file:
+pop_front	rlike.cpp	/^                if (history.size() > HistLen) history.pop_front();$/;"	p	file:
+pos	original src/printf.cc	/^    std::size_t position = state.position, pos = position \/ 4,  subpos = position % 4;$/;"	l
+position	original src/printf.cc	/^    std::size_t position = state.position, pos = position \/ 4,  subpos = position % 4;$/;"	l
 position	original src/printf.hh	/^        std::size_t position = 0;$/;"	m	struct:State
 print	original src/rlike-phase4.cc	/^    std::pair<std::string, bool> print(bool is_inv) const$/;"	f	struct:Eq
 print	original src/rlike-phase5.cc	/^    std::pair<std::string, bool> print(bool is_inv) const$/;"	f	struct:Eq
 print	original src/rlike-phase6.cc	/^    std::pair<std::string, bool> print(bool is_inv) const$/;"	f	struct:Eq
 print	original src/rlike-phase7-bugfix.cc	/^    std::pair<std::string, bool> print(bool is_inv) const$/;"	f	struct:Eq
 print	original src/rlike-phase7-video_ends_here.cc	/^    std::pair<std::string, bool> print(bool is_inv) const$/;"	f	struct:Eq
-prompt	original src/rlike-phase2.cc	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-prompt	original src/rlike-phase3.cc	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-prompt	original src/rlike-phase4.cc	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-prompt	original src/rlike-phase5.cc	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-prompt	original src/rlike-phase6.cc	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-prompt	original src/rlike-phase7-bugfix.cc	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-prompt	original src/rlike-phase7-video_ends_here.cc	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-prompt	rlike.cpp	/^    std::string prompt;$/;"	m	struct:CommandReader	file:
-pulling	original src/rlike-phase7-bugfix.cc	/^static bool pulling=false;$/;"	v	file:
-pulling	original src/rlike-phase7-video_ends_here.cc	/^static bool pulling=false;$/;"	v	file:
+prompt	original src/rlike-phase2.cc	/^            std::cout << prompt;$/;"	l
+prompt	original src/rlike-phase2.cc	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prompt	original src/rlike-phase3.cc	/^            term << "`prompt`%s`reset``flush`"_f % prompt;$/;"	l
+prompt	original src/rlike-phase3.cc	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prompt	original src/rlike-phase4.cc	/^            term << "`prompt`%s`reset``flush`"_f % prompt;$/;"	l
+prompt	original src/rlike-phase4.cc	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prompt	original src/rlike-phase5.cc	/^            term << "`prompt`%s`reset``flush`"_f % prompt;$/;"	l
+prompt	original src/rlike-phase5.cc	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prompt	original src/rlike-phase6.cc	/^            term << "`prompt`%s`reset``flush`"_f % prompt;$/;"	l
+prompt	original src/rlike-phase6.cc	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prompt	original src/rlike-phase7-bugfix.cc	/^            term << "`prompt`%s`reset``flush`"_f % prompt;$/;"	l
+prompt	original src/rlike-phase7-bugfix.cc	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prompt	original src/rlike-phase7-video_ends_here.cc	/^            term << "`prompt`%s`reset``flush`"_f % prompt;$/;"	l
+prompt	original src/rlike-phase7-video_ends_here.cc	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prompt	rlike.cpp	/^            term << "`prompt`" << prompt << "`reset``flush`";$/;"	l
+prompt	rlike.cpp	/^    std::string prompt;$/;"	m	struct:Maze::CommandReader	file:
+prying_power	original src/rlike-phase6.cc	/^    float prying_power      = 0.5 \/ 2.5;                    \/\/ 0.2$/;"	l
+prying_power	original src/rlike-phase7-bugfix.cc	/^    float prying_power      = 0.5 \/ 2.5;                    \/\/ 0.2$/;"	l
+prying_power	original src/rlike-phase7-video_ends_here.cc	/^    float prying_power      = 0.5 \/ 2.5;                    \/\/ 0.2$/;"	l
+pulling	original src/rlike-phase7-bugfix.cc	/^static bool pulling=false;$/;"	m	struct:Maze	file:
+pulling	original src/rlike-phase7-video_ends_here.cc	/^static bool pulling=false;$/;"	m	struct:Maze	file:
+push_back	original src/printf.cc	/^            formats.push_back(argument);$/;"	p	file:
+push_back	original src/rlike-phase1.cc	/^        mapgraph.push_back(line);$/;"	p	file:
+push_back	original src/rlike-phase2.cc	/^                history.push_back(cmd);$/;"	p	file:
+push_back	original src/rlike-phase2.cc	/^        mapgraph.push_back(line);$/;"	p	file:
+push_back	original src/rlike-phase3.cc	/^                history.push_back(cmd);$/;"	p	file:
+push_back	original src/rlike-phase4.cc	/^                history.push_back(cmd);$/;"	p	file:
+push_back	original src/rlike-phase4.cc	/^            list.push_back(k); value -= f.worth;$/;"	p	file:
+push_back	original src/rlike-phase4.cc	/^            refs.push_back(w);$/;"	p	file:
+push_back	original src/rlike-phase5.cc	/^                        result.moved.push_back( name );$/;"	p	file:
+push_back	original src/rlike-phase5.cc	/^                history.push_back(cmd);$/;"	p	file:
+push_back	original src/rlike-phase5.cc	/^                result.notfound.push_back(w.what);$/;"	p	file:
+push_back	original src/rlike-phase5.cc	/^            for(const auto& s: r.notfound) result.notfound.push_back(s);$/;"	p	file:
+push_back	original src/rlike-phase5.cc	/^            list.push_back(k); value -= f.worth;$/;"	p	file:
+push_back	original src/rlike-phase5.cc	/^            refs.push_back(w);$/;"	p	file:
+push_back	original src/rlike-phase6.cc	/^                            result.immovable.push_back( name );$/;"	p	file:
+push_back	original src/rlike-phase6.cc	/^                            result.moved.push_back( name );$/;"	p	file:
+push_back	original src/rlike-phase6.cc	/^                history.push_back(cmd);$/;"	p	file:
+push_back	original src/rlike-phase6.cc	/^                result.notfound.push_back(w.what);$/;"	p	file:
+push_back	original src/rlike-phase6.cc	/^            for(const auto& s: r.notfound) result.notfound.push_back(s);$/;"	p	file:
+push_back	original src/rlike-phase6.cc	/^            list.push_back(k); value -= f.worth;$/;"	p	file:
+push_back	original src/rlike-phase6.cc	/^            refs.push_back(w);$/;"	p	file:
+push_back	original src/rlike-phase7-bugfix.cc	/^                            result.immovable.push_back( name );$/;"	p	file:
+push_back	original src/rlike-phase7-bugfix.cc	/^                            result.moved.push_back( name );$/;"	p	file:
+push_back	original src/rlike-phase7-bugfix.cc	/^                history.push_back(cmd);$/;"	p	file:
+push_back	original src/rlike-phase7-bugfix.cc	/^                result.notfound.push_back(w.what);$/;"	p	file:
+push_back	original src/rlike-phase7-bugfix.cc	/^            for(const auto& s: r.notfound) result.notfound.push_back(s);$/;"	p	file:
+push_back	original src/rlike-phase7-bugfix.cc	/^            list.push_back(k); value -= f.worth;$/;"	p	file:
+push_back	original src/rlike-phase7-bugfix.cc	/^            refs.push_back(w);$/;"	p	file:
+push_back	original src/rlike-phase7-video_ends_here.cc	/^                            result.immovable.push_back( name );$/;"	p	file:
+push_back	original src/rlike-phase7-video_ends_here.cc	/^                            result.moved.push_back( name );$/;"	p	file:
+push_back	original src/rlike-phase7-video_ends_here.cc	/^                history.push_back(cmd);$/;"	p	file:
+push_back	original src/rlike-phase7-video_ends_here.cc	/^                result.notfound.push_back(w.what);$/;"	p	file:
+push_back	original src/rlike-phase7-video_ends_here.cc	/^            for(const auto& s: r.notfound) result.notfound.push_back(s);$/;"	p	file:
+push_back	original src/rlike-phase7-video_ends_here.cc	/^            list.push_back(k); value -= f.worth;$/;"	p	file:
+push_back	original src/rlike-phase7-video_ends_here.cc	/^            refs.push_back(w);$/;"	p	file:
+push_back	rlike.cpp	/^                        result.moved.push_back(name);$/;"	p	file:
+push_back	rlike.cpp	/^                history.push_back(cmd);$/;"	p	file:
+push_back	rlike.cpp	/^                result.notFound.push_back(w.what);$/;"	p	file:
+push_back	rlike.cpp	/^            for (const auto& s : r.notFound) result.notFound.push_back(s);$/;"	p	file:
+push_back	rlike.cpp	/^            list.push_back(k); value -= f.worth;$/;"	p	file:
+push_back	rlike.cpp	/^            refs.push_back(w);$/;"	p	file:
+push_back	rlike.cpp	/^        mapGraph.push_back(oss.str());$/;"	p	file:
+push_front	original src/rlike-phase5.cc	/^                        target.Items.push_front( Items[item_id] );$/;"	p	file:
+push_front	original src/rlike-phase6.cc	/^                            target.Items.push_front( Items[item_id] );$/;"	p	file:
+push_front	original src/rlike-phase7-bugfix.cc	/^                            target.Items.push_front( Items[item_id] );$/;"	p	file:
+push_front	original src/rlike-phase7-bugfix.cc	/^            target.items.Items.push_front(room.items.Items[no]);$/;"	p	file:
+push_front	original src/rlike-phase7-video_ends_here.cc	/^                            target.Items.push_front( Items[item_id] );$/;"	p	file:
+push_front	original src/rlike-phase7-video_ends_here.cc	/^            target.items.Items.push_front(room.items.Items[no]);$/;"	p	file:
+push_front	rlike.cpp	/^                        target.items.push_front(items[itemId]);$/;"	p	file:
+r	original src/rlike-phase5.cc	/^            auto r = target.move(*this, takeback);$/;"	l
+r	original src/rlike-phase6.cc	/^            auto r = target.move(*this, takeback);$/;"	l
+r	original src/rlike-phase7-bugfix.cc	/^            auto r = target.move(*this, takeback);$/;"	l
+r	original src/rlike-phase7-video_ends_here.cc	/^            auto r = target.move(*this, takeback);$/;"	l
+r	rlike.cpp	/^            auto r = target.Move(*this, takeBack);$/;"	l
 rand	original src/rlike-phase1.cc	18;"	d	file:
 rand	original src/rlike-phase2.cc	18;"	d	file:
 rand	original src/rlike-phase3.cc	18;"	d	file:
@@ -798,14 +1541,59 @@ refs	original src/rlike-phase6.cc	/^    std::deque<SingleReference> refs, except
 refs	original src/rlike-phase7-bugfix.cc	/^    std::deque<SingleReference> refs, except;$/;"	m	struct:ItemReference	file:
 refs	original src/rlike-phase7-video_ends_here.cc	/^    std::deque<SingleReference> refs, except;$/;"	m	struct:ItemReference	file:
 refs	rlike.cpp	/^    std::deque<SingleReference> refs, except;$/;"	m	struct:ItemReference	file:
-repeat	original src/rlike-phase2.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
-repeat	original src/rlike-phase3.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
-repeat	original src/rlike-phase4.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
-repeat	original src/rlike-phase5.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
-repeat	original src/rlike-phase6.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
-repeat	original src/rlike-phase7-bugfix.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
-repeat	original src/rlike-phase7-video_ends_here.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
-repeat	rlike.cpp	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:CommandReader	file:
+regex_match	original src/rlike-phase4.cc	/^            std::regex_match(w.what, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase4.cc	/^        std::regex_match(what, res, "(.*?)(?: except (.+))?"_r);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase4.cc	/^        std::regex_match(word, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase5.cc	/^            std::regex_match(w.what, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase5.cc	/^        std::regex_match(what, res, "(.*?)(?: except (.+))?"_r);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase5.cc	/^        std::regex_match(word, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase6.cc	/^            std::regex_match(w.what, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase6.cc	/^        std::regex_match(what, res, "(.*?)(?: except (.+))?"_r);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase6.cc	/^        std::regex_match(word, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase7-bugfix.cc	/^            std::regex_match(w.what, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase7-bugfix.cc	/^        std::regex_match(what, res, "(.*?)(?: except (.+))?"_r);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase7-bugfix.cc	/^        std::regex_match(word, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase7-video_ends_here.cc	/^            std::regex_match(w.what, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase7-video_ends_here.cc	/^        std::regex_match(what, res, "(.*?)(?: except (.+))?"_r);$/;"	p	class:ItemReference::std	file:
+regex_match	original src/rlike-phase7-video_ends_here.cc	/^        std::regex_match(word, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	rlike.cpp	/^            std::regex_match(w.what, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_match	rlike.cpp	/^        std::regex_match(what, res, "(.*?)(?: except (.+))?"_r);$/;"	p	class:ItemReference::std	file:
+regex_match	rlike.cpp	/^        std::regex_match(word, res, pattern);$/;"	p	class:ItemReference::std	file:
+regex_search	original src/rlike-phase1.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	original src/rlike-phase2.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	original src/rlike-phase3.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	original src/rlike-phase4.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	original src/rlike-phase5.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	original src/rlike-phase6.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	original src/rlike-phase7-bugfix.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	original src/rlike-phase7-video_ends_here.cc	/^        if(b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+regex_search	rlike.cpp	/^        if (b != e) { std::regex_search(b, e, res, pat); b = res[0].second; }$/;"	p	class:Maze::std	file:
+remainingItems	rlike.cpp	/^                long remainingItems = w.amount ? w.amount : 1;$/;"	l
+remainingMoney	rlike.cpp	/^                long remainingMoney = w.amount ? w.amount : 0x7FFFFFFF1;$/;"	l
+remaining_items	original src/rlike-phase5.cc	/^                long remaining_items = w.amount ? w.amount : 1;$/;"	l
+remaining_items	original src/rlike-phase6.cc	/^                long remaining_items = w.amount ? w.amount : 1;$/;"	l
+remaining_items	original src/rlike-phase7-bugfix.cc	/^                long remaining_items = w.amount ? w.amount : 1;$/;"	l
+remaining_items	original src/rlike-phase7-video_ends_here.cc	/^                long remaining_items = w.amount ? w.amount : 1;$/;"	l
+remaining_money	original src/rlike-phase5.cc	/^                long remaining_money = w.amount ? w.amount : 0x7FFFFFFFl;$/;"	l
+remaining_money	original src/rlike-phase6.cc	/^                long remaining_money = w.amount ? w.amount : 0x7FFFFFFFl;$/;"	l
+remaining_money	original src/rlike-phase7-bugfix.cc	/^                long remaining_money = w.amount ? w.amount : 0x7FFFFFFFl;$/;"	l
+remaining_money	original src/rlike-phase7-video_ends_here.cc	/^                long remaining_money = w.amount ? w.amount : 0x7FFFFFFFl;$/;"	l
+remove_if	original src/rlike-phase5.cc	/^                std::remove_if(result.moved.begin(), result.moved.end(),$/;"	p	file:
+remove_if	original src/rlike-phase6.cc	/^                std::remove_if(result.immovable.begin(), result.immovable.end(),$/;"	p	file:
+remove_if	original src/rlike-phase6.cc	/^                std::remove_if(result.moved.begin(), result.moved.end(),$/;"	p	file:
+remove_if	original src/rlike-phase7-bugfix.cc	/^                std::remove_if(result.immovable.begin(), result.immovable.end(),$/;"	p	file:
+remove_if	original src/rlike-phase7-bugfix.cc	/^                std::remove_if(result.moved.begin(), result.moved.end(),$/;"	p	file:
+remove_if	original src/rlike-phase7-video_ends_here.cc	/^                std::remove_if(result.immovable.begin(), result.immovable.end(),$/;"	p	file:
+remove_if	original src/rlike-phase7-video_ends_here.cc	/^                std::remove_if(result.moved.begin(), result.moved.end(),$/;"	p	file:
+remove_if	rlike.cpp	/^                std::remove_if(result.moved.begin(), result.moved.end(),$/;"	p	file:
+repeat	original src/rlike-phase2.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
+repeat	original src/rlike-phase3.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
+repeat	original src/rlike-phase4.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
+repeat	original src/rlike-phase5.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
+repeat	original src/rlike-phase6.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
+repeat	original src/rlike-phase7-bugfix.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
+repeat	original src/rlike-phase7-video_ends_here.cc	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
+repeat	rlike.cpp	/^    std::pair<std::string, unsigned> repeat;$/;"	m	struct:Maze::CommandReader	file:
 replace	original src/rlike-phase4.cc	57;"	d	file:
 replace	original src/rlike-phase4.cc	65;"	d	file:
 replace	original src/rlike-phase5.cc	57;"	d	file:
@@ -816,15 +1604,70 @@ replace	original src/rlike-phase7-bugfix.cc	57;"	d	file:
 replace	original src/rlike-phase7-bugfix.cc	65;"	d	file:
 replace	original src/rlike-phase7-video_ends_here.cc	57;"	d	file:
 replace	original src/rlike-phase7-video_ends_here.cc	65;"	d	file:
-replacement	original src/rlike-phase2.cc	/^    std::string replacement;$/;"	m	struct:Alias	file:
-replacement	original src/rlike-phase3.cc	/^    std::string replacement;$/;"	m	struct:Alias	file:
-replacement	original src/rlike-phase4.cc	/^    std::string replacement;$/;"	m	struct:Alias	file:
-replacement	original src/rlike-phase5.cc	/^    std::string replacement;$/;"	m	struct:Alias	file:
-replacement	original src/rlike-phase6.cc	/^    std::string replacement;$/;"	m	struct:Alias	file:
-replacement	original src/rlike-phase7-bugfix.cc	/^    std::string replacement;$/;"	m	struct:Alias	file:
-replacement	original src/rlike-phase7-video_ends_here.cc	/^    std::string replacement;$/;"	m	struct:Alias	file:
-replacement	rlike.cpp	/^    std::string replacement;$/;"	m	struct:Alias	file:
+replacement	original src/rlike-phase2.cc	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+replacement	original src/rlike-phase3.cc	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+replacement	original src/rlike-phase4.cc	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+replacement	original src/rlike-phase5.cc	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+replacement	original src/rlike-phase6.cc	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+replacement	original src/rlike-phase7-bugfix.cc	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+replacement	original src/rlike-phase7-video_ends_here.cc	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+replacement	rlike.cpp	/^    std::string replacement;$/;"	m	struct:Maze::Alias	file:
+res	original src/rlike-phase1.cc	/^        std::smatch res;$/;"	l
+res	original src/rlike-phase2.cc	/^            std::smatch res;$/;"	l
+res	original src/rlike-phase2.cc	/^        std::smatch res;$/;"	l
+res	original src/rlike-phase3.cc	/^            std::smatch res;$/;"	l
+res	original src/rlike-phase3.cc	/^        std::smatch res;$/;"	l
+res	original src/rlike-phase4.cc	/^            std::smatch res;$/;"	l
+res	original src/rlike-phase4.cc	/^        std::smatch res;$/;"	l
+res	original src/rlike-phase5.cc	/^            std::smatch res;$/;"	l
+res	original src/rlike-phase5.cc	/^        std::smatch res;$/;"	l
+res	original src/rlike-phase6.cc	/^            std::smatch res;$/;"	l
+res	original src/rlike-phase6.cc	/^        std::smatch res;$/;"	l
+res	original src/rlike-phase7-bugfix.cc	/^            std::smatch res;$/;"	l
+res	original src/rlike-phase7-bugfix.cc	/^        std::smatch res;$/;"	l
+res	original src/rlike-phase7-video_ends_here.cc	/^            std::smatch res;$/;"	l
+res	original src/rlike-phase7-video_ends_here.cc	/^        std::smatch res;$/;"	l
+res	rlike.cpp	/^            std::smatch res;$/;"	l
+res	rlike.cpp	/^        std::smatch res;$/;"	l
+reserve	original src/printf.cc	/^        result.reserve( result.size() + (length < arg.min_width ? arg.min_width : length) );$/;"	p	file:
+resize	original src/rlike-phase4.cc	/^        Items.resize(n);$/;"	p	file:
+resize	original src/rlike-phase5.cc	/^        Items.resize(n);$/;"	p	file:
+resize	original src/rlike-phase6.cc	/^        Items.resize(n);$/;"	p	file:
+resize	original src/rlike-phase7-bugfix.cc	/^        Items.resize(n);$/;"	p	file:
+resize	original src/rlike-phase7-video_ends_here.cc	/^        Items.resize(n);$/;"	p	file:
+resize	rlike.cpp	/^        items.resize(n);$/;"	p	file:
+result	original src/printf.cc	/^        state.result.append( (std::size_t) formats[pos].min_width, L' ' );$/;"	p	file:
 result	original src/printf.hh	/^        std::basic_string<char32_t> result;$/;"	m	struct:State
+result	original src/rlike-phase3.cc	/^        std::string result;$/;"	l
+result	original src/rlike-phase4.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+result	original src/rlike-phase4.cc	/^        std::size_t result = Items.size();$/;"	l
+result	original src/rlike-phase4.cc	/^        std::string result;$/;"	l
+result	original src/rlike-phase4.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+result	original src/rlike-phase5.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+result	original src/rlike-phase5.cc	/^        moveresult result;$/;"	l
+result	original src/rlike-phase5.cc	/^        std::size_t result = Items.size();$/;"	l
+result	original src/rlike-phase5.cc	/^        std::string result;$/;"	l
+result	original src/rlike-phase5.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+result	original src/rlike-phase6.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+result	original src/rlike-phase6.cc	/^        moveresult result;$/;"	l
+result	original src/rlike-phase6.cc	/^        std::size_t result = Items.size();$/;"	l
+result	original src/rlike-phase6.cc	/^        std::string result;$/;"	l
+result	original src/rlike-phase6.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+result	original src/rlike-phase7-bugfix.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+result	original src/rlike-phase7-bugfix.cc	/^        moveresult result;$/;"	l
+result	original src/rlike-phase7-bugfix.cc	/^        std::size_t result = Items.size();$/;"	l
+result	original src/rlike-phase7-bugfix.cc	/^        std::string result;$/;"	l
+result	original src/rlike-phase7-bugfix.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+result	original src/rlike-phase7-video_ends_here.cc	/^        float result = 0.f; size_t a=0;$/;"	l
+result	original src/rlike-phase7-video_ends_here.cc	/^        moveresult result;$/;"	l
+result	original src/rlike-phase7-video_ends_here.cc	/^        std::size_t result = Items.size();$/;"	l
+result	original src/rlike-phase7-video_ends_here.cc	/^        std::string result;$/;"	l
+result	original src/rlike-phase7-video_ends_here.cc	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
+result	rlike.cpp	/^        MoveResult result;$/;"	l
+result	rlike.cpp	/^        float result = 0.0f; size_t a = 0;$/;"	l
+result	rlike.cpp	/^        std::size_t result = items.size();$/;"	l
+result	rlike.cpp	/^        std::string result;$/;"	l
+result	rlike.cpp	/^    std::string result = GetType(), m = GetMaterial();$/;"	l
 rm	original src/rlike-phase1.cc	216;"	d	file:
 rm	original src/rlike-phase2.cc	331;"	d	file:
 rm	original src/rlike-phase3.cc	398;"	d	file:
@@ -842,6 +1685,51 @@ rnd	original src/rlike-phase6.cc	/^static std::mt19937 rnd;$/;"	v	file:
 rnd	original src/rlike-phase7-bugfix.cc	/^static std::mt19937 rnd;$/;"	v	file:
 rnd	original src/rlike-phase7-video_ends_here.cc	/^static std::mt19937 rnd;$/;"	v	file:
 rnd	rlike.cpp	/^static std::mt19937 rnd;    \/\/ Random number engine (Mersenne twister algorithm).$/;"	v	file:
+room	original src/rlike-phase1.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase1.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase1.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	original src/rlike-phase2.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase2.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase2.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	original src/rlike-phase3.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase3.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase3.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	original src/rlike-phase4.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase4.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase4.cc	/^    const Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase4.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	original src/rlike-phase5.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase5.cc	/^    Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase5.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase5.cc	/^    const Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase5.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	original src/rlike-phase6.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase6.cc	/^    Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase6.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase6.cc	/^    const Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase6.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	original src/rlike-phase7-bugfix.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase7-bugfix.cc	/^        auto& room   = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase7-bugfix.cc	/^    Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase7-bugfix.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase7-bugfix.cc	/^    const Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase7-bugfix.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	original src/rlike-phase7-video_ends_here.cc	/^        Room& room = insres.first->second;$/;"	l
+room	original src/rlike-phase7-video_ends_here.cc	/^        auto& room   = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase7-video_ends_here.cc	/^    Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase7-video_ends_here.cc	/^    Room& room = maze.GenerateRoom(wherex,wherey, model, 0);$/;"	l
+room	original src/rlike-phase7-video_ends_here.cc	/^    const Room &room = maze.GenerateRoom(x,y, defaultroom, 0);$/;"	l
+room	original src/rlike-phase7-video_ends_here.cc	/^    const Room& room = SpawnRooms(x,y);$/;"	l
+room	rlike.cpp	/^        Room& room = insRes.first->second;$/;"	l
+room	rlike.cpp	/^    Room& room = maze.GenerateRoom(whereX, whereY, model, 0);$/;"	l
+room	rlike.cpp	/^    const Room& room = SpawnRooms(x, y);$/;"	l
+room	rlike.cpp	/^    const Room& room = maze.GenerateRoom(x, y, defaultRoom, 0);$/;"	l
+roomEmpty	rlike.cpp	/^        bool roomEmpty = output.first.empty();$/;"	l
+room_empty	original src/rlike-phase4.cc	/^        bool room_empty = output.first.empty();$/;"	l
+room_empty	original src/rlike-phase5.cc	/^        bool room_empty = output.first.empty();$/;"	l
+room_empty	original src/rlike-phase6.cc	/^        bool room_empty = output.first.empty();$/;"	l
+room_empty	original src/rlike-phase7-bugfix.cc	/^            bool room_empty = output.first.empty();$/;"	l
+room_empty	original src/rlike-phase7-video_ends_here.cc	/^            bool room_empty = output.first.empty();$/;"	l
 rooms	original src/rlike-phase1.cc	/^    std::map<long\/*x*\/,std::map<long\/*y*\/,Room> > rooms;$/;"	m	struct:Maze	file:
 rooms	original src/rlike-phase2.cc	/^    std::map<long\/*x*\/,std::map<long\/*y*\/,Room> > rooms;$/;"	m	struct:Maze	file:
 rooms	original src/rlike-phase3.cc	/^    std::map<long\/*x*\/,std::map<long\/*y*\/,Room> > rooms;$/;"	m	struct:Maze	file:
@@ -851,6 +1739,50 @@ rooms	original src/rlike-phase6.cc	/^    std::map<long\/*x*\/,std::map<long\/*y*
 rooms	original src/rlike-phase7-bugfix.cc	/^    std::map<long\/*x*\/,std::map<long\/*y*\/,Room> > rooms;$/;"	m	struct:Maze	file:
 rooms	original src/rlike-phase7-video_ends_here.cc	/^    std::map<long\/*x*\/,std::map<long\/*y*\/,Room> > rooms;$/;"	m	struct:Maze	file:
 rooms	rlike.cpp	/^    std::map<long\/*x*\/, std::map<long\/*y*\/, Room>> rooms;$/;"	m	struct:Maze	file:
+s	original src/printf.cc	/^                std::basic_stringstream<ctype> s;$/;"	l
+s	original src/printf.cc	/^                std::string s;$/;"	l
+s	original src/printf.cc	/^                std::stringstream s;$/;"	l
+s	original src/printf.cc	/^        std::basic_stringstream<ctype> s;$/;"	l
+s	original src/rlike-phase1.cc	/^        std::string s;$/;"	l
+s	original src/rlike-phase2.cc	/^        auto s = cmd.ReadCommand();$/;"	l
+s	original src/rlike-phase3.cc	/^        auto s = cmd.ReadCommand();$/;"	l
+s	original src/rlike-phase4.cc	/^        auto s = cmd.ReadCommand();$/;"	l
+s	original src/rlike-phase5.cc	/^        auto s = cmd.ReadCommand();$/;"	l
+s	original src/rlike-phase6.cc	/^        auto s = cmd.ReadCommand();$/;"	l
+s	original src/rlike-phase6.cc	/^        else if(rm(s, "open|get|drop"_r))                           term << "%s what?\\n"_f % s;$/;"	l
+s	original src/rlike-phase7-bugfix.cc	/^        auto s = cmd.ReadCommand();$/;"	l
+s	original src/rlike-phase7-bugfix.cc	/^        else if(rm(s, "open|get|drop"_r))                           term << "%s what?\\n"_f % s;$/;"	l
+s	original src/rlike-phase7-video_ends_here.cc	/^        auto s = cmd.ReadCommand();$/;"	l
+s	original src/rlike-phase7-video_ends_here.cc	/^        else if(rm(s, "open|get|drop"_r))                           term << "%s what?\\n"_f % s;$/;"	l
+s	rlike.cpp	/^        auto s = cmd.ReadCommand();$/;"	l
+s2	original src/printf.cc	/^                std::string s2 = s.str();$/;"	l
+sa	original src/rlike-phase1.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	original src/rlike-phase2.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	original src/rlike-phase3.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	original src/rlike-phase4.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	original src/rlike-phase5.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	original src/rlike-phase6.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	original src/rlike-phase7-bugfix.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	original src/rlike-phase7-video_ends_here.cc	/^        std::string sa = m!=mapgraph.end() ? *m++ : std::string(11,' ');$/;"	l
+sa	rlike.cpp	/^        std::string sa = m!=mapGraph.end() ? *m++ : std::string(11, ' ');$/;"	l
+sb	original src/rlike-phase1.cc	/^        std::cout << "%s | %s\\n"_f % sa % sb;$/;"	l
+sb	original src/rlike-phase1.cc	/^        std::string sb = res[1];$/;"	l
+sb	original src/rlike-phase2.cc	/^        std::cout << "%s | %s\\n"_f % sa % sb;$/;"	l
+sb	original src/rlike-phase2.cc	/^        std::string sb = res[1];$/;"	l
+sb	original src/rlike-phase3.cc	/^        std::string sb = res[1];$/;"	l
+sb	original src/rlike-phase3.cc	/^        term << "`dfl`%s | `items`%s\\n"_f % sa % sb;$/;"	l
+sb	original src/rlike-phase4.cc	/^        std::string sb = res[1];$/;"	l
+sb	original src/rlike-phase4.cc	/^        term << "`dfl`%s | `items`%s\\n"_f % sa % sb;$/;"	l
+sb	original src/rlike-phase5.cc	/^        std::string sb = res[1];$/;"	l
+sb	original src/rlike-phase5.cc	/^        term << "`dfl`%s | `items`%s\\n"_f % sa % sb;$/;"	l
+sb	original src/rlike-phase6.cc	/^        std::string sb = res[1];$/;"	l
+sb	original src/rlike-phase6.cc	/^        term << "`dfl`%s | `items`%s\\n"_f % sa % sb;$/;"	l
+sb	original src/rlike-phase7-bugfix.cc	/^        std::string sb = res.size() >= 2 ? res[1] : std::string{};$/;"	l
+sb	original src/rlike-phase7-bugfix.cc	/^        term << "`dfl`%s | `items`%s\\n"_f % sa % sb;$/;"	l
+sb	original src/rlike-phase7-video_ends_here.cc	/^        std::string sb = res[1];$/;"	l
+sb	original src/rlike-phase7-video_ends_here.cc	/^        term << "`dfl`%s | `items`%s\\n"_f % sa % sb;$/;"	l
+sb	rlike.cpp	/^        std::string sb = res.ready() ? (std::string)res[1] : "";$/;"	l
+sb	rlike.cpp	/^        term << "`dfl`" << sa << " | " << "`items`" << sb << "\\n";$/;"	l
 seed	original src/rlike-phase1.cc	/^    unsigned seed = 0;          \/\/ For maze generation$/;"	m	struct:Room	file:
 seed	original src/rlike-phase2.cc	/^    unsigned seed = 0;          \/\/ For maze generation$/;"	m	struct:Room	file:
 seed	original src/rlike-phase3.cc	/^    unsigned seed = 0;          \/\/ For maze generation$/;"	m	struct:Room	file:
@@ -860,7 +1792,34 @@ seed	original src/rlike-phase6.cc	/^    unsigned seed = 0;          \/\/ For maz
 seed	original src/rlike-phase7-bugfix.cc	/^    unsigned seed = 0;          \/\/ For maze generation$/;"	m	struct:Room	file:
 seed	original src/rlike-phase7-video_ends_here.cc	/^    unsigned seed = 0;          \/\/ For maze generation$/;"	m	struct:Room	file:
 seed	rlike.cpp	/^    unsigned seed = 0;                  \/\/ For maze generation.$/;"	m	struct:Room	file:
+setprecision	original src/printf.cc	/^                s << std::setprecision( arg.max_width);$/;"	p	class:__anon1::std	file:
+showpos	original src/printf.cc	/^                if(arg.sign) s << std::showpos;$/;"	m	class:__anon1::std	file:
 sign	original src/printf.hh	/^        bool leftalign      = false, sign      = false, zeropad = false;$/;"	m	struct:PrintfFormatter::argsmall
+size_t	original src/printf.cc	/^            result.append( std::size_t(arg.min_width-length), pad );$/;"	p	file:
+sprain	original src/rlike-phase6.cc	/^            unsigned sprain = rand(count(BodyParts));$/;"	l
+sprain	original src/rlike-phase7-bugfix.cc	/^            unsigned sprain = rand(count(BodyParts));$/;"	l
+sprain	original src/rlike-phase7-video_ends_here.cc	/^            unsigned sprain = rand(count(BodyParts));$/;"	l
+str	rlike.cpp	/^            term << oss.str();$/;"	p	file:
+str	rlike.cpp	/^        term << oss.str();$/;"	p	file:
+subpos	original src/printf.cc	/^    std::size_t position = state.position, pos = position \/ 4,  subpos = position % 4;$/;"	l
+swap	original src/printf.cc	/^            argument.before.swap(trail);$/;"	p	file:
+target	original src/rlike-phase7-bugfix.cc	/^        auto& target = maze.GenerateRoom(x+xd, y+yd, defaultroom, 0);$/;"	l
+target	original src/rlike-phase7-video_ends_here.cc	/^        auto& target = maze.GenerateRoom(x+xd, y+yd, defaultroom, 0);$/;"	l
+targetBackup	rlike.cpp	/^        Eq targetBackup = target, meBackup = *this;$/;"	l
+target_backup	original src/rlike-phase5.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
+target_backup	original src/rlike-phase6.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
+target_backup	original src/rlike-phase7-bugfix.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
+target_backup	original src/rlike-phase7-video_ends_here.cc	/^        Eq target_backup = target, me_backup = *this;$/;"	l
+targetname	original src/rlike-phase5.cc	/^            term << "You put %s in %s.\\n"_f % explanation % targetname;$/;"	l
+targetname	original src/rlike-phase6.cc	/^            term << "You put %s in %s.\\n"_f % explanation % targetname;$/;"	l
+targetname	original src/rlike-phase7-bugfix.cc	/^            term << "You put %s in %s.\\n"_f % explanation % targetname;$/;"	l
+targetname	original src/rlike-phase7-video_ends_here.cc	/^            term << "You put %s in %s.\\n"_f % explanation % targetname;$/;"	l
+temp	original src/rlike-phase4.cc	/^    auto temp = std::regex_replace($/;"	l
+temp	original src/rlike-phase5.cc	/^    auto temp = std::regex_replace($/;"	l
+temp	original src/rlike-phase6.cc	/^    auto temp = std::regex_replace($/;"	l
+temp	original src/rlike-phase7-bugfix.cc	/^    auto temp = std::regex_replace($/;"	l
+temp	original src/rlike-phase7-video_ends_here.cc	/^    auto temp = std::regex_replace($/;"	l
+temp	rlike.cpp	/^    auto temp = std::regex_replace(s, R"(^(.*?)( (?:\\(|of\\b|made of\\b).*)?$)"_r, "$1" "\\001" "$2");$/;"	l
 term	original src/rlike-phase3.cc	/^} static term;$/;"	v	file:
 term	original src/rlike-phase4.cc	/^} static term;$/;"	v	file:
 term	original src/rlike-phase5.cc	/^} static term;$/;"	v	file:
@@ -868,23 +1827,52 @@ term	original src/rlike-phase6.cc	/^} static term;$/;"	v	file:
 term	original src/rlike-phase7-bugfix.cc	/^} static term;$/;"	v	file:
 term	original src/rlike-phase7-video_ends_here.cc	/^} static term;$/;"	v	file:
 term	rlike.cpp	/^} static term;$/;"	v	file:
+to_string	rlike.cpp	/^                    term << "Ignoring too large repeat count " << std::to_string(repeat.second) << "\\n";$/;"	p	class:Maze::CommandReader::std	file:
 trail	original src/printf.hh	/^    std::basic_string<char32_t> trail;$/;"	v
+translation	original src/rlike-phase3.cc	/^        static const std::map<char,const char*> translation =$/;"	l	file:
+translation	original src/rlike-phase4.cc	/^        static const std::map<char,const char*> translation =$/;"	l	file:
+translation	original src/rlike-phase5.cc	/^        static const std::map<char,const char*> translation =$/;"	l	file:
+translation	original src/rlike-phase6.cc	/^        static const std::map<char,const char*> translation =$/;"	l	file:
+translation	original src/rlike-phase7-bugfix.cc	/^        static const std::map<char,const char*> translation =$/;"	l	file:
+translation	original src/rlike-phase7-video_ends_here.cc	/^        static const std::map<char,const char*> translation =$/;"	l	file:
+translation	rlike.cpp	/^        static const std::map<char, const char*> translation = {$/;"	l	file:
 type	original src/rlike-phase4.cc	/^    std::size_t type      = frand() > 0.4 ? rand(count(ItemTypes))  : rand(4);$/;"	m	struct:ItemType	file:
 type	original src/rlike-phase5.cc	/^    std::size_t type      = frand() > 0.4 ? rand(count(ItemTypes))  : rand(4);$/;"	m	struct:ItemType	file:
 type	original src/rlike-phase6.cc	/^    std::size_t type      = frand() > 0.4 ? rand(count(ItemTypes))  : rand(4);$/;"	m	struct:ItemType	file:
 type	original src/rlike-phase7-bugfix.cc	/^    std::size_t type      = frand() > 0.4 ? rand(count(ItemTypes))  : rand(4);$/;"	m	struct:ItemType	file:
 type	original src/rlike-phase7-video_ends_here.cc	/^    std::size_t type      = frand() > 0.4 ? rand(count(ItemTypes))  : rand(4);$/;"	m	struct:ItemType	file:
 type	rlike.cpp	/^    std::size_t type      = FRAND() > 0.4 ? RAND(Count(itemTypes))  : RAND(4);$/;"	m	struct:ItemType	file:
+v	original src/rlike-phase4.cc	/^            auto v = look_money(a++, false);$/;"	l
+v	original src/rlike-phase5.cc	/^            auto v = look_money(a++, false);$/;"	l
+v	original src/rlike-phase6.cc	/^            auto v = look_money(a++, false);$/;"	l
+v	original src/rlike-phase7-bugfix.cc	/^            auto v = look_money(a++, false);$/;"	l
+v	original src/rlike-phase7-video_ends_here.cc	/^            auto v = look_money(a++, false);$/;"	l
 value	original src/rlike-phase4.cc	/^    float value() const$/;"	f	struct:Eq
 value	original src/rlike-phase4.cc	/^    float value(float constant=300.f) const$/;"	f	struct:ItemType
+value	original src/rlike-phase5.cc	/^    float value = eq.value();$/;"	l
 value	original src/rlike-phase5.cc	/^    float value() const$/;"	f	struct:Eq
 value	original src/rlike-phase5.cc	/^    float value(float constant=300.f) const$/;"	f	struct:ItemType
+value	original src/rlike-phase6.cc	/^    float value = eq.value();$/;"	l
 value	original src/rlike-phase6.cc	/^    float value() const$/;"	f	struct:Eq
 value	original src/rlike-phase6.cc	/^    float value(float constant=300.f) const$/;"	f	struct:ItemType
+value	original src/rlike-phase7-bugfix.cc	/^    float value = eq.value();$/;"	l
 value	original src/rlike-phase7-bugfix.cc	/^    float value() const$/;"	f	struct:Eq
 value	original src/rlike-phase7-bugfix.cc	/^    float value(float constant=300.f) const$/;"	f	struct:ItemType
+value	original src/rlike-phase7-video_ends_here.cc	/^    float value = eq.value();$/;"	l
 value	original src/rlike-phase7-video_ends_here.cc	/^    float value() const$/;"	f	struct:Eq
 value	original src/rlike-phase7-video_ends_here.cc	/^    float value(float constant=300.f) const$/;"	f	struct:ItemType
+w	original src/rlike-phase4.cc	/^            SingleReference w;$/;"	l
+w	original src/rlike-phase4.cc	/^        SingleReference w;$/;"	l
+w	original src/rlike-phase5.cc	/^            SingleReference w;$/;"	l
+w	original src/rlike-phase5.cc	/^        SingleReference w;$/;"	l
+w	original src/rlike-phase6.cc	/^            SingleReference w;$/;"	l
+w	original src/rlike-phase6.cc	/^        SingleReference w;$/;"	l
+w	original src/rlike-phase7-bugfix.cc	/^            SingleReference w;$/;"	l
+w	original src/rlike-phase7-bugfix.cc	/^        SingleReference w;$/;"	l
+w	original src/rlike-phase7-video_ends_here.cc	/^            SingleReference w;$/;"	l
+w	original src/rlike-phase7-video_ends_here.cc	/^        SingleReference w;$/;"	l
+w	rlike.cpp	/^            SingleReference w;$/;"	l
+w	rlike.cpp	/^        SingleReference w;$/;"	l
 wall	rlike.cpp	/^    std::size_t wall = 0, env = 0;      \/\/ Indexs.$/;"	m	struct:Room	file:
 weight	original src/rlike-phase1.cc	/^    float weight;$/;"	m	struct:GenericData	file:
 weight	original src/rlike-phase2.cc	/^    float weight;$/;"	m	struct:GenericData	file:
@@ -911,6 +1899,14 @@ what	original src/rlike-phase6.cc	/^        std::string what;$/;"	m	struct:ItemR
 what	original src/rlike-phase7-bugfix.cc	/^        std::string what;$/;"	m	struct:ItemReference::SingleReference	file:
 what	original src/rlike-phase7-video_ends_here.cc	/^        std::string what;$/;"	m	struct:ItemReference::SingleReference	file:
 what	rlike.cpp	/^        std::string what;$/;"	m	struct:ItemReference::SingleReference	file:
+where	original src/rlike-phase4.cc	/^    const Eq& where  = room.items;$/;"	l
+where	rlike.cpp	/^    const Eq& where  = room.items;$/;"	l
+word	original src/rlike-phase4.cc	/^        std::string word = part;$/;"	l
+word	original src/rlike-phase5.cc	/^        std::string word = part;$/;"	l
+word	original src/rlike-phase6.cc	/^        std::string word = part;$/;"	l
+word	original src/rlike-phase7-bugfix.cc	/^        std::string word = part;$/;"	l
+word	original src/rlike-phase7-video_ends_here.cc	/^        std::string word = part;$/;"	l
+word	rlike.cpp	/^        std::string word = part;$/;"	l
 worth	original src/rlike-phase1.cc	/^    float worth;$/;"	m	struct:GenericData	file:
 worth	original src/rlike-phase2.cc	/^    float worth;$/;"	m	struct:GenericData	file:
 worth	original src/rlike-phase3.cc	/^    float worth;$/;"	m	struct:GenericData	file:
@@ -920,22 +1916,22 @@ worth	original src/rlike-phase6.cc	/^    float worth;$/;"	m	struct:GenericData	f
 worth	original src/rlike-phase7-bugfix.cc	/^    float worth;$/;"	m	struct:GenericData	file:
 worth	original src/rlike-phase7-video_ends_here.cc	/^    float worth;$/;"	m	struct:GenericData	file:
 worth	rlike.cpp	/^    float worth;$/;"	m	struct:GenericData	file:
-x	original src/rlike-phase1.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	original src/rlike-phase2.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	original src/rlike-phase3.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	original src/rlike-phase4.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	original src/rlike-phase5.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	original src/rlike-phase6.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	original src/rlike-phase7-bugfix.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	original src/rlike-phase7-video_ends_here.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-x	rlike.cpp	/^static long x = 0, y = 0, life = 1000;$/;"	v	file:
-y	original src/rlike-phase1.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	original src/rlike-phase2.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	original src/rlike-phase3.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	original src/rlike-phase4.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	original src/rlike-phase5.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	original src/rlike-phase6.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	original src/rlike-phase7-bugfix.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	original src/rlike-phase7-video_ends_here.cc	/^static long x=0, y=0, life=1000;$/;"	v	file:
-y	rlike.cpp	/^static long x = 0, y = 0, life = 1000;$/;"	v	file:
+x	original src/rlike-phase1.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	original src/rlike-phase2.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	original src/rlike-phase3.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	original src/rlike-phase4.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	original src/rlike-phase5.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	original src/rlike-phase6.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	original src/rlike-phase7-bugfix.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	original src/rlike-phase7-video_ends_here.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+x	rlike.cpp	/^static long x = 0, y = 0, life = 1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase1.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase2.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase3.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase4.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase5.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase6.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase7-bugfix.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	original src/rlike-phase7-video_ends_here.cc	/^static long x=0, y=0, life=1000;$/;"	m	struct:Maze	file:
+y	rlike.cpp	/^static long x = 0, y = 0, life = 1000;$/;"	m	struct:Maze	file:
 zeropad	original src/printf.hh	/^        bool leftalign      = false, sign      = false, zeropad = false;$/;"	m	struct:PrintfFormatter::argsmall
