@@ -768,7 +768,7 @@ static bool TryMoveBy(int xd, int yd) {
     if (!CanMoveTo(x+xd, y+yd) || (!CanMoveTo(x, y+yd) && !CanMoveTo(x+xd, y)))
         { term << "You cannot go that way.\n"; return false; }
 
-    long burden = 1;
+    long burden = eq.Burden();
     x += xd; y += yd;
     EatLife(burden);
 
@@ -781,11 +781,8 @@ static void Inv() {
     else          term << p.first << "\n";
 }
 
-static void LookAt(const ItemReference& what, const ItemReference&) {
-    const Room& room = maze.GenerateRoom(x, y, defaultRoom, 0);
-    const Eq& where  = room.items;
-
-    std::string hereStr = "here";
+static void LookAtIn(const Eq& where, const ItemReference& what,
+                     const std::string& hereStr = "here") {
 
     // Look at items in the room.
     for (const auto& w : what.refs) {
@@ -839,6 +836,89 @@ static void LookAt(const ItemReference& what, const ItemReference&) {
             else
                 term << "There is nothing " << hereStr + ".\n";
     }
+}
+
+static void LookAt(const ItemReference& what, const ItemReference& where) {
+    const Room &room = maze.GenerateRoom(x, y, defaultRoom, 0);
+
+    if (where.refs.empty()) LookAtIn(room.items, what);
+    else {
+        unsigned nSources = 0;
+        for (const auto& w : where.refs) {
+            unsigned n = 0;
+            for (long no = 0; (no = room.items.FindItem(w, no)) >= 0; ++n) {
+                const auto& container = room.items.items[no++];
+                term << UCFirst(AddArticle(container.Name(1, 1), true) +
+                        " does not contain anything!\n");
+                continue;
+            }
+
+            if (!n && room.items.FindMoney(w, 0) >= 0) {
+                term << "You cannot look inside money! They do not contain anything!\n";
+                ++n;
+            }
+            if (!n && !where.everything)
+                term << "Look where? There is no " + w.what + " in this room!\n";
+            nSources += n;
+        }
+        if (!nSources && where.everything) term << "There is nothing in this room!\n";
+    }
+}
+
+static void GetFrom(Eq& source, const ItemReference& what,
+                    const std::string& fromStr = "",
+                    const std::string& hereStr = "here") {
+    // Move stuff from room to the inventory.
+    auto moved = source.Move(eq, what);
+
+    if (!moved.notFound.empty()) {
+        if (moved.notFound.empty()) term << "There is nothing " + hereStr + " you can take!\n";
+        else                        term << "There is no " +
+                                            ListWithCounts(std::move(moved.notFound)) + " !\n";
+    }
+
+    if (!moved.moved.empty()) {
+        auto num = moved.moved.size();
+        std::string explanation = ListWithCounts(std::move(moved.moved));
+        term << "You take " + explanation + " " + fromStr + ".\n";
+        // Eat two hitpoints for every item moved.
+        EatLife(num * 2);
+    }
+    else {
+        term << "Nothing taken " + fromStr + ".\n";
+    }
+}
+
+static void Get(const ItemReference& what, const ItemReference&) {
+    Room &room = maze.GenerateRoom(x, y, defaultRoom, 0);
+    GetFrom(room.items, what);
+}
+
+static void PutTo(Eq& target, const ItemReference& what,
+                  const std::string& targetName = "") {
+    // Move stuff from inventory to the specified destination.
+    auto moved = eq.Move(target, what);
+
+    if (!moved.notFound.empty()) {
+        if (moved.notFound.empty()) term << "You don't have anything!\n";
+        else                        term << "You don't have " +
+                                            ListWithCounts(std::move(moved.notFound));
+    }
+
+    if (!moved.moved.empty()) {
+        auto num = moved.moved.size();
+        std::string explanation = ListWithCounts(std::move(moved.moved));
+        if (targetName.empty()) term << "You drop " + explanation + ".\n";
+        else                    term << "You put " + explanation + " in " + targetName + ".\n";
+        // Eat half hitpoint for every item dropped.
+        EatLife(num / 2);
+    }
+    else term << "Nothing moved.\n";
+}
+
+static void Put(const ItemReference& what, const ItemReference&) {
+    Room &room = maze.GenerateRoom(x, y, defaultRoom, 0);
+    PutTo(room.items, what);
 }
 
 struct Alias {
@@ -951,6 +1031,9 @@ help:
             "\tl/look\n"
             "\tla/look at <item>\n"
             "\tn/s/w/e for moving\n"
+            "\tget <item>/get all/ga for short\n"
+            "\tdrop <item>/drop all\n"
+            "\ti/inv/inventory\n"
             "\tansi off, if the colors don't work for you\n"
             "\tquit\n"
             "\thelp\n\n"
@@ -993,6 +1076,11 @@ help:
         else if (RM(s, "look( +around)?"_r)) Look();
         else if (RM(s, res, "look(?: +at)? +(.*?)(?: +in +(.+))?"_r)) LookAt(res[1].str(), res[2].str());
 
+        // Inventory manipulation commands.
+        else if (s == "inv")                                        Inv();
+        else if (RM(s, res, "get +(.+?)(?: +from +(.+))?"_r))       Get(res[1].str(), res[2].str());
+        else if (RM(s, res, "drop +(.+?)(?: +(?:to|in) +(.+))?"_r)) Put(res[1].str(), res[2].str());
+
         else if (RM(s, res, "ansi +(off|on)"_r)) term.EnableDisable(res[1] == "on");
         else if (RM(s, R"((?:wear|wield|eq)\b.*)"_r))
             term << "You are scavenging for survival and not playing an RPG character.\n";
@@ -1003,6 +1091,14 @@ help:
         else term << "what\n";
     }
 
-    term << "`alert`" << (life < 0 ? "You are pulled out from the maze by a supernatural force!\n" : "byebye\n")
-         << "[life:" << std::to_string(life) << "] Game over\n`reset`";
+    float value = eq.Value();
+    std::ostringstream oss;
+    oss << "`alert`" << (life < 0 ? "You are pulled out from the maze by a supernatural force!\n" : "byebye\n")
+        << "[life:" << std::to_string(life) << "] Game over\n`reset`"
+        << "You managed to collect stuff worth " << std::fixed << std::setprecision(2) << value << " gold.\n"
+        << "With all your possessions, you purchase " + Appraise(value) + ".\n" +
+           "You consume your reward eagerly.\n"
+        << "You " << (value < 10000.0 ? "DID NOT SURVIVE. Hint: Learn to judge the value/weight ratio." :
+                                        "SURVIVED! CONGRATULATION. ;)") << "\n";
+    term << oss.str();
 }
